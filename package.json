@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "eval": "node scripts/eval-scam.mjs"
+    "eval": "node scripts/eval-scam.mjs",
+    "test:nemotron": "node scripts/test-nemotron.mjs"
   },
   "dependencies": {
     "next": "14.2.15",
