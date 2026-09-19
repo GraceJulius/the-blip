@@ -93,6 +93,7 @@ button.ghost.quiz-option:hover { background: var(--surface-3); }
 button.ghost.quiz-option > span:first-child { flex: 1; min-width: 0; }
 button.ghost.quiz-option.correct { background: var(--ok-soft); border-color: var(--ok-border); color: var(--ok); }
 button.ghost.quiz-option.wrong { background: var(--bad-soft); border-color: var(--bad-border); color: var(--bad); }
+.quiz-points.capped { background: var(--surface-3); color: var(--muted); }
 .quiz-points { flex: none; display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 999px; background: var(--ok-soft); color: var(--ok); font-size: 12px; font-weight: 700; }
 
 /* ---------- type ---------- */

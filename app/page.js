@@ -14,7 +14,7 @@ function label(l, quests) {
     const q = quests.find((x) => x.id === l.questId);
     return q ? q.title : 'Quest completed';
   }
-  return { scam_reported: 'Reported a scam', incident_reported: 'Reported an incident', recovery_completed: 'Finished recovery', redeem: 'Redeemed a gift card' }[l.type] || l.type;
+  return { scam_reported: 'Reported a scam', incident_reported: 'Reported an incident', recovery_completed: 'Finished recovery', redeem: 'Redeemed a gift card', quiz_bonus: 'Quiz bonus' }[l.type] || l.type;
 }
 
 function ago(ts) {
