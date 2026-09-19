@@ -92,6 +92,14 @@ The starter samples in `data/scam-samples.json` are synthetic and easy. Add at l
 - **Tests:** `npm run test:grocery` checks the store math, swaps, budget trimming and the keyword parser.
 - **Claude settings:** `ANTHROPIC_API_KEY`, `CLAUDE_MODEL` (default `claude-opus-5`) and `CLAUDE_CALLS_PER_10MIN`. In DigitalOcean add the key as an encrypted variable.
 
+## Free food map
+
+- `/food` shows a map with a pin for each place, a list with the details, and filters (On campus, Oakland, Nearby, Open now).
+- **Open now** is shown only for places with confirmed weekly hours (`schedule` in `lib/pantries.js`, Pittsburgh time). Every other place shows "Confirm before you go". Never add a `schedule` you have not confirmed with the source.
+- **Use my location** sorts by distance. The location stays in the browser and is never sent to the server.
+- **Coordinates** come from OpenStreetMap search. Campus buildings and one Bloomfield address are placed at the area, not the exact door, and the page says so. Map tiles and data are from OpenStreetMap contributors.
+- Tests: `npm run test:map` checks the open-now logic (including time zones and daylight saving) and the distance math.
+
 ## Partner platform (for banks and other companies)
 
 - **Console** (`/console`, Bank view): overview charts and KPIs, program settings, and an integration center. Overview is public; **Program** and **Integration** need `ADMIN_PASSWORD`.
