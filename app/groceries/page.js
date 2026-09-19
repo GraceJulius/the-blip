@@ -3,7 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import FoodTabs from '../FoodTabs';
 import { post } from '../useBlip';
-import { CATALOG, TEMPLATES } from '@/lib/grocery.mjs';
+import { fileToUpload } from '../imageUpload';
+import { CATALOG, TEMPLATES, STORES } from '@/lib/grocery.mjs';
 
 const money = (n) => '$' + Number(n).toFixed(2);
 const tone = (h) => (h >= 75 ? 'ok' : h >= 45 ? 'warn' : 'bad');
@@ -19,6 +20,11 @@ export default function Groceries() {
   const [search, setSearch] = useState('');
   const [advice, setAdvice] = useState(null);
   const [adviceBusy, setAdviceBusy] = useState(false);
+  const [refresh, setRefresh] = useState(0);
+  const [rc, setRc] = useState(null);
+  const [rcBusy, setRcBusy] = useState(false);
+  const [rcErr, setRcErr] = useState('');
+  const [rcMsg, setRcMsg] = useState('');
   const seq = useRef(0);
   const skip = useRef(false);
 
@@ -31,7 +37,7 @@ export default function Groceries() {
       if (mine === seq.current && !r.error) { setRes(r); if (r.questAward > 0) setAward(r.questAward); }
     }, 300);
     return () => clearTimeout(t);
-  }, [items, budget]);
+  }, [items, budget, refresh]);
 
   const qtyOf = (id) => (items.find((i) => i.id === id) || {}).qty || 0;
   const add = (id) => { setAdvice(null); setItems((p) => (p.some((i) => i.id === id) ? p.map((i) => (i.id === id ? { ...i, qty: Math.min(10, i.qty + 1) } : i)) : [...p, { id, qty: 1 }])); };
@@ -60,6 +66,31 @@ export default function Groceries() {
   function swap(s) { setAdvice(null); setItems((p) => { const q = (p.find((i) => i.id === s.from.id) || {}).qty || 0; const rest = p.filter((i) => i.id !== s.from.id); const ex = rest.find((i) => i.id === s.to.id); return ex ? rest.map((i) => (i.id === s.to.id ? { ...i, qty: Math.min(10, i.qty + q) } : i)) : [...rest, { id: s.to.id, qty: q }]; }); }
   function swapAll() { if (!res) return; let next = items.map((i) => ({ ...i })); for (const s of res.swaps) { const q = (next.find((i) => i.id === s.from.id) || {}).qty || 0; if (!q) continue; next = next.filter((i) => i.id !== s.from.id); const ex = next.find((i) => i.id === s.to.id); if (ex) ex.qty = Math.min(10, ex.qty + q); else next.push({ id: s.to.id, qty: q }); } setAdvice(null); setItems(next); }
   function trim() { if (res && res.budget && res.budget.trim) { setAdvice(null); setItems(res.budget.trim.items.map(({ id, qty }) => ({ id, qty }))); } }
+
+  async function scanReceipt(file) {
+    if (!file) return;
+    setRcBusy(true); setRcErr(''); setRcMsg(''); setRc(null);
+    try {
+      const up = await fileToUpload(file);
+      const r = await post('/api/groceries/receipt', up);
+      if (r.error) { setRcErr(r.error); setRcBusy(false); return; }
+      const rec = r.receipt;
+      setRc({ storeId: rec.storeId || '', storeName: rec.storeName, date: rec.date, lines: rec.lines.map((l) => ({ ...l, use: Boolean(l.itemId) && !l.suspicious, price: String(l.unitPrice) })) });
+    } catch (e) { setRcErr(e.message || 'Something went wrong reading that receipt.'); }
+    setRcBusy(false);
+  }
+  async function saveReceipt() {
+    if (!rc.storeId) { setRcErr('Pick which store this receipt is from.'); return; }
+    const prices = rc.lines.filter((l) => l.use && l.itemId).map((l) => ({ itemId: l.itemId, price: Number(l.price) }));
+    if (prices.length === 0) { setRcErr('Choose at least one price to save.'); return; }
+    setRcErr('');
+    const r = await post('/api/groceries/prices', { storeId: rc.storeId, prices });
+    if (r.error) { setRcErr(r.error); return; }
+    setRc(null);
+    setRcMsg('Saved ' + r.saved + ' price' + (r.saved === 1 ? '' : 's') + '. Your comparison now uses them.' + (r.questAward > 0 ? ' Quest complete: +' + r.questAward + ' points.' : ''));
+    setRefresh((n) => n + 1);
+  }
+  async function clearMine() { await post('/api/groceries/prices', { clear: true }); setRcMsg('Your saved prices were cleared.'); setRefresh((n) => n + 1); }
 
   async function getAdvice() {
     setAdviceBusy(true);
@@ -118,6 +149,44 @@ export default function Groceries() {
         </div>
       </div>
 
+      <div className="card">
+        <h2>Use real prices from a receipt</h2>
+        <p className="note" style={{ marginBottom: 12 }}>The prices above are samples. Photograph a grocery receipt and Claude reads it, then you choose which prices to keep. They replace the samples for you. The photo is read once and not saved.</p>
+        <label className="btn small" style={{ cursor: rcBusy ? 'wait' : 'pointer' }}>
+          {rcBusy ? 'Reading…' : 'Scan a receipt'}
+          <input type="file" accept="image/*,application/pdf" disabled={rcBusy} style={{ display: 'none' }} onChange={(e) => { scanReceipt(e.target.files[0]); e.target.value = ''; }} />
+        </label>
+        {rcErr && <p className="err" style={{ marginTop: 10 }}>{rcErr}</p>}
+        {rcMsg && <p style={{ marginTop: 10 }}>{rcMsg}</p>}
+        {rc && (
+          <div style={{ marginTop: 14 }}>
+            <div className="row" style={{ marginTop: 0 }}>
+              <label htmlFor="rstore">Store</label>
+              <select id="rstore" value={rc.storeId} onChange={(e) => setRc({ ...rc, storeId: e.target.value })}>
+                <option value="">Choose the store…</option>
+                {STORES.map((st) => <option key={st.id} value={st.id}>{st.name}</option>)}
+              </select>
+              {rc.storeName && !rc.storeId && <span className="note">Read as "{rc.storeName}", which we do not track yet.</span>}
+            </div>
+            <div className="list">
+              {rc.lines.filter((l) => l.itemId).map((l, i) => (
+                <div className="item" key={l.itemId}>
+                  <label style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+                    <input type="checkbox" checked={l.use} onChange={(e) => setRc({ ...rc, lines: rc.lines.map((x) => (x.itemId === l.itemId ? { ...x, use: e.target.checked } : x)) })} />
+                    <span>{l.itemName} <span className="note">from "{l.text}"{l.quantity > 1 ? ' ×' + l.quantity : ''}{l.suspicious ? ' · check this price' : ''}</span></span>
+                  </label>
+                  <span>$<input type="number" step="0.01" min="0.05" value={l.price} style={{ width: 84 }} onChange={(e) => setRc({ ...rc, lines: rc.lines.map((x) => (x.itemId === l.itemId ? { ...x, price: e.target.value } : x)) })} /></span>
+                </div>
+              ))}
+            </div>
+            {rc.lines.filter((l) => !l.itemId).length > 0 && <p className="note" style={{ marginTop: 8 }}>Not tracked: {rc.lines.filter((l) => !l.itemId).map((l) => l.text).join(', ')}</p>}
+            {rc.trackedCount === 0 && <p className="note">None of these match items in our catalog yet.</p>}
+            <div className="actions"><button onClick={saveReceipt}>Save these prices</button><button className="ghost" onClick={() => setRc(null)}>Cancel</button></div>
+          </div>
+        )}
+        {res && res.yourPriceCount > 0 && <div className="actions"><span className="note">Using {res.yourPriceCount} price{res.yourPriceCount === 1 ? '' : 's'} from your receipts in the comparison below.</span><button className="ghost small" onClick={clearMine}>Clear my prices</button></div>}
+      </div>
+
       {res && res.items.length > 0 && (
         <>
           <h2 className="section">Where to shop</h2>
@@ -126,6 +195,7 @@ export default function Groceries() {
               <div key={s.id} className={'store' + (s.badges.includes('Cheapest') ? ' best' : '')}>
                 <div className="store-head"><b>{s.name}</b>{s.badges.map((b) => <span key={b} className={'pill' + (b === 'Cheapest' ? '' : ' ok')}>{b}</span>)}</div>
                 <div className="tot">{money(s.total)}{!s.complete && <span className="note"> partial</span>}</div>
+                {s.yours > 0 && <div className="note" style={{ color: 'var(--ok)' }}>{s.yours} of your receipt price{s.yours === 1 ? '' : 's'}</div>}
                 {s.complete ? <div className="note">Carries everything on your list</div> : <div className="note warnText">Does not carry: {s.missing.join(', ')}</div>}
                 {res.swaps.length > 0 && s.healthyComplete && <div className="sub2">With healthier swaps: <b>{money(s.healthyTotal)}</b> <span className="note">({s.healthyExtra >= 0 ? '+' : '−'}{money(Math.abs(s.healthyExtra))})</span></div>}
               </div>
