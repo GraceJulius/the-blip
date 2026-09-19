@@ -64,9 +64,10 @@ if (useModel) {
   }
 }
 
-console.log('\n' + 'Method'.padEnd(46) + 'Accuracy  Caught scams  False alarms  Missed');
+const W = Math.max(46, ...table.map(([n]) => n.length + 2));
+console.log('\n' + 'Method'.padEnd(W) + 'Accuracy  Caught scams  False alarms  Missed');
 for (const [name, t] of table) {
-  console.log(name.padEnd(46) + (t.acc.toFixed(1) + '%').padEnd(10) + (t.caught.toFixed(1) + '%').padEnd(14) + String(t.fp).padEnd(14) + t.fn);
+  console.log(name.padEnd(W) + (t.acc.toFixed(1) + '%').padEnd(10) + (t.caught.toFixed(1) + '%').padEnd(14) + String(t.fp).padEnd(14) + t.fn);
 }
 
 if (useModel) {
