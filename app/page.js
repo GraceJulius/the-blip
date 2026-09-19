@@ -7,6 +7,7 @@ const TOOLS = [
   { href: '/check', icon: 'sliders', title: 'Reality check', desc: 'See what a card offer really costs you.' },
   { href: '/scam', icon: 'shield', title: 'Scam check', desc: 'Paste a message and find out if it is a scam.' },
   { href: '/quests', icon: 'star', title: 'Quests', desc: 'Earn points for safe money habits.' },
+  { href: '/food', icon: 'basket', title: 'Free food nearby', desc: 'Campus and community pantries, with hours and sources.' },
 ];
 
 function label(l, quests) {
