@@ -1,6 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
 
+function sliderStyle(value, min, max) {
+  const percent = Math.min(100, Math.max(0, ((value - min) / (max - min)) * 100));
+  return { '--track-fill': percent + '%' };
+}
+
 export default function Console() {
   const [enrolled, setEnrolled] = useState(5000);
   const [avoided, setAvoided] = useState(4);
@@ -35,8 +40,8 @@ export default function Console() {
       </div>
       <div className="card">
         <h2>Projected program results (illustrative)</h2>
-        <div className="row"><label>Enrolled students</label><input type="range" min="1000" max="20000" step="500" value={enrolled} onChange={(e) => setEnrolled(+e.target.value)} /><span className="val">{enrolled.toLocaleString()}</span></div>
-        <div className="row"><label>Avoided loss per quest</label><input type="range" min="0" max="10" step="0.5" value={avoided} onChange={(e) => setAvoided(+e.target.value)} /><span className="val">${avoided.toFixed(1)}</span></div>
+        <div className="row"><label>Enrolled students</label><input type="range" min="1000" max="20000" step="500" value={enrolled} onChange={(e) => setEnrolled(+e.target.value)} style={sliderStyle(enrolled, 1000, 20000)} /><span className="val">{enrolled.toLocaleString()}</span></div>
+        <div className="row"><label>Avoided loss per quest</label><input type="range" min="0" max="10" step="0.5" value={avoided} onChange={(e) => setAvoided(+e.target.value)} style={sliderStyle(avoided, 0, 10)} /><span className="val">${avoided.toFixed(1)}</span></div>
         <div className="grid">
           {m('Quests completed', s.projection.completions.toLocaleString())}
           {m('Points cost', '$' + s.projection.cost.toLocaleString())}
