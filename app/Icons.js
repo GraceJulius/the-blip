@@ -12,6 +12,7 @@ const PATHS = {
   check: <path d="m5 12 5 5 9-10" />,
   lock: <><rect x="5.5" y="11" width="13" height="9" rx="2" /><path d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3" /></>,
   chevron: <path d="m9 6 6 6-6 6" />,
+  basket: <><path d="M4 9h16l-1.5 9a2 2 0 0 1-2 1.7h-9A2 2 0 0 1 5.5 18z" /><path d="m9 9 3-5 3 5M9.5 13v3M14.5 13v3" /></>,
 };
 
 export default function Icon({ name, size = 20 }) {

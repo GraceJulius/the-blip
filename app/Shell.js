@@ -9,6 +9,7 @@ const STUDENT = [
   { href: '/check', label: 'Check', icon: 'sliders' },
   { href: '/scam', label: 'Scams', icon: 'shield' },
   { href: '/quests', label: 'Quests', icon: 'star' },
+  { href: '/food', label: 'Food', icon: 'basket' },
   { href: '/recovery', label: 'Help', icon: 'lifebuoy' },
 ];
 const BANK = [

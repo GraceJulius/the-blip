@@ -238,6 +238,17 @@ input[type=radio] { accent-color: var(--accent); margin-right: 8px; }
   transition: width 0.4s ease;
 }
 
+/* ---------- pantries ---------- */
+.filters { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 16px; }
+button.ghost.on { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
+.place-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.place-head h2 { margin: 0 0 4px; }
+.place dl { margin: 12px 0 0; display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 10px 14px; font-size: 14px; }
+.place dt { color: var(--muted); }
+.place dd { margin: 0; overflow-wrap: anywhere; }
+.place a { color: var(--accent); }
+.pill.warn { background: var(--warn-soft); color: var(--warn); white-space: normal; text-align: right; }
+
 /* ---------- phone ---------- */
 @media (max-width: 860px) {
   .shell { display: block; }
@@ -265,4 +276,8 @@ input[type=radio] { accent-color: var(--accent); margin-right: 8px; }
   .row { flex-wrap: wrap; }
   .row label { min-width: 100%; }
   .row .val { min-width: 56px; }
+  .place-head { flex-direction: column; gap: 4px; }
+  .pill.warn { text-align: left; }
+  .place dl { grid-template-columns: 1fr; gap: 2px; }
+  .place dt { margin-top: 10px; }
 }
