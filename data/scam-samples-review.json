@@ -1,0 +1,5 @@
+[
+  {"label": "scam", "text": "The task is extremely straightforward—helping drive visibility and click rates for a popular App Store app.", "note": "Fragment of a scam text, not a full message. Replace with the complete message, then move it into scam-samples.json."},
+  {"label": "scam", "text": "If you are above the age of 22 or more text 'more info' for additional information.", "note": "Fragment of a scam text, not a full message. Replace with the complete message, then move it into scam-samples.json."},
+  {"label": "scam", "text": "A few minutes later, Mark messages you politely: Oh my gosh, I am so sorry! I was trying to send rent money to my roommate and typed your username by mistake. can you send it specifically on venmo? I'm panicking.", "note": "Original narrated version. Trimmed to the scammer's message in scam-samples.json."}
+]
