@@ -36,7 +36,7 @@ export default function Scam() {
       <div className="card">
         <p>{SAMPLES.map((s, i) => <button key={i} className="ghost" style={{ marginRight: 8 }} onClick={() => { setMessage(s); setRes(null); }}>Sample {i + 1}</button>)}</p>
         <textarea rows={4} value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Paste a suspicious message" />
-        <p><button disabled={busy} onClick={() => run(false)}>Check message</button> <span className="err">{err}</span></p>
+        <p><button disabled={busy} onClick={() => run(false)}>{busy ? 'Checking…' : 'Check message'}</button> <span className="err">{err}</span>{busy && <span className="note"> The model can take a few seconds when it is busy.</span>}</p>
       </div>
       {res && (
         <div className={'card ' + cls}>
