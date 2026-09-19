@@ -24,5 +24,17 @@
   {"label": "scam", "text": "Your subscription payment failed and your account is locked. Update your payment info within 24 hours to avoid cancellation."},
   {"label": "scam", "text": "UPS Alert: Your package has a fee of $1.50. Please update your delivery address immediately at ups-tracking-updates.com."},
   {"label": "scam", "text": "Amazon: We've issued you a $486.27 refund. Your refund is pending. Call 1-888-759-4000 to complete the process."},
-  {"label": "scam", "text": "Oh my gosh, I am so sorry! I was trying to send rent money to my roommate and typed your username by mistake. can you send it specifically on venmo? I'm panicking."}
+  {"label": "scam", "text": "Oh my gosh, I am so sorry! I was trying to send rent money to my roommate and typed your username by mistake. can you send it specifically on venmo? I'm panicking."},
+  {"label": "legit", "text": "Reminder: your rent of $650 is due on the 1st. You can pay through the resident portal or drop a check at the front office."},
+  {"label": "legit", "text": "Your refund of $18.40 for the returned textbook was sent to your original card. It can take 3 to 5 business days to show up."},
+  {"label": "legit", "text": "Final notice: your library books are overdue. Please return them to the front desk by Friday to avoid a late fee."},
+  {"label": "legit", "text": "A purchase of $54.20 at Giant Eagle was made with your card ending 4421. If this was not you, call the number on the back of your card."},
+  {"label": "legit", "text": "Security notice: a new sign-in to your school account from a Mac in Pittsburgh. If this was you, no action is needed."},
+  {"label": "legit", "text": "Your financial aid disbursement of $1,200 will post to your student account on Monday. You do not need to do anything."},
+  {"label": "legit", "text": "hey can you venmo me your half of the groceries? it was $23.50. thanks!"},
+  {"label": "legit", "text": "Your exam has been moved to Thursday at 9 AM. Please confirm your attendance now by replying YES."},
+  {"label": "legit", "text": "Your account was locked after several incorrect password attempts. Reset it on the official school login page or stop by the IT help desk."},
+  {"label": "legit", "text": "Thanks for your payment of $89.00. Your receipt is attached to this email."},
+  {"label": "legit", "text": "Your appointment is confirmed for Tuesday at 2 PM. View details: https://studenthealth.pitt.edu/appointments"},
+  {"label": "legit", "text": "The scholarship office here: your application is missing one document. Please upload it in the student portal by the 15th."}
 ]
