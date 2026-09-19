@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useBlip, post } from '../useBlip';
+import Icon from '../Icons';
 
 export default function Quests() {
   const { state, refresh } = useBlip();
@@ -21,9 +22,9 @@ export default function Quests() {
         <h2>{state.points} points · Level {state.level.index + 1} {state.level.name}</h2>
         <div className="prog"><div style={{ width: state.level.progress + '%' }} /></div>
         {state.quests.map((q) => (
-          <div className="q" key={q.id}>
-            <span>{q.done ? '✓ ' : ''}{q.title} <span className="note">({q.category})</span></span>
-            <span className="pill">{q.done ? 'Done' : '+' + q.points}</span>
+          <div className={'q' + (q.done ? ' done' : '')} key={q.id}>
+            <span><span className="tick"><Icon name="check" size={13} /></span>{q.title} <span className="note">{q.category}</span></span>
+            <span className={'pill' + (q.done ? ' ok' : '')}>{q.done ? 'Done' : '+' + q.points}</span>
           </div>
         ))}
       </div>
