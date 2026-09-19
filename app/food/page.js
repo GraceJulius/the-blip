@@ -6,7 +6,8 @@ import { PLACES, MORE_HELP, CHECKED } from '@/lib/pantries';
 const FILTERS = [
   { id: 'all', label: 'All' },
   { id: 'campus', label: 'On campus' },
-  { id: 'community', label: 'Community' },
+  { id: 'oakland', label: 'Oakland' },
+  { id: 'nearby', label: 'Nearby' },
 ];
 
 function mapsUrl(address) {
