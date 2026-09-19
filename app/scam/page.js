@@ -7,7 +7,7 @@ const SAMPLES = [
   'You are owed a $312 refund. Confirm your card number at bank-refund-secure.com within 24 hours.',
   'Your statement is ready. Open the app to view it.',
 ];
-const TEXT = { likely_scam: 'Likely scam', suspicious: 'Suspicious', no_flags: 'No red flags found' };
+const TEXT = { likely_scam: 'Likely scam', suspicious: 'Suspicious', probably_fine: 'Probably fine', no_flags: 'No red flags found' };
 
 export default function Scam() {
   const [message, setMessage] = useState('');
@@ -27,6 +27,7 @@ export default function Scam() {
     if (report) setInfo(r.award ? r.award.message + (r.award.awarded ? ' +' + r.award.awarded + ' points' : '') : 'Nothing to report: no red flags found.');
   }
 
+  const risky = res && (res.level === 'likely_scam' || res.level === 'suspicious');
   const cls = res ? (res.level === 'likely_scam' ? 'bad' : res.level === 'suspicious' ? 'warn' : 'good') : '';
   return (
     <>
@@ -42,8 +43,9 @@ export default function Scam() {
           <h2>{TEXT[res.level]}</h2>
           {res.flags.length > 0 && <ul>{res.flags.map((f) => <li key={f.id}>{f.label}</li>)}</ul>}
           {res.model && res.model.explanation && <p>{res.model.explanation}</p>}
-          {res.level !== 'no_flags' && <p className="note">Do not tap the link. Open your bank app directly. You can forward scam texts to 7726.</p>}
-          {res.level !== 'no_flags' && <button onClick={() => run(true)}>Report this scam (+25 points)</button>}
+          {risky && <p className="note">Do not tap the link. Open your bank app directly. You can forward scam texts to 7726.</p>}
+          {res.level === 'probably_fine' && <p className="note">One thing looked odd, but the model reads it as a normal message. Still open links and accounts from the official app, not from the message.</p>}
+          {risky && <button onClick={() => run(true)}>Report this scam (+25 points)</button>}
           {info && <p>{info}</p>}
         </div>
       )}

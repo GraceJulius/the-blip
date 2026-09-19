@@ -63,6 +63,7 @@ table.push(['Rules only: warn on any flag', tally(rows, (r) => r.level !== 'no_f
 table.push(['Rules only: strong alert (2+ flags)', tally(rows, (r) => r.level === 'likely_scam')]);
 if (useModel) {
   for (const m of models) {
+    table.push(['Rules + ' + short(m) + ': warn on any flag (model can clear)', tally(rows, (r) => r.level !== 'no_flags' && !(r.level === 'suspicious' && r.model[m] && r.model[m].label === 'legit'))]);
     table.push(['Rules + ' + short(m) + ': strong alert', tally(rows, (r) => r.level === 'likely_scam' || (r.level === 'suspicious' && r.model[m] && r.model[m].label === 'scam'))]);
     if (runAll) table.push([short(m) + ' alone', tally(rows, (r) => r.model[m] && r.model[m].label === 'scam')]);
   }
