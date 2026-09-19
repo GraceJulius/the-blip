@@ -1,13 +1,17 @@
 import { checkRules } from '@/lib/scamRules.mjs';
 import { classifyWithNemotron } from '@/lib/nemotron.mjs';
 import { handleEvent, getState } from '@/lib/engine';
+import { studentFrom } from '@/lib/api';
 import { allow, clientKey, tooMany } from '@/lib/guard';
 
 export const dynamic = 'force-dynamic';
 
 export async function POST(req) {
   if (!allow('scam:' + clientKey(req), 20, 60 * 1000)) return tooMany('Too many checks. Wait a minute and try again.');
-  const { message = '', report = false, studentId = 's1' } = await req.json().catch(() => ({}));
+  const { message = '', report = false, studentId: rawId } = await req.json().catch(() => ({}));
+  const s = await studentFrom(rawId);
+  if (s.error) return s.error;
+  const studentId = s.id;
   if (!message.trim()) return Response.json({ error: 'Paste a message first' }, { status: 400 });
   if (message.length > 5000) return Response.json({ error: 'That message is too long. Paste the part that worries you.' }, { status: 400 });
 

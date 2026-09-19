@@ -83,6 +83,15 @@ The starter samples in `data/scam-samples.json` are synthetic and easy. Add at l
 - Run command: `npm start`
 - Environment: add the variables from `.env.example` if using Nemotron.
 
+## Students and saved data
+
+- **Every browser is its own student.** The app creates an id the first time someone visits and keeps it in the browser. Nobody shares progress with anyone else.
+- **Link a phone to a laptop for a demo.** On the Bank simulator page you will see a link like `https://your-site/?student=s_abc123`. Open it on a phone and both devices act as the same student.
+- **Reset this student** clears only your own demo student and needs no password. **Reset everyone** needs `ADMIN_PASSWORD`.
+- **The bank console counts everyone** who has used the app.
+- **Saving across redeploys (optional).** Set `DATABASE_URL` to any Postgres connection string. The app saves its whole state there about once a second and reloads it on start. Without it, data lives in memory and a local file and is lost when the server restarts. Use one server instance only. Set `PGSSL=disable` if your database does not use SSL.
+- `MAX_STUDENTS` (default 5000) caps how many students the demo will hold.
+
 ## Protecting the live site
 
 - **Reset needs a password on the live server.** Set `ADMIN_PASSWORD` in DigitalOcean (mark it encrypted). Without it, reset is disabled in production so nobody can wipe your demo. On your own computer (`npm run dev`) reset works without a password, so leave the prompt empty.
