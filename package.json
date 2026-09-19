@@ -10,7 +10,10 @@
     "test:nemotron": "node scripts/test-nemotron.mjs",
     "test:grocery": "node scripts/test-grocery.mjs",
     "test:statement": "node scripts/test-statement.mjs",
-    "test:receipt": "node scripts/test-receipt.mjs"
+    "test:receipt": "node scripts/test-receipt.mjs",
+    "test:platform": "node scripts/test-platform.mjs",
+    "test:analytics": "node scripts/test-analytics.mjs",
+    "test": "npm run test:grocery && npm run test:statement && npm run test:receipt && npm run test:platform && npm run test:analytics"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.127.0",
