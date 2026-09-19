@@ -3,7 +3,7 @@ import fs from 'fs';
 try {
   for (const line of fs.readFileSync(new URL('../.env.local', import.meta.url), 'utf8').split('\n')) {
     const m = line.match(/^([A-Z_]+)=(.*)$/);
-    if (m && !process.env[m[1]]) process.env[m[1]] = m[2].trim();
+    if (m && !process.env[m[1]]) process.env[m[1]] = m[2].trim().replace(/^["']|["']$/g, '');
   }
 } catch {
   console.log('No .env.local found. Copy .env.example to .env.local first.');
@@ -16,6 +16,11 @@ const url = process.env.NEMOTRON_URL || 'https://integrate.api.nvidia.com/v1/cha
 
 if (!key) { console.log('NVIDIA_API_KEY is empty in .env.local'); process.exit(1); }
 if (!model) { console.log('NEMOTRON_MODEL is empty in .env.local'); process.exit(1); }
+if (model.startsWith('nvapi-')) {
+  console.log('NEMOTRON_MODEL looks like an API key. Put the key on the NVIDIA_API_KEY line and the model name on the NEMOTRON_MODEL line. Then replace the exposed key.');
+  process.exit(1);
+}
+if (!key.startsWith('nvapi-')) console.log('Note: the key does not start with nvapi-. Double-check that you copied the whole key.');
 
 const message = process.argv[2] || 'Your library book is overdue.';
 console.log('Model:', model);
