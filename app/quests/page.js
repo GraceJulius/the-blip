@@ -67,6 +67,7 @@ export default function Quests() {
   const { state, refresh } = useBlip();
   const [note, setNote] = useState('');
   const [answers, setAnswers] = useState({});
+  const [awarded, setAwarded] = useState({});
   const [quizSet, setQuizSet] = useState([]);
 
   useEffect(() => {
@@ -82,10 +83,13 @@ export default function Quests() {
 
   function handleQuizAnswer(questionIndex, option) {
     if (answers[questionIndex] !== undefined) return;
-    if (option.correct) {
-      post('/api/events', { type: 'quiz_bonus' }).then(() => refresh());
-    }
     setAnswers((prev) => ({ ...prev, [questionIndex]: option.label }));
+    if (option.correct) {
+      post('/api/events', { type: 'quiz_bonus' }).then((r) => {
+        setAwarded((prev) => ({ ...prev, [questionIndex]: r.awarded > 0 }));
+        refresh();
+      });
+    }
   }
 
   async function redeem() {
@@ -110,6 +114,11 @@ export default function Quests() {
       </div>
       <div className="card">
         <h2>Earn extra points</h2>
+        <p className="note" style={{ margin: '-4px 0 14px' }}>
+          {state.quizBonus.leftToday > 0
+            ? state.quizBonus.leftToday + ' of ' + state.quizBonus.dailyCap + ' bonus answers left today (+' + state.quizBonus.points + ' each).'
+            : 'You have used today\'s quiz bonuses. You can still practice, and more unlock tomorrow.'}
+        </p>
         <div className="quiz-list">
           {quizSet.length === 0 ? [] : quizSet.map((quiz, qIndex) => {
             const selectedAnswer = answers[qIndex];
@@ -139,7 +148,8 @@ export default function Quests() {
                         onClick={() => handleQuizAnswer(qIndex, option)}
                       >
                         <span>{option.label}</span>
-                        {showCorrectBonus && <span className="quiz-points">+25</span>}
+                        {showCorrectBonus && awarded[qIndex] === true && <span className="quiz-points">+{state.quizBonus.points}</span>}
+                        {showCorrectBonus && awarded[qIndex] === false && <span className="quiz-points capped">Limit reached</span>}
                       </button>
                     );
                   })}
