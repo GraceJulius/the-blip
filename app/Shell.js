@@ -9,7 +9,7 @@ const STUDENT = [
   { href: '/check', label: 'Check', icon: 'sliders' },
   { href: '/scam', label: 'Scams', icon: 'shield' },
   { href: '/quests', label: 'Quests', icon: 'star' },
-  { href: '/food', label: 'Food', icon: 'basket' },
+  { href: '/groceries', label: 'Food', icon: 'basket', match: ['/groceries', '/food'] },
   { href: '/recovery', label: 'Help', icon: 'lifebuoy' },
 ];
 const BANK = [
@@ -22,7 +22,7 @@ export default function Shell({ children }) {
   const bank = path.startsWith('/bank') || path.startsWith('/console');
   const { state } = useBlip();
   const items = bank ? BANK : STUDENT;
-  const isActive = (href) => (href === '/' ? path === '/' : path.startsWith(href));
+  const isActive = (i) => (i.match ? i.match.some((m) => path.startsWith(m)) : i.href === '/' ? path === '/' : path.startsWith(i.href));
 
   return (
     <div className={'shell' + (bank ? ' bank' : '')}>
@@ -34,7 +34,7 @@ export default function Shell({ children }) {
         <div className="side-label">{bank ? 'Bank view · demo' : 'Student app'}</div>
         <nav className="sidenav">
           {items.map((i) => (
-            <Link key={i.href} href={i.href} className={'navitem' + (isActive(i.href) ? ' active' : '')}>
+            <Link key={i.href} href={i.href} className={'navitem' + (isActive(i) ? ' active' : '')}>
               <Icon name={i.icon} /> {i.label}
             </Link>
           ))}
@@ -73,7 +73,7 @@ export default function Shell({ children }) {
 
       <nav className="tabbar" aria-label="Main">
         {items.map((i) => (
-          <Link key={i.href} href={i.href} className={'tab' + (isActive(i.href) ? ' active' : '')}>
+          <Link key={i.href} href={i.href} className={'tab' + (isActive(i) ? ' active' : '')}>
             <Icon name={i.icon} size={22} />
             <span>{i.label}</span>
           </Link>

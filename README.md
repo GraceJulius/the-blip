@@ -83,6 +83,15 @@ The starter samples in `data/scam-samples.json` are synthetic and easy. Add at l
 - Run command: `npm start`
 - Environment: add the variables from `.env.example` if using Nemotron.
 
+## Grocery comparison
+
+- **Where:** the Food tab, `/groceries`. Build a list from the catalog, a starter list, or plain words.
+- **Prices are computed by code, never by Claude.** Claude only reads a natural request into catalog items and writes a short summary from numbers the code already computed. If Claude is off, out of budget, or fails, a keyword matcher and plain-text advice take over.
+- **Sample data.** The catalog in `lib/grocery.mjs` has about 35 staples with typical sample prices at 4 store chains and a simple 0 to 100 health rating with a reason. These are not live prices. Edit the numbers there as you collect real ones, and check `PRICE_NOTE` still tells the truth.
+- **Real quest.** Comparing a basket of 5 or more items completes the grocery quest.
+- **Tests:** `npm run test:grocery` checks the store math, swaps, budget trimming and the keyword parser.
+- **Claude settings:** `ANTHROPIC_API_KEY`, `CLAUDE_MODEL` (default `claude-opus-5`) and `CLAUDE_CALLS_PER_10MIN`. In DigitalOcean add the key as an encrypted variable.
+
 ## Students and saved data
 
 - **Every browser is its own student.** The app creates an id the first time someone visits and keeps it in the browser. Nobody shares progress with anyone else.
