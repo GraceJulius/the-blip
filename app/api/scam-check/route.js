@@ -14,10 +14,11 @@ export async function POST(req) {
   if (level === 'suspicious') {
     model = await classifyWithNemotron(message);
     if (model && model.label === 'scam') level = 'likely_scam';
+    if (model && model.label === 'legit') level = 'probably_fine';
   }
 
   let award = null;
-  if (report && level !== 'no_flags') award = handleEvent(studentId, 'scam_reported');
+  if (report && (level === 'likely_scam' || level === 'suspicious')) award = handleEvent(studentId, 'scam_reported');
 
   return Response.json({ level, flags: rules.flags, model, award, state: report ? getState(studentId) : undefined });
 }
