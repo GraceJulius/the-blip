@@ -1,0 +1,23 @@
+import { checkRules } from '@/lib/scamRules.mjs';
+import { classifyWithNemotron } from '@/lib/nemotron';
+import { handleEvent, getState } from '@/lib/engine';
+
+export const dynamic = 'force-dynamic';
+
+export async function POST(req) {
+  const { message = '', report = false, studentId = 's1' } = await req.json().catch(() => ({}));
+  if (!message.trim()) return Response.json({ error: 'Paste a message first' }, { status: 400 });
+
+  const rules = checkRules(message);
+  let level = rules.level;
+  let model = null;
+  if (level === 'suspicious') {
+    model = await classifyWithNemotron(message);
+    if (model && model.label === 'scam') level = 'likely_scam';
+  }
+
+  let award = null;
+  if (report && level !== 'no_flags') award = handleEvent(studentId, 'scam_reported');
+
+  return Response.json({ level, flags: rules.flags, model, award, state: report ? getState(studentId) : undefined });
+}
