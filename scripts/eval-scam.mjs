@@ -36,6 +36,7 @@ function tally(rows, pred) {
 }
 
 const rows = samples.map((s) => ({ ...s, ...checkRules(s.text), model: {} }));
+const times = {};
 const suspicious = rows.filter((r) => r.level === 'suspicious').length;
 console.log('Samples:', rows.length, '(scams:', rows.filter((r) => r.label === 'scam').length + ', legit:', rows.filter((r) => r.label === 'legit').length + ')');
 console.log('Messages with exactly one flag ("suspicious"):', suspicious);
@@ -44,8 +45,11 @@ if (useModel) {
   const jobs = rows.filter((r) => runAll || r.level === 'suspicious');
   console.log('Calling', models.length, 'model(s) on', jobs.length, 'message(s). About', Math.ceil((jobs.length * models.length * delay) / 1000), 'seconds.');
   for (const m of models) {
+    times[m] = [];
     for (const r of jobs) {
+      const t0 = Date.now();
       r.model[m] = await classifyWithNemotron(r.text, { model: m });
+      times[m].push(Date.now() - t0);
       await sleep(delay);
     }
   }
@@ -71,6 +75,18 @@ for (const [name, t] of table) {
 }
 
 if (useModel) {
+  console.log('\nSpeed per call (includes one retry if the first call failed):');
+  for (const m of models) {
+    const t = [...times[m]].sort((a, b) => a - b);
+    if (!t.length) continue;
+    const avg = Math.round(t.reduce((a, b) => a + b, 0) / t.length);
+    const median = t[Math.floor(t.length / 2)];
+    const failed = Object.values(rows).filter((r) => r.model[m] === null && (runAll || r.level === 'suspicious')).length;
+    console.log('-', short(m).padEnd(34), 'average', avg + ' ms,', 'median', median + ' ms,', 'slowest', t[t.length - 1] + ' ms,', 'no answer:', failed + '/' + t.length);
+  }
+}
+
+if (useModel) {
   console.log('\nCases where the model changed the outcome or looked unsure:');
   let shown = 0;
   for (const r of rows) {
@@ -84,7 +100,7 @@ if (useModel) {
       }
     }
   }
-  fs.writeFileSync(new URL('../data/eval-results.json', import.meta.url), JSON.stringify({ ranAt: new Date().toISOString(), models, runAll, summary: table.map(([name, t]) => ({ name, ...t })) }, null, 2));
+  fs.writeFileSync(new URL('../data/eval-results.json', import.meta.url), JSON.stringify({ ranAt: new Date().toISOString(), models, runAll, summary: table.map(([name, t]) => ({ name, ...t })), speedMs: Object.fromEntries(models.map((m) => [m, times[m]])) }, null, 2));
   console.log('\nSaved summary to data/eval-results.json');
 }
 
