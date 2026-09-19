@@ -31,7 +31,7 @@ Reset demo data any time with the button on `/bank`.
 | `app/check` | Reward reality check and payoff plan | Frontend A |
 | `app/page.js`, `app/Nav.js`, `app/globals.css` | Dashboard, nav, styling | Frontend A |
 | `app/quests`, `app/bank`, `app/recovery` | Quests, bank simulator, recovery mode | Frontend B |
-| `app/scam`, `lib/scamRules.mjs`, `lib/nemotron.js`, `data/scam-samples.json`, `scripts/eval-scam.mjs` | Scam check, model, evaluation | Data and AI |
+| `app/scam`, `lib/scamRules.mjs`, `lib/nemotron.mjs`, `data/scam-samples.json`, `scripts/eval-scam.mjs` | Scam check, model, evaluation | Data and AI |
 | `app/console`, `app/api/stats` | Bank console | Pitch and console |
 | `app/api/*`, `lib/engine.js`, `lib/quests.js`, `lib/levels.js`, `lib/store.js` | API, points engine, data | Lead and API |
 
@@ -51,6 +51,18 @@ API details: `docs/API.md`.
 ```bash
 npm run eval
 ```
+
+Runs the fixed rules on every message in `data/scam-samples.json` and prints accuracy, scams caught, false alarms and misses. If `NVIDIA_API_KEY` and `NEMOTRON_MODEL` are set in `.env.local`, it also runs Nemotron on the one-flag ("suspicious") messages, exactly like the app, and shows what the model adds.
+
+Options:
+
+```bash
+npm run eval -- --models nvidia/nemotron-3.5-lightning-30b-a3b,nvidia/nemotron-3-super-120b-a12b
+npm run eval -- --all        # also test the model on every message, alone
+npm run eval -- --delay 3000 # wait longer between calls if you hit rate limits
+```
+
+Results are saved to `data/eval-results.json`. Check the exact model names on build.nvidia.com.
 
 The starter samples in `data/scam-samples.json` are synthetic and easy. Add at least 30 realistic ones, including tricky legit messages, before you quote any accuracy number.
 

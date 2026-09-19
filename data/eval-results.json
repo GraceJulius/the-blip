@@ -1,0 +1,38 @@
+{
+  "ranAt": "2026-09-19T17:14:36.468Z",
+  "models": [
+    "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "nvidia/nemotron-3-super-120b-a12b"
+  ],
+  "runAll": false,
+  "summary": [
+    {
+      "name": "Rules only: warn on any flag",
+      "acc": 100,
+      "caught": 100,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "name": "Rules only: strong alert (2+ flags)",
+      "acc": 90,
+      "caught": 83.33333333333334,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "name": "Rules + nemotron-3.5-lightning-30b-a3b: strong alert",
+      "acc": 100,
+      "caught": 100,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "name": "Rules + nemotron-3-super-120b-a12b: strong alert",
+      "acc": 100,
+      "caught": 100,
+      "fp": 0,
+      "fn": 0
+    }
+  ]
+}

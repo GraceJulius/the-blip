@@ -1,5 +1,5 @@
 import { checkRules } from '@/lib/scamRules.mjs';
-import { classifyWithNemotron } from '@/lib/nemotron';
+import { classifyWithNemotron } from '@/lib/nemotron.mjs';
 import { handleEvent, getState } from '@/lib/engine';
 
 export const dynamic = 'force-dynamic';
