@@ -8,7 +8,8 @@
     "start": "next start",
     "eval": "node scripts/eval-scam.mjs",
     "test:nemotron": "node scripts/test-nemotron.mjs",
-    "test:grocery": "node scripts/test-grocery.mjs"
+    "test:grocery": "node scripts/test-grocery.mjs",
+    "test:statement": "node scripts/test-statement.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.127.0",
