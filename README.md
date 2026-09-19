@@ -83,6 +83,13 @@ The starter samples in `data/scam-samples.json` are synthetic and easy. Add at l
 - Run command: `npm start`
 - Environment: add the variables from `.env.example` if using Nemotron.
 
+## Protecting the live site
+
+- **Reset needs a password on the live server.** Set `ADMIN_PASSWORD` in DigitalOcean (mark it encrypted). Without it, reset is disabled in production so nobody can wipe your demo. On your own computer (`npm run dev`) reset works without a password, so leave the prompt empty.
+- **Rate limits.** Each visitor is limited per minute on every write action (scam check 20, events 120, redeem 30, recovery 60), and reset attempts are limited too.
+- **Model quota guard.** At most `MODEL_CALLS_PER_10MIN` (default 60) model calls are made across all visitors every 10 minutes. After that the scam check keeps working with rules only.
+- The bank simulator's events are left open on purpose: they are how the demo works. Do not share the link publicly before you present.
+
 ## Guardrails
 
 - Educational only. No card recommendations, no promised score changes.
