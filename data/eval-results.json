@@ -1,38 +1,39 @@
 {
-  "ranAt": "2026-09-19T17:14:36.468Z",
+  "ranAt": "2026-09-19T17:50:49.545Z",
   "models": [
-    "nvidia/nemotron-3.5-lightning-30b-a3b",
-    "nvidia/nemotron-3-super-120b-a12b"
+    "nvidia/nemotron-3.5-lightning-30b-a3b"
   ],
   "runAll": false,
   "summary": [
     {
       "name": "Rules only: warn on any flag",
-      "acc": 100,
+      "acc": 85.71428571428571,
       "caught": 100,
-      "fp": 0,
+      "fp": 4,
       "fn": 0
     },
     {
       "name": "Rules only: strong alert (2+ flags)",
-      "acc": 90,
+      "acc": 89.28571428571429,
       "caught": 83.33333333333334,
-      "fp": 0,
+      "fp": 1,
       "fn": 2
     },
     {
       "name": "Rules + nemotron-3.5-lightning-30b-a3b: strong alert",
-      "acc": 100,
-      "caught": 100,
-      "fp": 0,
-      "fn": 0
-    },
-    {
-      "name": "Rules + nemotron-3-super-120b-a12b: strong alert",
-      "acc": 100,
-      "caught": 100,
-      "fp": 0,
-      "fn": 0
+      "acc": 85.71428571428571,
+      "caught": 91.66666666666666,
+      "fp": 3,
+      "fn": 1
     }
-  ]
+  ],
+  "speedMs": {
+    "nvidia/nemotron-3.5-lightning-30b-a3b": [
+      27849,
+      943,
+      31504,
+      17858,
+      1281
+    ]
+  }
 }

@@ -48,7 +48,7 @@ if (useModel) {
     times[m] = [];
     for (const r of jobs) {
       const t0 = Date.now();
-      r.model[m] = await classifyWithNemotron(r.text, { model: m });
+      r.model[m] = await classifyWithNemotron(r.text, { model: m, retry: true, timeoutMs: 25000 });
       times[m].push(Date.now() - t0);
       await sleep(delay);
     }
@@ -75,7 +75,7 @@ for (const [name, t] of table) {
 }
 
 if (useModel) {
-  console.log('\nSpeed per call (includes one retry if the first call failed):');
+  console.log('\nSpeed per call (the eval waits up to 25 s and retries once; the app waits only 8 s and does not retry):');
   for (const m of models) {
     const t = [...times[m]].sort((a, b) => a - b);
     if (!t.length) continue;
