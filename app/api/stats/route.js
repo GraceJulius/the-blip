@@ -1,9 +1,10 @@
-import { db } from '@/lib/store';
+import { db, ready } from '@/lib/store';
 import { ASSUMPTIONS } from '@/lib/quests';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET(req) {
+  await ready();
   const q = new URL(req.url).searchParams;
   const enrolled = Number(q.get('enrolled')) || ASSUMPTIONS.enrolled;
   const avoided = q.has('avoided') ? Number(q.get('avoided')) : ASSUMPTIONS.avoidedPerQuest;
