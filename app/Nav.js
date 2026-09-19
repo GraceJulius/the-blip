@@ -7,7 +7,10 @@ export default function Nav() {
   return (
     <>
       <header className="nav">
-        <Link href="/" className="brand">TheBlip</Link>
+        <Link href="/" className="brand">
+          <img src="/logo-mark.png" alt="" width="30" height="30" />
+          <span>TheBlip</span>
+        </Link>
         <nav>
           <Link href="/check">Reality check</Link>
           <Link href="/scam">Scam check</Link>

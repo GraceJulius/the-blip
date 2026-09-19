@@ -1,3 +1,5 @@
+<p align="center"><img src="public/logo.png" alt="TheBlip logo" width="220"></p>
+
 # TheBlip
 
 See the real cost before you swipe. TheBlip helps college students make better credit decisions, spot scams, and level up by building safe money habits. Banks plug it in through a small event API.
