@@ -249,6 +249,29 @@ button.ghost.on { background: var(--accent-soft); color: var(--accent); border-c
 .place a { color: var(--accent); }
 .pill.warn { background: var(--warn-soft); color: var(--warn); white-space: normal; text-align: right; }
 
+/* ---------- groceries ---------- */
+.seg { display: inline-flex; gap: 4px; padding: 4px; margin: 0 0 18px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px; }
+.seg a { padding: 8px 14px; border-radius: 9px; font-size: 14px; font-weight: 600; color: var(--muted); text-decoration: none; }
+.seg a.on { background: var(--accent-soft); color: var(--accent); }
+.actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+button.small, .btn.small { padding: 6px 12px; font-size: 13px; }
+h2.section { font-size: 16px; font-weight: 600; margin: 22px 0 10px; }
+.stores { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 0 0 16px; }
+.store { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
+.store.best { border-color: var(--accent); background: var(--accent-soft); }
+.store-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+.store .tot { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; }
+.store .sub2 { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13px; }
+.warnText { color: var(--warn); }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 10px; background: var(--faint); vertical-align: middle; }
+.dot.ok { background: var(--ok); } .dot.warn { background: var(--warn); } .dot.bad { background: var(--bad); }
+.qty { display: inline-flex; align-items: center; gap: 10px; }
+.qty b { min-width: 18px; text-align: center; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 8px; }
+.big { font-size: 34px; font-weight: 700; letter-spacing: -0.02em; }
+.big.ok { color: var(--ok); } .big.warn { color: var(--warn); } .big.bad { color: var(--bad); }
+
 /* ---------- phone ---------- */
 @media (max-width: 860px) {
   .shell { display: block; }

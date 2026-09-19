@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Icon from '../Icons';
+import FoodTabs from '../FoodTabs';
 import { PLACES, MORE_HELP, CHECKED } from '@/lib/pantries';
 
 const FILTERS = [
@@ -21,6 +22,8 @@ export default function Food() {
     <>
       <h1>Free food near campus</h1>
       <p className="sub">Real places where students can get groceries at no cost. Hours change, so check the source before you go.</p>
+
+      <FoodTabs />
 
       <div className="filters">
         {FILTERS.map((f) => (
