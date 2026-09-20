@@ -2,6 +2,7 @@ import { z } from 'zod';
 import { compare, normalizeItems } from '@/lib/grocery.mjs';
 import { claudeParse, claudeAvailable } from '@/lib/claude';
 import { studentFrom } from '@/lib/api';
+import { userPricesFor } from '@/lib/engine';
 import { allow, clientKey, tooMany } from '@/lib/guard';
 
 export const dynamic = 'force-dynamic';
@@ -41,7 +42,7 @@ export async function POST(req) {
   const s = await studentFrom(body.studentId);
   if (s.error) return s.error;
 
-  const r = compare(normalizeItems(Array.isArray(body.items) ? body.items.slice(0, 40) : []), { budget: Number(body.budget) > 0 ? Number(body.budget) : null });
+  const r = compare(normalizeItems(Array.isArray(body.items) ? body.items.slice(0, 40) : []), { budget: Number(body.budget) > 0 ? Number(body.budget) : null, userPrices: userPricesFor(s.id) });
   if (!r.items.length) return Response.json({ advice: 'Add a few items to get advice.', usedClaude: false });
 
   const f = facts(r);

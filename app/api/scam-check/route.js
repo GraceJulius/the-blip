@@ -1,6 +1,7 @@
 import { checkRules } from '@/lib/scamRules.mjs';
 import { classifyWithNemotron } from '@/lib/nemotron.mjs';
-import { handleEvent, getState } from '@/lib/engine';
+import { handleEvent, getState, orgOf } from '@/lib/engine';
+import { recordScamSignal } from '@/lib/orgs';
 import { studentFrom } from '@/lib/api';
 import { allow, clientKey, tooMany } from '@/lib/guard';
 
@@ -26,7 +27,10 @@ export async function POST(req) {
   }
 
   let award = null;
-  if (report && (level === 'likely_scam' || level === 'suspicious')) award = handleEvent(studentId, 'scam_reported');
+  if (report && (level === 'likely_scam' || level === 'suspicious')) {
+    award = handleEvent(studentId, 'scam_reported');
+    if (award && award.awarded > 0) recordScamSignal(orgOf(studentId), level, rules.flags.map((f) => f.id));
+  }
 
   return Response.json({ level, flags: rules.flags, model, award, state: report ? getState(studentId) : undefined });
 }

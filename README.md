@@ -92,6 +92,26 @@ The starter samples in `data/scam-samples.json` are synthetic and easy. Add at l
 - **Tests:** `npm run test:grocery` checks the store math, swaps, budget trimming and the keyword parser.
 - **Claude settings:** `ANTHROPIC_API_KEY`, `CLAUDE_MODEL` (default `claude-opus-5`) and `CLAUDE_CALLS_PER_10MIN`. In DigitalOcean add the key as an encrypted variable.
 
+## Free food map
+
+- `/food` shows a map with a pin for each place, a list with the details, and filters (On campus, Oakland, Nearby, Open now).
+- **Open now** is shown only for places with confirmed weekly hours (`schedule` in `lib/pantries.js`, Pittsburgh time). Every other place shows "Confirm before you go". Never add a `schedule` you have not confirmed with the source.
+- **Use my location** sorts by distance. The location stays in the browser and is never sent to the server.
+- **Coordinates** come from OpenStreetMap search. Campus buildings and one Bloomfield address are placed at the area, not the exact door, and the page says so. Map tiles and data are from OpenStreetMap contributors.
+- Tests: `npm run test:map` checks the open-now logic (including time zones and daylight saving) and the distance math.
+
+## Partner platform (for banks and other companies)
+
+- **Console** (`/console`, Bank view): overview charts and KPIs, program settings, and an integration center. Overview is public; **Program** and **Integration** need `ADMIN_PASSWORD`.
+- **Organizations.** Each partner has its own students, API keys, custom quests, points budget, brand and webhook. Nothing is shared between them. The `demo` organization is created automatically and holds the students of the public app.
+- **Public API** (`/api/v1/...`, key in `Authorization: Bearer`): send events, read a student, list quests, read stats, mint embed tokens. Full docs at `/docs`. Keys are shown once and only a hash is stored.
+- **Embeddable widget:** the partner's server mints a short-lived, signed, read-only token, and the page includes `<script src=".../embed.js" data-token="...">`.
+- **Webhooks:** signed with HMAC-SHA256 when a student earns points. Addresses must be public https URLs; private, loopback and cloud-metadata addresses are refused, and redirects are not followed. There are no automatic retries yet.
+- **Simulated cohort:** the Console can load 240 generated students so the charts have something to show. They are flagged, excluded by default, never counted by the partner API, and never trigger webhooks.
+- **Reset everyone** clears students and points but keeps organizations, keys and quests.
+- **Tests:** `npm test` runs the unit suites. `scripts/e2e-platform.py` runs 73 end-to-end checks (see the comment at the top of that file).
+- Local testing only: `WEBHOOK_ALLOW_INSECURE=1` and `WEBHOOK_ALLOW_PRIVATE=1` let webhooks reach a local receiver. Never set them on a live server.
+
 ## Students and saved data
 
 - **Every browser is its own student.** The app creates an id the first time someone visits and keeps it in the browser. Nobody shares progress with anyone else.

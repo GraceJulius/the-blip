@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { CATALOG, CATALOG_IDS, compare, parseRequest, normalizeItems } from '@/lib/grocery.mjs';
 import { claudeParse } from '@/lib/claude';
 import { studentFrom } from '@/lib/api';
-import { handleEvent } from '@/lib/engine';
+import { handleEvent, userPricesFor } from '@/lib/engine';
 import { allow, clientKey, tooMany } from '@/lib/guard';
 
 export const dynamic = 'force-dynamic';
@@ -54,7 +54,7 @@ export async function POST(req) {
     }
   }
 
-  const result = compare(normalizeItems(items), { budget });
+  const result = compare(normalizeItems(items), { budget, userPrices: userPricesFor(s.id) });
   let questAward = 0;
   if (result.items.length >= 5) {
     const ev = handleEvent(s.id, 'basket_compared');

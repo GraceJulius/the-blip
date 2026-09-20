@@ -8,10 +8,17 @@
     "start": "next start",
     "eval": "node scripts/eval-scam.mjs",
     "test:nemotron": "node scripts/test-nemotron.mjs",
-    "test:grocery": "node scripts/test-grocery.mjs"
+    "test:grocery": "node scripts/test-grocery.mjs",
+    "test:statement": "node scripts/test-statement.mjs",
+    "test:receipt": "node scripts/test-receipt.mjs",
+    "test:platform": "node scripts/test-platform.mjs",
+    "test:analytics": "node scripts/test-analytics.mjs",
+    "test": "npm run test:grocery && npm run test:statement && npm run test:receipt && npm run test:platform && npm run test:analytics && npm run test:map",
+    "test:map": "node scripts/test-map.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.127.0",
+    "leaflet": "^1.9.4",
     "next": "14.2.15",
     "pg": "^8.23.0",
     "react": "18.3.1",

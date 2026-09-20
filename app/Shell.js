@@ -15,13 +15,20 @@ const STUDENT = [
 const BANK = [
   { href: '/console', label: 'Console', icon: 'chart' },
   { href: '/bank', label: 'Simulator', icon: 'terminal' },
+  { href: '/docs', label: 'API docs', icon: 'book' },
 ];
 
 export default function Shell({ children }) {
   const path = usePathname() || '/';
-  const bank = path.startsWith('/bank') || path.startsWith('/console');
+  if (path.startsWith('/embed')) return <div className="embed-root">{children}</div>;
+  return <AppShell path={path}>{children}</AppShell>;
+}
+
+function AppShell({ children, path }) {
+  const bank = path.startsWith('/bank') || path.startsWith('/console') || path.startsWith('/docs');
   const { state } = useBlip();
   const items = bank ? BANK : STUDENT;
+
   const isActive = (i) => (i.match ? i.match.some((m) => path.startsWith(m)) : i.href === '/' ? path === '/' : path.startsWith(i.href));
 
   return (

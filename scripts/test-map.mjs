@@ -1,0 +1,42 @@
+import { openStatus } from '../lib/openNow.mjs';
+import { distanceMiles, formatMiles, sortByDistance } from '../lib/geo.mjs';
+let pass = 0, fail = 0;
+const ok = (n, c, x = '') => { console.log((c ? '  PASS ' : '  FAIL ') + n + (c ? '' : ' ' + x)); c ? pass++ : fail++; };
+
+const PITT = { 1: [[11, 14]], 2: [[11, 19]], 3: [[11, 19]] };
+// September 22 2026 is a Tuesday. Pittsburgh is on daylight time then (UTC-4).
+const at = (iso) => new Date(iso);
+let s = openStatus(PITT, at('2026-09-22T16:00:00Z'));
+ok('Tuesday 12:00 in Pittsburgh is open until 7 PM', s.open && s.text === 'Open now until 7 PM', JSON.stringify(s));
+s = openStatus(PITT, at('2026-09-22T14:59:00Z'));
+ok('Tuesday 10:59 is still closed, opens today at 11 AM', !s.open && s.text.includes('today at 11 AM'), JSON.stringify(s));
+s = openStatus(PITT, at('2026-09-22T23:00:00Z'));
+ok('Tuesday 7:00 PM sharp is closed (the end time is exclusive)', !s.open, JSON.stringify(s));
+s = openStatus(PITT, at('2026-09-22T22:59:00Z'));
+ok('Tuesday 6:59 PM is open', s.open, JSON.stringify(s));
+s = openStatus(PITT, at('2026-09-24T18:00:00Z'));
+ok('Thursday is closed and the next opening is Monday', !s.open && s.text.includes('Mon at 11 AM'), JSON.stringify(s));
+s = openStatus(PITT, at('2026-09-25T02:00:00Z'));
+ok('Wednesday 10 PM Pittsburgh time (2 AM UTC Thursday) uses Pittsburgh time, not UTC', !s.open && s.text.includes('Mon'), JSON.stringify(s));
+s = openStatus(PITT, at('2026-09-22T01:00:00Z'));
+ok('Monday 9 PM Pittsburgh time (1 AM UTC Tuesday) is closed and opens tomorrow', !s.open && s.text.includes('tomorrow at 11 AM'), JSON.stringify(s));
+s = openStatus(PITT, at('2026-12-08T17:00:00Z'));
+ok('in winter (UTC-5) Tuesday noon is 5 PM UTC and correctly open', s.open, JSON.stringify(s));
+s = openStatus(PITT, at('2026-12-08T16:30:00Z'));
+ok('in winter 11:30 AM local is open and 10:30 AM local is not', s.open && !openStatus(PITT, at('2026-12-08T15:30:00Z')).open);
+ok('no schedule means unknown, never a guess', openStatus(null, new Date()) === null && openStatus(undefined, new Date()) === null);
+ok('a place with an empty week says closed', openStatus({}, at('2026-09-22T16:00:00Z')).open === false);
+s = openStatus({ 4: [[10, 20]] }, at('2026-09-24T22:30:00Z'));
+ok('a late Thursday hour reads correctly (6:30 PM, open until 8 PM)', s.open && s.text === 'Open now until 8 PM', JSON.stringify(s));
+s = openStatus({ 3: [[11, 18]], 4: [[15, 18]] }, at('2026-09-23T15:00:00Z'));
+ok('a place with two different days finds the right one', s.open && s.text === 'Open now until 6 PM', JSON.stringify(s));
+
+const pitt = { lat: 40.44477, lng: -79.95725 }, cmu = { lat: 40.44687, lng: -79.94677 }, duq = { lat: 40.43653, lng: -79.99048 };
+ok('distance from a point to itself is zero', distanceMiles(pitt, pitt) === 0);
+ok('Pitt to CMU is about 0.6 miles', Math.abs(distanceMiles(pitt, cmu) - 0.55) < 0.15, String(distanceMiles(pitt, cmu)));
+ok('Pitt to Duquesne is about 1.7 miles', Math.abs(distanceMiles(pitt, duq) - 1.75) < 0.25, String(distanceMiles(pitt, duq)));
+ok('distance is symmetric', Math.abs(distanceMiles(pitt, duq) - distanceMiles(duq, pitt)) < 1e-9);
+ok('distances are formatted for people', formatMiles(0.04) === 'under 0.1 mi' && formatMiles(0.63) === '0.6 mi' && formatMiles(12.4) === '12 mi');
+const sorted = sortByDistance([{ id: 'duq', ...duq }, { id: 'cmu', ...cmu }, { id: 'pitt', ...pitt }], pitt);
+ok('sorting puts the nearest first', sorted.map((p) => p.id).join() === 'pitt,cmu,duq', sorted.map((p) => p.id).join());
+console.log(fail ? `\n${fail} FAILED, ${pass} passed` : `\nall ${pass} checks passed`); process.exit(fail ? 1 : 0);
