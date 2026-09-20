@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useBlip } from './useBlip';
 import Icon from './Icons';
+import Onboarding from './Onboarding';
 
 const STUDENT = [
   { href: '/', label: 'Home', icon: 'home' },
@@ -54,6 +55,9 @@ function AppShell({ children, path }) {
               <div className="lc-pts">{state.points} points</div>
             </div>
           )}
+          <button className="switch helpbtn" onClick={(e) => window.dispatchEvent(new CustomEvent('blip-help', { detail: { opener: e.currentTarget } }))}>
+            <Icon name="help" size={18} /> How this page works
+          </button>
           <Link href={bank ? '/' : '/console'} className="switch">
             <Icon name={bank ? 'arrowLeft' : 'bank'} size={18} />
             {bank ? 'Back to student app' : 'Bank view'}
@@ -67,7 +71,10 @@ function AppShell({ children, path }) {
             <img src="/logo-mark.png" alt="" width="30" height="30" />
             <span>TheBlip</span>
           </Link>
-          {bank ? <span className="chip">Bank view</span> : state && <span className="chip">{state.points} pts · Lv {state.level.index + 1}</span>}
+          <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            {bank ? <span className="chip">Bank view</span> : state && <span className="chip">{state.points} pts · Lv {state.level.index + 1}</span>}
+            <button className="iconbtn" aria-label="How this page works" onClick={(e) => window.dispatchEvent(new CustomEvent('blip-help', { detail: { opener: e.currentTarget } }))}><Icon name="help" size={20} /></button>
+          </span>
         </header>
         {!bank && state && state.locked && (
           <div className="lockbar">
@@ -89,6 +96,7 @@ function AppShell({ children, path }) {
           <Link href="/" className="tab"><Icon name="arrowLeft" size={22} /><span>Student</span></Link>
         )}
       </nav>
+      <Onboarding />
     </div>
   );
 }

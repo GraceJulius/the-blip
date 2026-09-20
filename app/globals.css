@@ -308,6 +308,30 @@ a.btn.ghostlink { background: transparent; color: var(--text); border-color: var
 .place a.btn { color: var(--on-accent); text-decoration: none; }
 .place a.btn.ghostlink { color: var(--text); }
 
+/* ---------- onboarding ---------- */
+.ob-back { position: fixed; inset: 0; z-index: 200; background: rgba(6, 6, 12, 0.72); display: flex; align-items: center; justify-content: center; padding: 20px; animation: obfade 0.18s ease-out; }
+.ob { width: 100%; max-width: 460px; max-height: calc(100vh - 40px); overflow-y: auto; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 18px; padding: 26px 24px 18px; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55); animation: obrise 0.22s ease-out; }
+.ob-ico { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); margin-bottom: 14px; }
+.ob h2 { font-size: 21px; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 8px; }
+.ob-lead { margin: 0 0 12px; color: var(--muted); font-size: 15px; line-height: 1.55; }
+.ob-list { list-style: none; margin: 4px 0 6px; padding: 0; display: grid; gap: 10px; }
+.ob-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 14.5px; line-height: 1.45; }
+.ob-list li svg { flex: none; margin-top: 2px; color: var(--accent); }
+.ob-dots { display: flex; gap: 6px; justify-content: center; margin: 16px 0 4px; }
+.ob-dots span { width: 7px; height: 7px; border-radius: 50%; background: var(--surface-3); }
+.ob-dots span.on { background: var(--accent); width: 20px; border-radius: 999px; }
+.ob-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 18px; }
+.ob-actions button { min-width: 110px; }
+.ob-foot { display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; }
+button.linkish { background: transparent; color: var(--faint); border: 0; box-shadow: none; padding: 4px 0; font-size: 12.5px; font-weight: 500; text-decoration: underline; }
+button.linkish:hover { color: var(--muted); filter: none; }
+button.iconbtn { background: var(--surface-2); color: var(--muted); border: 1px solid var(--border); padding: 0; width: 34px; height: 34px; border-radius: 50%; box-shadow: none; }
+button.iconbtn:hover { color: var(--text); filter: none; }
+button.switch.helpbtn { background: transparent; cursor: pointer; text-align: left; width: 100%; }
+@keyframes obfade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes obrise { from { opacity: 0; transform: translateY(8px) scale(0.98); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .ob-back, .ob { animation: none; } }
+
 /* ---------- phone ---------- */
 @media (max-width: 860px) {
   .shell { display: block; }
@@ -340,5 +364,8 @@ a.btn.ghostlink { background: transparent; color: var(--text); border-color: var
   .place dl { grid-template-columns: 1fr; gap: 2px; }
   .tbl { display: block; overflow-x: auto; white-space: nowrap; }
   .map { height: 260px; }
+  .ob-back { align-items: flex-end; padding: 12px; }
+  .ob { padding: 22px 18px 14px; }
+  .ob-actions button { flex: 1; }
   .place dt { margin-top: 10px; }
 }
