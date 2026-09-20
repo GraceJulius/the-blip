@@ -110,6 +110,15 @@ export default function Home() {
           </div>
         )}
       </div>
+
+      <div className="card">
+        <h2>{t('See the bank side')}</h2>
+        <p className="note">{t('In this demo you can play the bank: send a payment or a paycheck and watch the student get a warning.')}</p>
+        <p style={{ display: 'flex', gap: 10, flexWrap: 'wrap', margin: 0 }}>
+          <Link href="/bank" className="switch">{t('Open the bank simulator')}</Link>
+          <Link href="/console" className="switch">{t('Open the bank dashboard')}</Link>
+        </p>
+      </div>
     </>
   );
 }
