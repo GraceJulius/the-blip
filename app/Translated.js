@@ -36,8 +36,8 @@ export default function Translated({ parts }) {
       {out && (
         <>
           {out.map((line, i) => <p key={i} style={{ fontSize: 18, lineHeight: 1.5, margin: i === 0 ? '0 0 8px' : '0 0 6px', fontWeight: i === 0 ? 700 : 400 }}>{line}</p>)}
-          <p style={{ margin: '10px 0 4px' }}><ReadAloud text={out.join(' ')} lang={lang} label={t('Read aloud')} /></p>
-          <p className="note">{t('Translated by AI. If it matters, check it with someone you trust.')}{l.voice === null ? ' ' + t('There is no voice for this language yet, so this device may read it with a different accent.') : ''}</p>
+          {l.voice !== null && <p style={{ margin: '10px 0 4px' }}><ReadAloud text={out.join(' ')} lang={lang} label={t('Read aloud')} /></p>}
+          <p className="note">{t('Translated by AI. If it matters, check it with someone you trust.')}{l.voice === null ? ' ' + t('This language is text only for now, with no voice yet.') : ''}</p>
         </>
       )}
     </div>
