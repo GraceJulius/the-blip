@@ -241,6 +241,7 @@
  "Text the code back": "কোডটি ফিরতি বার্তায় পাঠান",
  "That is under the 30% mark, which is good for your credit score.": "এটি ৩০%-এর নিচে, যা আপনার ক্রেডিট স্কোরের জন্য ভালো।",
  "That payment does not cover the monthly interest. Try a higher amount.": "ওই টাকায় মাসিক সুদও শোধ হয় না। আরও বেশি টাকা দিন।",
+ "The AI double-check was not available, so this is a first-pass check only.": "এআই দিয়ে দ্বিতীয়বার যাচাই করা যায়নি, তাই এটি শুধু প্রথম ধাপের যাচাই।",
  "The model can take a few seconds when it is busy.": "ব্যস্ত থাকলে মডেলটির কয়েক সেকেন্ড সময় লাগতে পারে।",
  "The sender": "প্রেরক",
  "The sender says they are your bank and asks you to share the code they just texted.": "প্রেরক বলছে সে আপনার ব্যাংক, আর এইমাত্র পাঠানো কোডটি চাইছে।",

@@ -24,7 +24,7 @@ Built for the **PNC Compound** track (best financial hack), and it also uses NVI
 
 - **AI in the product:**
   - **Anthropic Claude** reads card statements and receipts, turns a plain request into a grocery list, writes short summaries, and translates warnings into other languages. Claude never does the math: prices, totals and interest are computed by our code.
-  - **NVIDIA Nemotron** helps classify borderline scam messages. Simple rules run first, and the app still works with rules only if the model is slow or off.
+  - **NVIDIA Nemotron** checks every message for the scam check. Plain rules and a small local classifier run alongside it, explain the verdict, and are the backup if the model is slow or off (the screen says when that happens).
 - **AI used to build it:** we used **Claude Code (Anthropic)** as a coding assistant for much of the code, tests and documentation. Team members reviewed, ran and directed the work.
 - **Voice:** **ElevenLabs** text to speech reads warnings aloud, in several languages (optional). Without a key the browser's built-in voice is used.
 - **Services:** Tiger Cloud (Tiger Data) Postgres for saved state, DigitalOcean App Platform for hosting, a `.tech` domain from MLH.
@@ -136,16 +136,19 @@ the-blip/
 │   ├── tts.mjs                   Read-aloud text cleanup and the ElevenLabs call
 │   ├── languages.mjs, translate.js   Language list, voice choice, translation of warnings
 │   ├── i18n.mjs                  Interface translation helpers
-│   ├── nemotron.mjs              NVIDIA Nemotron scam classifier
+│   ├── nemotron.mjs              NVIDIA Nemotron scam classifier (tolerant answer parsing)
+│   ├── scamCheck.mjs             The scam decision: model on every message, rules and classifier as backup
+│   ├── scamNormalize.mjs, scamNB.mjs   Removes disguises; small local classifier
 │   ├── claude.js, vision.js, statement.mjs, receipt.mjs   Claude features (Claude never does the math)
 │   ├── grocery.mjs               Store prices, health ratings and comparisons
 │   ├── pantries.js, openNow.mjs, geo.mjs   Free food places, opening hours, distance
 │   ├── orgs.js, platform.mjs, partnerApi.js, webhooks.js, analytics.mjs   Partner platform
 │   ├── guard.js                  Rate limits, admin lockout, budgets
 │   └── ids.js, api.js, onboarding.mjs   Student ids, request helpers, tip content
-├── data/                         Scam test messages, evaluation results, translatable strings
+├── data/                         Scam samples, the evaluation set (scam-eval/), the shipped classifier, translatable strings
 ├── scripts/                      Test suites, scam evaluation, partner demo scripts
 ├── docs/API.md                   Partner API reference
+├── docs/SCAM-EVAL.md             How well the scam check works, honestly
 ├── public/                       Logo, the embeddable widget script, and i18n/ (one dictionary per language)
 ├── .env.example                  Every setting the app reads (copy to .env.local)
 └── package.json                  Scripts: dev, build, start, test, eval
@@ -164,23 +167,16 @@ API details: `docs/API.md`.
 
 ## Evaluating the scam check
 
-```bash
-npm run eval
-```
-
-Runs the fixed rules on every message in `data/scam-samples.json` and prints accuracy, scams caught, false alarms and misses. If `NVIDIA_API_KEY` and `NEMOTRON_MODEL` are set in `.env.local`, it also runs Nemotron on the one-flag ("suspicious") messages, exactly like the app, and shows what the model adds.
-
-Options:
+On a 483-message synthetic set, the check we ship caught **100% of scams with about 8% false alarms** on the held-out test part (73 scams, 65 legitimate messages), against 74% caught for the design we started with. The confidence ranges are wide and the data is synthetic, so read `docs/SCAM-EVAL.md` before quoting a number.
 
 ```bash
-npm run eval -- --models nvidia/nemotron-3.5-lightning-30b-a3b,nvidia/nemotron-3-super-120b-a12b
-npm run eval -- --all        # also test the model on every message, alone
-npm run eval -- --delay 3000 # wait longer between calls if you hit rate limits
+npm run eval:scam     # prints the comparison from cached model answers
+npm run test:scam     # unit tests for the decision logic
 ```
 
-Results are saved to `data/eval-results.json`. Check the exact model names on build.nvidia.com.
+The set, the cached model answers and the scripts to rebuild everything are in `data/scam-eval/` and `scripts/`. The older 38-message check (`npm run eval`) is kept for reference.
 
-The sample messages in `data/scam-samples.json` are synthetic and small, so treat any accuracy number from them as a sanity check, not a benchmark. See "What could go wrong" below.
+**Recommended setting:** `NEMOTRON_MODEL=nvidia/nemotron-3-super-120b-a12b`. The lightning model was slower than our time limit on 42% of calls in our test.
 
 ## Deploy (DigitalOcean App Platform)
 
@@ -239,9 +235,9 @@ We tried to think about how this could hurt someone, be abused, or confuse peopl
 
 | Risk | What we did |
 | --- | --- |
-| **The AI is wrong** about a scam or a document | Rules run first and are explained in plain words. The model can only raise or lower a borderline verdict, and we say the result is guidance, not proof. Statement and receipt readings are shown back to the person to check and edit before anything changes. |
+| **The AI is wrong** about a scam or a document | We measured it (`docs/SCAM-EVAL.md`): about 100% of scams caught and about 8% false alarms on synthetic test data, with wide error ranges. Every verdict comes with reasons in plain words, and we say the result is guidance, not proof. Statement and receipt readings are shown back to the person to check and edit before anything changes. |
 | **The AI makes up numbers** | Claude never computes money. All prices, totals, interest and payoff times come from code, and there are tests for them. |
-| **The AI is slow, down or out of budget** | Timeouts, caching, a call budget, and fallbacks: rules-only scam check, keyword grocery matching, plain-text advice. |
+| **The AI is slow, down or out of budget** | Timeouts, caching, a call budget, and fallbacks: a rules and local-classifier backup for the scam check (about 18% false alarms in our test, and the screen says the AI check did not run), keyword grocery matching, plain-text advice. |
 | **Fraud and gaming the points** | Server-side daily caps, recovery rewards once a day, quiz bonus limits, per-visitor rate limits, and no points for spending or opening cards. |
 | **Private data leaks** | Uploads and pasted messages are read once and not saved. The app never asks for account numbers, card numbers or passwords, and warns people not to enter them. Demo data is synthetic. |
 | **Partner API abuse** | Hashed API keys, per-key and per-IP rate limits, signed webhooks, blocked private addresses (SSRF guard), admin lockout, and no real student names in partner data. |
@@ -253,7 +249,7 @@ We tried to think about how this could hurt someone, be abused, or confuse peopl
 | **The voice service is down or the key runs out** | Read aloud falls back to the browser's voice, is rate limited, has a per-10-minute call budget, and caches repeats. |
 | **Someone sends money to a scammer** | "Before you send money" checks a payment request for common scam patterns (gift cards, crypto, "send it back", secrecy, fake bank calls) and says what to do next, including calling the bank and reporting to the FTC. |
 
-Known limits: the payment and scam checks catch common patterns, not every scam, and the scam rules read English only. We have not tested with a real bank's data, and the bank events in the demo are simulated.
+Known limits: the payment and scam checks catch common patterns, not every scam. Our evaluation data is synthetic and small, and we have not tested against attackers who target this system. We have not tested with a real bank's data, and the bank events in the demo are simulated.
 
 ## Guardrails
 

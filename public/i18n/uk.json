@@ -241,6 +241,7 @@
  "Text the code back": "Надіслати код у відповідь",
  "That is under the 30% mark, which is good for your credit score.": "Це менше 30%, і це добре для вашої кредитної історії.",
  "That payment does not cover the monthly interest. Try a higher amount.": "Цей платіж не покриває місячні відсотки. Спробуйте більшу суму.",
+ "The AI double-check was not available, so this is a first-pass check only.": "Перевірка через ШІ була недоступна, тож це лише перша, попередня перевірка.",
  "The model can take a few seconds when it is busy.": "Коли модель завантажена, це може зайняти кілька секунд.",
  "The sender": "Відправник",
  "The sender says they are your bank and asks you to share the code they just texted.": "Відправник каже, що він із вашого банку, і просить назвати код, який щойно надіслав у СМС.",
