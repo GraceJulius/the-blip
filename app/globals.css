@@ -146,7 +146,7 @@ button, .btn {
 }
 button:hover, .btn:hover { filter: brightness(1.08); }
 button:active { transform: translateY(1px); }
-button.ghost { background: transparent; color: var(--text); border-color: var(--border-strong); }
+button.ghost, .btn.ghost { background: transparent; color: var(--text); border-color: var(--border-strong); }
 button.ghost:hover { background: var(--surface-2); filter: none; }
 button.warn-btn {
   background: var(--ok);

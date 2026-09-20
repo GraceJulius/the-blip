@@ -18,6 +18,9 @@ function sliderStyle(value, min, max) {
   };
 }
 
+// Made-up statement for demos and judging. Nothing here is a real account.
+const SAMPLE = { apr: 24.99, balance: 1200, creditLimit: 2000, minimumPayment: 35, dueDate: 'sample data', cashBackPercent: 1.5, annualFee: 0, notes: ['This is a made-up sample statement. It is not a real account.'] };
+
 export default function Check() {
   const [cb, setCb] = useState(5);
   const [spend, setSpend] = useState(400);
@@ -56,6 +59,19 @@ export default function Check() {
     setReading(false);
   }
 
+  function useSample() {
+    const d = SAMPLE;
+    setReadErr('');
+    setApr(Math.round(d.apr)); setBal(d.balance); setPay(d.minimumPayment); setCb(d.cashBackPercent); setFee(d.annualFee);
+    setFound({
+      reading: d,
+      analysis: { utilization: Math.round((d.balance / d.creditLimit) * 100), minPayoff: payoff(d.balance, d.apr, d.minimumPayment) },
+      questAward: 0,
+      privacy: null,
+      sample: true,
+    });
+  }
+
   async function savePlan() {
     if (bal > 0 && plan.months === Infinity) { setMsg('That payment does not cover the monthly interest. Try a higher amount.'); return; }
     const r = await post('/api/events', { type: 'payoff_plan_written' });
@@ -65,18 +81,20 @@ export default function Check() {
   return (
     <>
       <h1>Reward reality check</h1>
-      <p className="sub">Is that card offer worth it for you? Start from your real numbers, or move the sliders.</p>
+      <p className="sub">Is that card offer worth it for you? Start from a sample statement, or move the sliders.</p>
 
       <div className="card">
-        <h2>Start from your real numbers</h2>
-        <p className="note" style={{ marginBottom: 12 }}>Upload a photo or PDF of a card statement or an offer. Claude reads the balance, APR and minimum payment, and fills in the sliders below. Your file is read once and not saved. Cover your name and account number if you like.</p>
-        <label className="btn" style={{ cursor: reading ? 'wait' : 'pointer' }}>
+        <h2>Start from a statement</h2>
+        <p className="note" style={{ marginBottom: 12 }}>Try it with a made-up sample statement. Claude can also read a photo or PDF of a card statement or an offer and fill in the sliders below. For demos, please do not upload real account documents. If you do use your own, cover your name and account number: the file is read once and not saved.</p>
+        <button onClick={useSample} style={{ marginRight: 8 }}>Use a sample statement</button>
+        <label className="btn ghost" style={{ cursor: reading ? 'wait' : 'pointer' }}>
           {reading ? 'Reading…' : 'Upload a statement or offer'}
           <input type="file" accept="image/*,application/pdf" disabled={reading} style={{ display: 'none' }} onChange={(e) => { readFile(e.target.files[0]); e.target.value = ''; }} />
         </label>
         {readErr && <p className="err" style={{ marginTop: 10 }}>{readErr}</p>}
         {found && (
           <div style={{ marginTop: 14 }}>
+            {found.sample && <p className="note"><b>Sample data.</b> Made up for demos. Not a real account.</p>}
             {found.questAward > 0 && <p><b>Quest complete: +{found.questAward} points</b> for reading your real statement.</p>}
             <div className="chips">
               {found.reading.apr !== null && <span className="pill">APR {found.reading.apr}%</span>}

@@ -151,7 +151,7 @@ export default function Groceries() {
 
       <div className="card">
         <h2>Use real prices from a receipt</h2>
-        <p className="note" style={{ marginBottom: 12 }}>The prices above are samples. Photograph a grocery receipt and Claude reads it, then you choose which prices to keep. They replace the samples for you. The photo is read once and not saved.</p>
+        <p className="note" style={{ marginBottom: 12 }}>The prices above are samples. Photograph a grocery receipt and Claude reads it, then you choose which prices to keep. They replace the samples for you. The photo is read once and not saved. For demos, use a made-up receipt, not a real one.</p>
         <label className="btn small" style={{ cursor: rcBusy ? 'wait' : 'pointer' }}>
           {rcBusy ? 'Reading…' : 'Scan a receipt'}
           <input type="file" accept="image/*,application/pdf" disabled={rcBusy} style={{ display: 'none' }} onChange={(e) => { scanReceipt(e.target.files[0]); e.target.value = ''; }} />
