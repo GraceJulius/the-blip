@@ -292,10 +292,10 @@ select { font: inherit; background: var(--surface-2); color: var(--text); border
 /* ---------- map ---------- */
 .map-wrap { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin: 0 0 4px; }
 .map { height: 340px; width: 100%; background: var(--surface-2); }
-.leaflet-container { background: var(--surface-2); font: inherit; }
-.leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(0.78) contrast(1.35) saturate(0.55); }
-.leaflet-control-attribution { background: rgba(20, 20, 30, 0.85) !important; color: var(--muted) !important; font-size: 10px; }
-.leaflet-control-attribution a { color: var(--muted) !important; }
+.leaflet-container { background: #e8e6df; font: inherit; }
+/* Standard light OpenStreetMap tiles: readable street names and high contrast */
+.leaflet-control-attribution { background: rgba(255, 255, 255, 0.88) !important; color: #333 !important; font-size: 10px; }
+.leaflet-control-attribution a { color: #0b57a4 !important; }
 .leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--surface); color: var(--text); }
 .leaflet-popup-content { margin: 10px 14px; font-size: 13px; line-height: 1.4; }
 .pin { display: block; width: 22px; height: 22px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 3px solid #fff; background: var(--faint); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); }
