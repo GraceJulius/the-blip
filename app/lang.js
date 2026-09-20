@@ -1,36 +1,24 @@
 'use client';
-import { useEffect, useState } from 'react';
-import { LANGS, isLang } from '@/lib/languages.mjs';
+import { LANGS } from '@/lib/languages.mjs';
+import { useLang, LANG_KEY } from './useLang';
+import { useT } from './i18n';
+import Icon from './Icons';
 
-const KEY = 'blipLang';
+export { useLang };
 
-function read() {
-  try { const v = localStorage.getItem(KEY); return isLang(v) ? v : 'en'; } catch { return 'en'; }
-}
-
-// The chosen language for warnings and read-aloud. Stored in this browser only.
-export function useLang() {
-  const [lang, setLang] = useState('en');
-  useEffect(() => {
-    setLang(read());
-    const on = () => setLang(read());
-    window.addEventListener('blip-lang', on);
-    return () => window.removeEventListener('blip-lang', on);
-  }, []);
-  return lang;
-}
-
-export function LangSelect({ label = 'Language for warnings' }) {
+export function LangSelect({ label, compact = false, narrow = false }) {
   const lang = useLang();
+  const t = useT();
+  const text = label || t('Language');
   function change(e) {
-    try { localStorage.setItem(KEY, e.target.value); } catch {}
+    try { localStorage.setItem(LANG_KEY, e.target.value); } catch {}
     window.dispatchEvent(new Event('blip-lang'));
   }
   return (
-    <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-      <span className="note">{label}</span>
-      <select value={lang} onChange={change} aria-label={label}>
-        {LANGS.map((l) => <option key={l.id} value={l.id}>{l.native}{l.id !== 'en' ? ' (' + l.name + ')' : ''}</option>)}
+    <label style={{ display: compact ? 'flex' : 'inline-flex', alignItems: 'center', gap: 8, maxWidth: '100%' }}>
+      {compact ? (narrow ? null : <Icon name="globe" size={18} />) : <span className="note">{text}</span>}
+      <select value={lang} onChange={change} aria-label={text} style={{ minWidth: 0, maxWidth: narrow ? 'min(92px, 24vw)' : '100%', flex: compact && !narrow ? 1 : undefined, textOverflow: 'ellipsis' }}>
+        {LANGS.map((l) => <option key={l.id} value={l.id} lang={l.id}>{l.native}{l.id !== 'en' ? ' (' + l.name + ')' : ''}</option>)}
       </select>
     </label>
   );

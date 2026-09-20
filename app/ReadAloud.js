@@ -1,9 +1,12 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { langById } from '@/lib/languages.mjs';
+import { useT } from './i18n';
 
 // "Read aloud" button. Tries the ElevenLabs voice through /api/tts, and falls back to the browser's voice.
-export default function ReadAloud({ text, lang = 'en', label = 'Read aloud' }) {
+export default function ReadAloud({ text, lang = 'en', label }) {
+  const t = useT();
+  const name = label || t('Read aloud');
   const [state, setState] = useState('idle');
   const audio = useRef(null);
   const url = useRef('');
@@ -43,8 +46,8 @@ export default function ReadAloud({ text, lang = 'en', label = 'Read aloud' }) {
   }
 
   return (
-    <button type="button" className="ghost small" onClick={speak} aria-label={state === 'idle' ? label : 'Stop reading'}>
-      {state === 'loading' ? 'Loading…' : state === 'playing' ? 'Stop' : label}
+    <button type="button" className="ghost small" onClick={speak} aria-label={state === 'idle' ? name : t('Stop reading')} aria-pressed={state === 'playing'}>
+      {state === 'loading' ? t('Loading…') : state === 'playing' ? t('Stop') : name}
     </button>
   );
 }

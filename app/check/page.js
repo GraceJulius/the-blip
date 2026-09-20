@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { post } from '../useBlip';
 import { fileToUpload } from '../imageUpload';
+import { useT } from '../i18n';
 
 function payoff(balance, apr, pay) {
   const r = apr / 100 / 12;
@@ -22,6 +23,7 @@ function sliderStyle(value, min, max) {
 const SAMPLE = { apr: 24.99, balance: 1200, creditLimit: 2000, minimumPayment: 35, dueDate: 'sample data', cashBackPercent: 1.5, annualFee: 0, notes: ['This is a made-up sample statement. It is not a real account.'] };
 
 export default function Check() {
+  const t = useT();
   const [cb, setCb] = useState(5);
   const [spend, setSpend] = useState(400);
   const [apr, setApr] = useState(24);
@@ -54,7 +56,7 @@ export default function Check() {
       setFee(d.annualFee || 0);
       setFound({ reading: d, analysis: r.analysis, questAward: r.questAward, privacy: r.privacy });
     } catch (e) {
-      setReadErr(e.message || 'Something went wrong reading that file.');
+      setReadErr(e.message || t('Something went wrong reading that file.'));
     }
     setReading(false);
   }
@@ -73,67 +75,71 @@ export default function Check() {
   }
 
   async function savePlan() {
-    if (bal > 0 && plan.months === Infinity) { setMsg('That payment does not cover the monthly interest. Try a higher amount.'); return; }
+    if (bal > 0 && plan.months === Infinity) { setMsg(t('That payment does not cover the monthly interest. Try a higher amount.')); return; }
     const r = await post('/api/events', { type: 'payoff_plan_written' });
-    setMsg(r.message || 'Saved.');
+    setMsg(r.message || t('Saved.'));
   }
 
   return (
     <>
-      <h1>Reward reality check</h1>
-      <p className="sub">Is that card offer worth it for you? Start from a sample statement, or move the sliders.</p>
+      <h1>{t('Reward reality check')}</h1>
+      <p className="sub">{t('Is that card offer worth it for you? Start from a sample statement, or move the sliders.')}</p>
 
       <div className="card">
-        <h2>Start from a statement</h2>
-        <p className="note" style={{ marginBottom: 12 }}>Try it with a made-up sample statement. Claude can also read a photo or PDF of a card statement or an offer and fill in the sliders below. For demos, please do not upload real account documents. If you do use your own, cover your name and account number: the file is read once and not saved.</p>
-        <button onClick={useSample} style={{ marginRight: 8 }}>Use a sample statement</button>
+        <h2>{t('Start from a statement')}</h2>
+        <p className="note" style={{ marginBottom: 12 }}>{t('Try it with a made-up sample statement. Claude can also read a photo or PDF of a card statement or an offer and fill in the sliders below. For demos, please do not upload real account documents. If you do use your own, cover your name and account number: the file is read once and not saved.')}</p>
+        <button onClick={useSample} style={{ marginRight: 8 }}>{t('Use a sample statement')}</button>
         <label className="btn ghost" style={{ cursor: reading ? 'wait' : 'pointer' }}>
-          {reading ? 'Reading…' : 'Upload a statement or offer'}
-          <input type="file" accept="image/*,application/pdf" disabled={reading} style={{ display: 'none' }} onChange={(e) => { readFile(e.target.files[0]); e.target.value = ''; }} />
+          {reading ? t('Reading…') : t('Upload a statement or offer')}
+          <input type="file" accept="image/*,application/pdf" disabled={reading} className="sr-only-file" onChange={(e) => { readFile(e.target.files[0]); e.target.value = ''; }} />
         </label>
-        {readErr && <p className="err" style={{ marginTop: 10 }}>{readErr}</p>}
+        {readErr && <p className="err" role="alert" style={{ marginTop: 10 }}>{readErr}</p>}
         {found && (
           <div style={{ marginTop: 14 }}>
-            {found.sample && <p className="note"><b>Sample data.</b> Made up for demos. Not a real account.</p>}
-            {found.questAward > 0 && <p><b>Quest complete: +{found.questAward} points</b> for reading your real statement.</p>}
+            {found.sample && <p className="note"><b>{t('Sample data.')}</b> {t('Made up for demos. Not a real account.')}</p>}
+            {found.questAward > 0 && <p><b>{t('Quest complete: +{n} points', { n: found.questAward })}</b> {t('for reading your real statement.')}</p>}
             <div className="chips">
-              {found.reading.apr !== null && <span className="pill">APR {found.reading.apr}%</span>}
-              {found.reading.balance !== null && <span className="pill">Balance ${found.reading.balance.toLocaleString()}</span>}
-              {found.reading.creditLimit !== null && <span className="pill">Limit ${found.reading.creditLimit.toLocaleString()}</span>}
-              {found.reading.minimumPayment !== null && <span className="pill">Minimum ${found.reading.minimumPayment.toLocaleString()}</span>}
-              {found.reading.dueDate && <span className="pill">Due {found.reading.dueDate}</span>}
-              {found.reading.cashBackPercent !== null && <span className="pill">Cash back {found.reading.cashBackPercent}%</span>}
-              {found.reading.annualFee !== null && <span className="pill warn">Annual fee ${found.reading.annualFee}</span>}
+              {found.reading.apr !== null && <span className="pill">{t('APR {n}%', { n: found.reading.apr })}</span>}
+              {found.reading.balance !== null && <span className="pill">{t('Balance ${n}', { n: found.reading.balance.toLocaleString() })}</span>}
+              {found.reading.creditLimit !== null && <span className="pill">{t('Limit ${n}', { n: found.reading.creditLimit.toLocaleString() })}</span>}
+              {found.reading.minimumPayment !== null && <span className="pill">{t('Minimum ${n}', { n: found.reading.minimumPayment.toLocaleString() })}</span>}
+              {found.reading.dueDate && <span className="pill">{t('Due {d}', { d: found.reading.dueDate === 'sample data' ? t('sample data') : found.reading.dueDate })}</span>}
+              {found.reading.cashBackPercent !== null && <span className="pill">{t('Cash back {n}%', { n: found.reading.cashBackPercent })}</span>}
+              {found.reading.annualFee !== null && <span className="pill warn">{t('Annual fee ${n}', { n: found.reading.annualFee })}</span>}
             </div>
             {found.analysis.utilization !== null && (
-              <p style={{ margin: '12px 0 4px' }}>You are using <b>{found.analysis.utilization}%</b> of your limit. {found.analysis.utilization > 30 ? 'Staying under 30% is better for your credit score.' : 'That is under the 30% mark, which is good for your credit score.'}</p>
+              <p style={{ margin: '12px 0 4px' }}><b>{t('You are using {n}% of your limit.', { n: found.analysis.utilization })}</b> {found.analysis.utilization > 30 ? t('Staying under 30% is better for your credit score.') : t('That is under the 30% mark, which is good for your credit score.')}</p>
             )}
             {found.analysis.minPayoff && (
-              <p style={{ margin: '4px 0' }}>{found.analysis.minPayoff.months === Infinity ? 'At the minimum payment the balance would never shrink, because the interest eats it.' : 'Paying only the minimum, you would be paying for about ' + found.analysis.minPayoff.months + ' months and about $' + found.analysis.minPayoff.interest.toLocaleString() + ' in interest.'}</p>
+              <p style={{ margin: '4px 0' }}>{found.analysis.minPayoff.months === Infinity ? t('At the minimum payment the balance would never shrink, because the interest eats it.') : t('Paying only the minimum, you would be paying for about {m} months and about ${i} in interest.', { m: found.analysis.minPayoff.months, i: found.analysis.minPayoff.interest.toLocaleString() })}</p>
             )}
             {found.reading.notes.map((n, i) => <p key={i} className="note" style={{ margin: '4px 0' }}>{n}</p>)}
-            <p className="note" style={{ marginTop: 8 }}>Check these against your document. The sliders below were set from them, and you can change any of them.</p>
+            <p className="note" style={{ marginTop: 8 }}>{t('Check these against your document. The sliders below were set from them, and you can change any of them.')}</p>
           </div>
         )}
       </div>
 
       <div className="card">
-        <div className="row"><label>Cash back offer</label><input type="range" min="0.5" max="6" step="0.5" value={cb} onChange={(e) => setCb(+e.target.value)} style={sliderStyle(cb, 0.5, 6)} /><span className="val">{cb}%</span></div>
-        <div className="row"><label>Monthly spend</label><input type="range" min="100" max="1000" step="50" value={spend} onChange={(e) => setSpend(+e.target.value)} style={sliderStyle(spend, 100, 1000)} /><span className="val">${spend}</span></div>
-        <div className="row"><label>Card APR</label><input type="range" min="5" max="40" value={apr} onChange={(e) => setApr(+e.target.value)} style={sliderStyle(apr, 5, 40)} /><span className="val">{apr}%</span></div>
-        <div className="row"><label>Balance you carry</label><input type="range" min="0" max="10000" step="50" value={bal} onChange={(e) => setBal(+e.target.value)} style={sliderStyle(bal, 0, 10000)} /><span className="val">${bal}</span></div>
-        <div className="row"><label>Rewards per year</label><div className="bar good" style={{ width: Math.max(8, rewards / max * 100) + '%' }}>${rewards.toLocaleString()}</div></div>
-        <div className="row"><label>Interest per year</label><div className="bar bad" style={{ width: Math.max(8, interest / max * 100) + '%' }}>${interest.toLocaleString()}</div></div>
-        <p className={net >= 0 ? 'note' : 'err'}>
-          {net >= 0 ? 'Rewards win by $' + net.toLocaleString() + ' a year' + (fee ? ' after the $' + fee + ' annual fee' : '') + ', but only while you keep the balance near zero. Remember: you are borrowing, not spending.' : 'You lose $' + Math.abs(net).toLocaleString() + ' a year' + (fee ? ' including the $' + fee + ' annual fee' : '') + '. The rewards do not cover the ' + (interest > 0 ? 'interest' : 'fee') + '.'}
+        <div className="row"><label htmlFor="chk-cb">{t('Cash back offer')}</label><input id="chk-cb" aria-valuetext={`${cb}%`} type="range" min="0.5" max="6" step="0.5" value={cb} onChange={(e) => setCb(+e.target.value)} style={sliderStyle(cb, 0.5, 6)} /><span className="val">{cb}%</span></div>
+        <div className="row"><label htmlFor="chk-spend">{t('Monthly spend')}</label><input id="chk-spend" aria-valuetext={`$${spend}`} type="range" min="100" max="1000" step="50" value={spend} onChange={(e) => setSpend(+e.target.value)} style={sliderStyle(spend, 100, 1000)} /><span className="val">${spend}</span></div>
+        <div className="row"><label htmlFor="chk-apr">{t('Card APR')}</label><input id="chk-apr" aria-valuetext={`${apr}%`} type="range" min="5" max="40" value={apr} onChange={(e) => setApr(+e.target.value)} style={sliderStyle(apr, 5, 40)} /><span className="val">{apr}%</span></div>
+        <div className="row"><label htmlFor="chk-bal">{t('Balance you carry')}</label><input id="chk-bal" aria-valuetext={`$${bal}`} type="range" min="0" max="10000" step="50" value={bal} onChange={(e) => setBal(+e.target.value)} style={sliderStyle(bal, 0, 10000)} /><span className="val">${bal}</span></div>
+        <div className="row"><label>{t('Rewards per year')}</label><div className="bar good" style={{ width: Math.max(8, rewards / max * 100) + '%' }}>${rewards.toLocaleString()}</div></div>
+        <div className="row"><label>{t('Interest per year')}</label><div className="bar bad" style={{ width: Math.max(8, interest / max * 100) + '%' }}>${interest.toLocaleString()}</div></div>
+        <p className={net >= 0 ? 'note' : 'err'} role="status">
+          {net >= 0
+            ? (fee ? t('Rewards win by ${n} a year after the ${f} annual fee, but only while you keep the balance near zero. Remember: you are borrowing, not spending.', { n: net.toLocaleString(), f: fee }) : t('Rewards win by ${n} a year, but only while you keep the balance near zero. Remember: you are borrowing, not spending.', { n: net.toLocaleString() }))
+            : (fee
+              ? (interest > 0 ? t('You lose ${n} a year including the ${f} annual fee. The rewards do not cover the interest.', { n: Math.abs(net).toLocaleString(), f: fee }) : t('You lose ${n} a year including the ${f} annual fee. The rewards do not cover the fee.', { n: Math.abs(net).toLocaleString(), f: fee }))
+              : (interest > 0 ? t('You lose ${n} a year. The rewards do not cover the interest.', { n: Math.abs(net).toLocaleString() }) : t('You lose ${n} a year. The rewards do not cover the fee.', { n: Math.abs(net).toLocaleString() })))}
         </p>
       </div>
       <div className="card">
-        <h2>Your backup plan</h2>
-        <p className="note">How will you pay the ${bal} off?</p>
-        <div className="row"><label>Monthly payment</label><input type="range" min="5" max="1000" step="5" value={pay} onChange={(e) => setPay(+e.target.value)} style={sliderStyle(pay, 5, 1000)} /><span className="val">${pay}</span></div>
-        <p>{bal === 0 ? 'No balance to pay off.' : plan.months === Infinity ? 'At this payment the balance never shrinks. The interest eats it.' : 'Debt-free in ' + plan.months + ' months, paying about $' + plan.interest + ' in interest.'}</p>
-        <button onClick={savePlan}>Save my payoff plan</button> {msg && <span className="note">{msg}</span>}
+        <h2>{t('Your backup plan')}</h2>
+        <p className="note">{t('How will you pay the ${n} off?', { n: bal })}</p>
+        <div className="row"><label htmlFor="chk-pay">{t('Monthly payment')}</label><input id="chk-pay" aria-valuetext={`$${pay}`} type="range" min="5" max="1000" step="5" value={pay} onChange={(e) => setPay(+e.target.value)} style={sliderStyle(pay, 5, 1000)} /><span className="val">${pay}</span></div>
+        <p>{bal === 0 ? t('No balance to pay off.') : plan.months === Infinity ? t('At this payment the balance never shrinks. The interest eats it.') : t('Debt-free in {m} months, paying about ${i} in interest.', { m: plan.months, i: plan.interest })}</p>
+        <button onClick={savePlan}>{t('Save my payoff plan')}</button> {msg && <span className="note" role="status">{msg}</span>}
       </div>
     </>
   );
