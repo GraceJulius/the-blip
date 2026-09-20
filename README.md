@@ -26,9 +26,29 @@ Built for the **PNC Compound** track (best financial hack), and it also uses NVI
   - **Anthropic Claude** reads card statements and receipts, turns a plain request into a grocery list, and writes short summaries. Claude never does the math: prices, totals and interest are computed by our code.
   - **NVIDIA Nemotron** helps classify borderline scam messages. Simple rules run first, and the app still works with rules only if the model is slow or off.
 - **AI used to build it:** we used **Claude Code (Anthropic)** as a coding assistant for much of the code, tests and documentation. Team members reviewed, ran and directed the work.
+- **Voice:** **ElevenLabs** text to speech reads warnings aloud (optional). Without a key the browser's built-in voice is used.
 - **Services:** Tiger Cloud (Tiger Data) Postgres for saved state, DigitalOcean App Platform for hosting, a `.tech` domain from MLH.
 - **Open source:** Next.js and React, Leaflet with OpenStreetMap map tiles, `pg`, `zod`, `@anthropic-ai/sdk`.
 - The project was started after the hackathon opened (first commit Sept 19, 2026, 11:34 AM EDT).
+
+## Sandbox bank feed
+
+Open `/bank` and use **Sandbox bank feed**. It is a made-up student with made-up money. Each button is an event a real bank would send:
+
+| Event | What TheBlip does |
+| --- | --- |
+| Paycheck arrives | Suggests moving a small amount to savings. Reaching $100 completes the emergency fund quest. |
+| Big purchase at 2 AM | Alerts the student and offers to freeze the card. |
+| Payment to a new person | Flags a likely advance-fee scam and opens "Before you send money" already filled in. |
+| Gift cards bought | Alerts that gift cards are a scam signal. |
+| Rent autopay runs | Warns when the balance gets low. |
+| Card bill paid early | Awards the pay-on-time quest. |
+
+The reaction is rule-based and shows on the student's **Home** screen (open the student app in another tab or on a phone). The account lives in the browser, so the server keeps no bank data, only the alert text. A real bank would send the same kind of events through the partner API (`docs/API.md`).
+
+## Read aloud
+
+Warnings have a **Read aloud** button, for accessibility and for people who scan rather than read. With `ELEVENLABS_API_KEY` set, the server calls ElevenLabs (`/api/tts`, rate limited, at most 700 characters, cached). Without a key, or if the service is down, the button uses the browser's built-in voice, so it always works. Nothing spoken is stored.
 
 ## Data: synthetic only
 
@@ -69,15 +89,18 @@ the-blip/
 │   ├── recovery/                 Recovery mode: steps to take after a scam
 │   ├── groceries/                Grocery compare: price, health, swaps, receipt scan
 │   ├── food/                     Free food map (Leaflet) with open-now status
-│   ├── bank/                     Bank simulator: sends demo events into the app
+│   ├── bank/                     Bank simulator: sandbox bank feed and demo events
 │   ├── console/                  Bank console: overview, program settings, integration
 │   ├── docs/                     Public API documentation page
 │   ├── embed/                    Embeddable widget page for partner sites
 │   ├── Shell.js, Onboarding.js   App frame, navigation, first-visit tips
+│   ├── ReadAloud.js              "Read aloud" button (ElevenLabs voice, browser voice as backup)
 │   ├── globals.css               Design tokens and styling
 │   └── api/                      Server routes
 │       ├── scam-check/           Rules first, then the model for borderline messages
 │       ├── payment-check/        Rule-based check of a payment request
+│       ├── sandbox-bank/         Synthetic bank feed: transaction in, student alert out
+│       ├── tts/                  Text to speech for the read-aloud button
 │       ├── statement/, groceries/  Claude reads statements and receipts, plans lists
 │       ├── events/, state/, quests/, redeem/, recovery/   Points engine endpoints
 │       ├── v1/                   Public partner API (API keys, rate limited)
@@ -87,6 +110,8 @@ the-blip/
 │   ├── engine.js, quests.js, levels.js   Points, quests and levels
 │   ├── store.js, snapshot.mjs, pgStore.mjs  In-memory state with file or Postgres snapshots
 │   ├── scamRules.mjs, paymentRules.mjs   Plain-language scam rules
+│   ├── sandboxBank.mjs           Sandbox bank scenarios and how TheBlip reacts to each
+│   ├── tts.mjs                   Read-aloud text cleanup and the ElevenLabs call
 │   ├── nemotron.mjs              NVIDIA Nemotron scam classifier
 │   ├── claude.js, vision.js, statement.mjs, receipt.mjs   Claude features (Claude never does the math)
 │   ├── grocery.mjs               Store prices, health ratings and comparisons
@@ -199,6 +224,7 @@ We tried to think about how this could hurt someone, be abused, or confuse peopl
 | **Bad or outdated local info** | Pantry hours are marked "not confirmed" when we have not verified them, with the check date, and only confirmed places show open or closed. Grocery prices are labeled as samples. |
 | **Confusing or inaccessible screens** | A first-visit welcome and per-page tips, plain language, keyboard and screen-reader support in dialogs, and a high-contrast light map. |
 | **Someone treats it as financial advice** | Educational only. No card recommendations and no promised score changes. Not affiliated with any bank. |
+| **The voice service is down or the key runs out** | Read aloud falls back to the browser's voice, is rate limited, has a per-10-minute call budget, and caches repeats. |
 | **Someone sends money to a scammer** | "Before you send money" checks a payment request for common scam patterns (gift cards, crypto, "send it back", secrecy, fake bank calls) and says what to do next, including calling the bank and reporting to the FTC. |
 
 Known limits: the payment and scam checks catch common patterns, not every scam. We have not tested with a real bank's data, and the bank events in the demo are simulated.

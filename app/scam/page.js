@@ -1,6 +1,7 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { post } from '../useBlip';
+import ReadAloud from '../ReadAloud';
 import { METHODS, WHO, SITUATIONS, LEVEL_LABEL } from '@/lib/paymentRules.mjs';
 
 const SAMPLES = [
@@ -43,7 +44,8 @@ function MessageCheck() {
           {res.model && res.model.explanation && <p>{res.model.explanation}</p>}
           {risky && <p className="note">Do not tap the link. Open your bank app directly. You can forward scam texts to 7726.</p>}
           {res.level === 'probably_fine' && <p className="note">One thing looked odd, but the model reads it as a normal message. Still open links and accounts from the official app, not from the message.</p>}
-          {risky && <button onClick={() => run(true)}>Report this scam (+25 points)</button>}
+          {risky && <button onClick={() => run(true)}>Report this scam (+25 points)</button>}{' '}
+          <ReadAloud text={TEXT[res.level] + '. ' + res.flags.map((f) => f.label).join('. ') + '. ' + (res.model && res.model.explanation ? res.model.explanation : '')} />
           {info && <p>{info}</p>}
         </div>
       )}
@@ -56,12 +58,12 @@ const EXAMPLES = [
   { amount: 45, method: 'card', who: 'known', situations: [], note: '' },
 ];
 
-function PaymentCheck() {
-  const [amount, setAmount] = useState('');
-  const [method, setMethod] = useState('bank');
-  const [who, setWho] = useState('known');
+function PaymentCheck({ init = {} }) {
+  const [amount, setAmount] = useState(init.amount || '');
+  const [method, setMethod] = useState(init.method || 'bank');
+  const [who, setWho] = useState(init.who || 'known');
   const [situations, setSituations] = useState([]);
-  const [note, setNote] = useState('');
+  const [note, setNote] = useState(init.note || '');
   const [res, setRes] = useState(null);
   const [err, setErr] = useState('');
   const [busy, setBusy] = useState(false);
@@ -111,6 +113,7 @@ function PaymentCheck() {
           {res.flags.length > 0 && <ul>{res.flags.map((f) => <li key={f.id}><b>{f.label}.</b> {f.advice}</li>)}</ul>}
           <p style={{ margin: '12px 0 4px' }}><b>What to do</b></p>
           <ol style={{ margin: 0, paddingLeft: 20 }}>{res.next.map((n, i) => <li key={i}>{n}</li>)}</ol>
+          <ReadAloud text={LEVEL_LABEL[res.level] + ' ' + res.flags.map((f) => f.label).join('. ') + '. ' + res.next.join(' ')} />
           <p className="note" style={{ marginTop: 12 }}>This is general guidance from common scam patterns. It cannot prove a request is safe or unsafe. Nothing you entered is stored.</p>
         </div>
       )}
@@ -120,6 +123,16 @@ function PaymentCheck() {
 
 export default function Scam() {
   const [mode, setMode] = useState('message');
+  const [init, setInit] = useState({});
+  // The bank sandbox links here with the payment already filled in.
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search);
+    if (q.get('tab') === 'payment') {
+      const ok = (v, list) => list.some((x) => x.id === v);
+      setInit({ amount: String(Number(q.get('amount')) || ''), method: ok(q.get('method'), METHODS) ? q.get('method') : 'bank', who: ok(q.get('who'), WHO) ? q.get('who') : 'known', note: (q.get('note') || '').slice(0, 300) });
+      setMode('payment');
+    }
+  }, []);
   return (
     <>
       <h1>Scam check</h1>
@@ -128,7 +141,7 @@ export default function Scam() {
         <button role="tab" aria-selected={mode === 'message'} className={mode === 'message' ? 'on' : ''} onClick={() => setMode('message')}>A message</button>
         <button role="tab" aria-selected={mode === 'payment'} className={mode === 'payment' ? 'on' : ''} onClick={() => setMode('payment')}>Before you send money</button>
       </div>
-      {mode === 'message' ? <MessageCheck /> : <PaymentCheck />}
+      {mode === 'message' ? <MessageCheck /> : <PaymentCheck key={JSON.stringify(init)} init={init} />}
     </>
   );
 }

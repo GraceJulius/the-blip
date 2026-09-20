@@ -13,10 +13,11 @@
     "test:receipt": "node scripts/test-receipt.mjs",
     "test:platform": "node scripts/test-platform.mjs",
     "test:analytics": "node scripts/test-analytics.mjs",
-    "test": "npm run test:grocery && npm run test:statement && npm run test:receipt && npm run test:platform && npm run test:analytics && npm run test:map && npm run test:onboarding && npm run test:payment",
+    "test": "npm run test:grocery && npm run test:statement && npm run test:receipt && npm run test:platform && npm run test:analytics && npm run test:map && npm run test:onboarding && npm run test:payment && npm run test:sandbox",
     "test:map": "node scripts/test-map.mjs",
     "test:onboarding": "node scripts/test-onboarding.mjs",
-    "test:payment": "node scripts/test-payment.mjs"
+    "test:payment": "node scripts/test-payment.mjs",
+    "test:sandbox": "node scripts/test-sandbox.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.127.0",
