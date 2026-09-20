@@ -6,7 +6,7 @@ See the real cost before you swipe. TheBlip helps college students make better c
 
 > Every card pays you to spend. We pay you to not get hurt.
 
-Built for SteelHacks XIII. Full plan and build guide: see the team's shared doc (link in the team chat) and `docs/`.
+Built for SteelHacks XIII.
 
 **Live demo:** https://theblip.tech
 
@@ -26,9 +26,29 @@ Built for the **PNC Compound** track (best financial hack), and it also uses NVI
   - **Anthropic Claude** reads card statements and receipts, turns a plain request into a grocery list, and writes short summaries. Claude never does the math: prices, totals and interest are computed by our code.
   - **NVIDIA Nemotron** helps classify borderline scam messages. Simple rules run first, and the app still works with rules only if the model is slow or off.
 - **AI used to build it:** we used **Claude Code (Anthropic)** as a coding assistant for much of the code, tests and documentation. Team members reviewed, ran and directed the work.
+- **Voice:** **ElevenLabs** text to speech reads warnings aloud (optional). Without a key the browser's built-in voice is used.
 - **Services:** Tiger Cloud (Tiger Data) Postgres for saved state, DigitalOcean App Platform for hosting, a `.tech` domain from MLH.
 - **Open source:** Next.js and React, Leaflet with OpenStreetMap map tiles, `pg`, `zod`, `@anthropic-ai/sdk`.
 - The project was started after the hackathon opened (first commit Sept 19, 2026, 11:34 AM EDT).
+
+## Sandbox bank feed
+
+Open `/bank` and use **Sandbox bank feed**. It is a made-up student with made-up money. Each button is an event a real bank would send:
+
+| Event | What TheBlip does |
+| --- | --- |
+| Paycheck arrives | Suggests moving a small amount to savings. Reaching $100 completes the emergency fund quest. |
+| Big purchase at 2 AM | Alerts the student and offers to freeze the card. |
+| Payment to a new person | Flags a likely advance-fee scam and opens "Before you send money" already filled in. |
+| Gift cards bought | Alerts that gift cards are a scam signal. |
+| Rent autopay runs | Warns when the balance gets low. |
+| Card bill paid early | Awards the pay-on-time quest. |
+
+The reaction is rule-based and shows on the student's **Home** screen (open the student app in another tab or on a phone). The account lives in the browser, so the server keeps no bank data, only the alert text. A real bank would send the same kind of events through the partner API (`docs/API.md`).
+
+## Read aloud
+
+Warnings have a **Read aloud** button, for accessibility and for people who scan rather than read. With `ELEVENLABS_API_KEY` set, the server calls ElevenLabs (`/api/tts`, rate limited, at most 700 characters, cached). Without a key, or if the service is down, the button uses the browser's built-in voice, so it always works. Nothing spoken is stored.
 
 ## Data: synthetic only
 
@@ -57,16 +77,55 @@ Try the demo flow in two browser tabs:
 
 Reset demo data any time with the button on `/bank`.
 
-## What is in the box
+## Project structure
 
-| Path | What | Suggested owner |
-| --- | --- | --- |
-| `app/check` | Reward reality check and payoff plan | Frontend A |
-| `app/page.js`, `app/Nav.js`, `app/globals.css` | Dashboard, nav, styling | Frontend A |
-| `app/quests`, `app/bank`, `app/recovery` | Quests, bank simulator, recovery mode | Frontend B |
-| `app/scam`, `lib/scamRules.mjs`, `lib/nemotron.mjs`, `data/scam-samples.json`, `scripts/eval-scam.mjs` | Scam check, model, evaluation | Data and AI |
-| `app/console`, `app/api/stats` | Bank console | Pitch and console |
-| `app/api/*`, `lib/engine.js`, `lib/quests.js`, `lib/levels.js`, `lib/store.js` | API, points engine, data | Lead and API |
+```
+the-blip/
+├── app/                          The website and its API (Next.js App Router)
+│   ├── page.js                   Home: level, next quest, tools
+│   ├── check/                    Reward reality check, payoff plan, statement reader
+│   ├── scam/                     Scam check: a message, or "before you send money"
+│   ├── quests/                   Quests, points, quiz and gift-card redeem (simulated)
+│   ├── recovery/                 Recovery mode: steps to take after a scam
+│   ├── groceries/                Grocery compare: price, health, swaps, receipt scan
+│   ├── food/                     Free food map (Leaflet) with open-now status
+│   ├── bank/                     Bank simulator: sandbox bank feed and demo events
+│   ├── console/                  Bank console: overview, program settings, integration
+│   ├── docs/                     Public API documentation page
+│   ├── embed/                    Embeddable widget page for partner sites
+│   ├── Shell.js, Onboarding.js   App frame, navigation, first-visit tips
+│   ├── ReadAloud.js              "Read aloud" button (ElevenLabs voice, browser voice as backup)
+│   ├── globals.css               Design tokens and styling
+│   └── api/                      Server routes
+│       ├── scam-check/           Rules first, then the model for borderline messages
+│       ├── payment-check/        Rule-based check of a payment request
+│       ├── sandbox-bank/         Synthetic bank feed: transaction in, student alert out
+│       ├── tts/                  Text to speech for the read-aloud button
+│       ├── statement/, groceries/  Claude reads statements and receipts, plans lists
+│       ├── events/, state/, quests/, redeem/, recovery/   Points engine endpoints
+│       ├── v1/                   Public partner API (API keys, rate limited)
+│       ├── embed/                Widget data (signed tokens)
+│       └── admin/, reset/, stats/  Console, analytics, demo reset (password protected)
+├── lib/                          Logic shared by the app (no UI)
+│   ├── engine.js, quests.js, levels.js   Points, quests and levels
+│   ├── store.js, snapshot.mjs, pgStore.mjs  In-memory state with file or Postgres snapshots
+│   ├── scamRules.mjs, paymentRules.mjs   Plain-language scam rules
+│   ├── sandboxBank.mjs           Sandbox bank scenarios and how TheBlip reacts to each
+│   ├── tts.mjs                   Read-aloud text cleanup and the ElevenLabs call
+│   ├── nemotron.mjs              NVIDIA Nemotron scam classifier
+│   ├── claude.js, vision.js, statement.mjs, receipt.mjs   Claude features (Claude never does the math)
+│   ├── grocery.mjs               Store prices, health ratings and comparisons
+│   ├── pantries.js, openNow.mjs, geo.mjs   Free food places, opening hours, distance
+│   ├── orgs.js, platform.mjs, partnerApi.js, webhooks.js, analytics.mjs   Partner platform
+│   ├── guard.js                  Rate limits, admin lockout, budgets
+│   └── ids.js, api.js, onboarding.mjs   Student ids, request helpers, tip content
+├── data/                         Scam test messages and the last evaluation results
+├── scripts/                      Test suites, scam evaluation, partner demo scripts
+├── docs/API.md                   Partner API reference
+├── public/                       Logo and the embeddable widget script (embed.js)
+├── .env.example                  Every setting the app reads (copy to .env.local)
+└── package.json                  Scripts: dev, build, start, test, eval
+```
 
 ## How it works
 
@@ -97,22 +156,13 @@ npm run eval -- --delay 3000 # wait longer between calls if you hit rate limits
 
 Results are saved to `data/eval-results.json`. Check the exact model names on build.nvidia.com.
 
-The starter samples in `data/scam-samples.json` are synthetic and easy. Add at least 30 realistic ones, including tricky legit messages, before you quote any accuracy number.
-
-## Team git workflow
-
-1. `git pull` before you start.
-2. Work on a branch: `git checkout -b yourname/short-topic`.
-3. Commit small and often: `git add -A && git commit -m "Add payoff plan"`.
-4. Push: `git push -u origin yourname/short-topic`.
-5. Open a pull request. The Lead merges. Never push straight to `main` after hour 3.
-6. Stuck on a merge conflict? Stop and ask the Lead.
+The sample messages in `data/scam-samples.json` are synthetic and small, so treat any accuracy number from them as a sanity check, not a benchmark. See "What could go wrong" below.
 
 ## Deploy (DigitalOcean App Platform)
 
 - Build command: `npm run build`
 - Run command: `npm start`
-- Environment: add the variables from `.env.example` if using Nemotron.
+- Environment: add the variables from `.env.example` (keep keys in the host's encrypted settings, never in the repo).
 
 ## Grocery comparison
 
@@ -154,10 +204,10 @@ The starter samples in `data/scam-samples.json` are synthetic and easy. Add at l
 
 ## Protecting the live site
 
-- **Reset needs a password on the live server.** Set `ADMIN_PASSWORD` in DigitalOcean (mark it encrypted). Without it, reset is disabled in production so nobody can wipe your demo. On your own computer (`npm run dev`) reset works without a password, so leave the prompt empty.
+- **Reset needs a password on the live server.** Set `ADMIN_PASSWORD` in the host's encrypted settings. Without it, reset is disabled in production so nobody can wipe the demo. On your own computer (`npm run dev`) reset works without a password, so leave the prompt empty.
 - **Rate limits.** Each visitor is limited per minute on every write action (scam check 20, events 120, redeem 30, recovery 60), and reset attempts are limited too.
 - **Model quota guard.** At most `MODEL_CALLS_PER_10MIN` (default 60) model calls are made across all visitors every 10 minutes. After that the scam check keeps working with rules only.
-- The bank simulator's events are left open on purpose: they are how the demo works. Do not share the link publicly before you present.
+- The bank simulator's events are open on purpose: they are how the demo works. They only change demo data.
 
 ## What could go wrong (and what we did about it)
 
@@ -174,6 +224,7 @@ We tried to think about how this could hurt someone, be abused, or confuse peopl
 | **Bad or outdated local info** | Pantry hours are marked "not confirmed" when we have not verified them, with the check date, and only confirmed places show open or closed. Grocery prices are labeled as samples. |
 | **Confusing or inaccessible screens** | A first-visit welcome and per-page tips, plain language, keyboard and screen-reader support in dialogs, and a high-contrast light map. |
 | **Someone treats it as financial advice** | Educational only. No card recommendations and no promised score changes. Not affiliated with any bank. |
+| **The voice service is down or the key runs out** | Read aloud falls back to the browser's voice, is rate limited, has a per-10-minute call budget, and caches repeats. |
 | **Someone sends money to a scammer** | "Before you send money" checks a payment request for common scam patterns (gift cards, crypto, "send it back", secrecy, fake bank calls) and says what to do next, including calling the bank and reporting to the FTC. |
 
 Known limits: the payment and scam checks catch common patterns, not every scam. We have not tested with a real bank's data, and the bank events in the demo are simulated.

@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useBlip } from './useBlip';
 import Icon from './Icons';
+import ReadAloud from './ReadAloud';
 
 const TOOLS = [
   { href: '/check', icon: 'sliders', title: 'Reality check', desc: 'See what a card offer really costs you.' },
@@ -46,6 +47,20 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      )}
+
+      {state && state.alerts && state.alerts.length > 0 && (
+        <div className="card">
+          <h2>From your bank (sandbox)</h2>
+          {state.alerts.map((a, i) => (
+            <div key={a.ts + i} style={{ padding: '8px 0', borderTop: i ? '1px solid var(--border)' : 0 }}>
+              <span className={'pill ' + (a.severity === 'good' ? 'ok' : a.severity === 'info' ? '' : 'warn')}>{a.severity === 'alert' ? 'Alert' : a.severity === 'warn' ? 'Heads-up' : a.severity === 'good' ? 'Nice' : 'Note'}</span>
+              <p style={{ margin: '6px 0 2px' }}><b>{a.title}</b></p>
+              <p className="note" style={{ margin: '0 0 6px' }}>{a.message}</p>
+              <ReadAloud text={a.title + '. ' + a.message} />
+            </div>
+          ))}
         </div>
       )}
 
