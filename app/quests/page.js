@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { useBlip, post } from '../useBlip';
 import Icon from '../Icons';
 import { useT } from '../i18n';
@@ -167,7 +168,10 @@ export default function Quests() {
         <p className="note">{t('$5 gift card costs {n} points. Demo only.', { n: state.redeemCost })}</p>
         <button onClick={redeem}>{t('Redeem $5 gift card')}</button> {note && <span className="note" role="status">{note}</span>}
       </div>
-      <p className="note">{t('Quests complete when the bank sends an event. Use the Bank simulator tab to fire them.')}</p>
+      <p className="note">
+        {t('Quests complete when a bank reports a safe habit, like paying on time. In this demo, you play the bank.')}{' '}
+        <Link href="/bank">{t('Open the bank simulator to complete quests')}</Link>
+      </p>
     </>
   );
 }
