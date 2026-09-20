@@ -17,7 +17,8 @@
     "test:map": "node scripts/test-map.mjs",
     "test:onboarding": "node scripts/test-onboarding.mjs",
     "test:payment": "node scripts/test-payment.mjs",
-    "test:sandbox": "node scripts/test-sandbox.mjs"
+    "test:sandbox": "node scripts/test-sandbox.mjs",
+    "test:voice": "node scripts/test-voice.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.127.0",
