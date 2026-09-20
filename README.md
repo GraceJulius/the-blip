@@ -57,7 +57,7 @@ Warnings have a **Read aloud** button, for accessibility and for people who scan
 - **The app in your language:** the menus, buttons, tips and the safety screens (Home, Scam check, "Before you send money", Recovery) switch language. The text comes from pre-built dictionaries in `public/i18n/<language>.json`, so it loads instantly, works offline and can be reviewed by a native speaker. Regenerate or extend them with `node scripts/build-i18n.mjs` (it only translates new strings). Arabic and Urdu switch the page to right-to-left.
 - **Warnings and alerts:** results are also translated live by Claude into simple words for an older reader, shown in large type, and can be read aloud. The original English stays on screen.
 - **Voice (ElevenLabs):** Multilingual v2 covers Spanish, French, Portuguese, Arabic, Hindi, Tamil, Chinese, Japanese, Korean, Filipino, Indonesian, Russian, Ukrainian, Polish, German, Italian, Dutch, Turkish and English. Eleven v3 covers Hausa, Swahili, Somali, Bengali, Urdu and Vietnamese. **Yorùbá, Igbo, Amharic and Haitian Creole are not on ElevenLabs' language lists**, so they are text only. We tried a Yorùbá voice and its intonation was wrong, so it stays off. To experiment, set `ELEVENLABS_VOICE_ON_LANGS=yo`.
-- **Honest limits:** all translations are AI-made and labeled that way, and a native speaker should review them. Quests, Reality check and Groceries screens, quest titles and level names are still English. The scam rules read English, so a message pasted in another language relies on the model.
+- **Honest limits:** all translations are AI-made and labeled that way, and a native speaker should review them. The Groceries and Free food screens, the bank view and text that comes from the server (such as the reasons in a scam verdict) are still English, though verdicts are also translated live below the English. The keyword rules read English, so a scam pasted in another language relies on the model and the local classifier (`docs/SCAM-EVAL.md`).
 
 **Accessibility (screen readers and keyboards)**
 
@@ -67,7 +67,7 @@ Warnings have a **Read aloud** button, for accessibility and for people who scan
 - Dialogs trap focus, close with Escape, and return focus. Motion respects "reduce motion".
 - Color contrast passes WCAG AA (small gray labels were raised from 3.98:1 to 5.85:1).
 - The page language and direction update when you change language.
-- We ran the axe-core accessibility checker on the server-rendered pages and fixed what it found. We have not done a full test with VoiceOver, TalkBack or NVDA, and would like to.
+- We ran the axe-core accessibility checker on 11 loaded pages (including Yorùbá and Arabic) and fixed what it found: 0 violations at the end. We checked phone layouts at 360 and 390 pixels in 12 languages. We have **not** done a full test with VoiceOver, TalkBack or NVDA, and would like to.
 
 ## Data: synthetic only
 
@@ -84,7 +84,7 @@ You need Node.js 18 or newer (`node -v` to check; install from https://nodejs.or
 
 ```bash
 npm install
-cp .env.example .env.local   # optional: only needed for Nemotron
+cp .env.example .env.local   # optional: add keys to turn on the AI features (see below)
 npm run dev
 ```
 
@@ -95,6 +95,8 @@ Try the demo flow in two browser tabs:
 2. Tab B: `/bank` and click **Send event**. Tab A updates within 2 seconds.
 
 Reset demo data any time with the button on `/bank`.
+
+**Keys are optional.** Without them the app still works: the scam check uses its rules and local classifier, statements and receipts can't be read, translation and the ElevenLabs voice are off, and read aloud uses the browser's voice. Add `NVIDIA_API_KEY` and `NEMOTRON_MODEL` (scam check), `ANTHROPIC_API_KEY` (statements, receipts, groceries, translation) and `ELEVENLABS_API_KEY` (voice) to `.env.local`. Run `npm test` to run every test suite.
 
 ## Project structure
 
@@ -118,7 +120,7 @@ the-blip/
 │   ├── ReadAloud.js              "Read aloud" button (ElevenLabs voice, browser voice as backup)
 │   ├── globals.css               Design tokens and styling
 │   └── api/                      Server routes
-│       ├── scam-check/           Rules first, then the model for borderline messages
+│       ├── scam-check/           The model checks every message; rules and a local classifier explain it and back it up
 │       ├── payment-check/        Rule-based check of a payment request
 │       ├── sandbox-bank/         Synthetic bank feed: transaction in, student alert out
 │       ├── tts/                  Text to speech for the read-aloud button
@@ -145,8 +147,8 @@ the-blip/
 │   ├── orgs.js, platform.mjs, partnerApi.js, webhooks.js, analytics.mjs   Partner platform
 │   ├── guard.js                  Rate limits, admin lockout, budgets
 │   └── ids.js, api.js, onboarding.mjs   Student ids, request helpers, tip content
-├── data/                         Scam samples, the evaluation set (scam-eval/), the shipped classifier, translatable strings
-├── scripts/                      Test suites, scam evaluation, partner demo scripts
+├── data/                         Scam samples, the evaluation set (scam-eval/), the shipped classifier (scam-nb.json), translatable strings
+├── scripts/                      Test suites, the scam evaluation and its data builders, the translation builder, partner demo scripts
 ├── docs/API.md                   Partner API reference
 ├── docs/SCAM-EVAL.md             How well the scam check works, honestly
 ├── public/                       Logo, the embeddable widget script, and i18n/ (one dictionary per language)
@@ -160,7 +162,7 @@ the-blip/
 - `lib/engine.js` matches the event to a quest, awards points once, and updates the level.
 - Student pages poll `/api/state` every 2 seconds, so they update live.
 - Data lives in memory and is saved to `data/db.json` (ignored by git). It resets if the server restarts on a host with a temporary disk. That is fine for a demo.
-- Scam check: fixed rules first. Only one-flag ("suspicious") messages go to Nemotron, if `NVIDIA_API_KEY` and `NEMOTRON_MODEL` are set. Without them the app works with rules only.
+- Scam check: the Nemotron model reads every message (if `NVIDIA_API_KEY` and `NEMOTRON_MODEL` are set). Plain rules and a small local classifier run alongside it to explain the verdict, and are the backup when the model is unavailable. The screen says when that happens.
 - Pasted messages are not stored.
 
 API details: `docs/API.md`.
@@ -226,7 +228,7 @@ The set, the cached model answers and the scripts to rebuild everything are in `
 
 - **Reset needs a password on the live server.** Set `ADMIN_PASSWORD` in the host's encrypted settings. Without it, reset is disabled in production so nobody can wipe the demo. On your own computer (`npm run dev`) reset works without a password, so leave the prompt empty.
 - **Rate limits.** Each visitor is limited per minute on every write action (scam check 20, events 120, redeem 30, recovery 60), and reset attempts are limited too.
-- **Model quota guard.** At most `MODEL_CALLS_PER_10MIN` (default 60) model calls are made across all visitors every 10 minutes. After that the scam check keeps working with rules only.
+- **Model quota guard.** At most `MODEL_CALLS_PER_10MIN` (default 60) model calls are made across all visitors every 10 minutes. After that the scam check keeps working with its rules and local classifier only, and says so on screen.
 - The bank simulator's events are open on purpose: they are how the demo works. They only change demo data.
 
 ## What could go wrong (and what we did about it)
