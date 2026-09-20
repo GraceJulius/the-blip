@@ -383,3 +383,6 @@ input[type=range] { direction: ltr; }
 
 .topbar .chip { white-space: nowrap; }
 .topbar select { padding: 7px 8px; font-size: 13px; }
+
+/* Very small phones: keep only the logo mark in the top bar so the language menu, points and help all fit. */
+@media (max-width: 400px) { .topbar .brandrow span { display: none; } }
