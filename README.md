@@ -8,6 +8,37 @@ See the real cost before you swipe. TheBlip helps college students make better c
 
 Built for SteelHacks XIII. Full plan and build guide: see the team's shared doc (link in the team chat) and `docs/`.
 
+**Live demo:** https://theblip.tech
+
+## Team
+
+| Name | Email |
+| --- | --- |
+| Grace Julius | (add email) |
+| Aryannah Martin | (add email) |
+| Jaemere Gamble | (add email) |
+
+Built for the **PNC Compound** track (best financial hack), and it also uses NVIDIA Nemotron, Tiger Cloud (Tiger Data), DigitalOcean and a `.tech` domain.
+
+## Tools and AI we used (disclosure)
+
+- **AI in the product:**
+  - **Anthropic Claude** reads card statements and receipts, turns a plain request into a grocery list, and writes short summaries. Claude never does the math: prices, totals and interest are computed by our code.
+  - **NVIDIA Nemotron** helps classify borderline scam messages. Simple rules run first, and the app still works with rules only if the model is slow or off.
+- **AI used to build it:** we used **Claude Code (Anthropic)** as a coding assistant for much of the code, tests and documentation. Team members reviewed, ran and directed the work.
+- **Services:** Tiger Cloud (Tiger Data) Postgres for saved state, DigitalOcean App Platform for hosting, a `.tech` domain from MLH.
+- **Open source:** Next.js and React, Leaflet with OpenStreetMap map tiles, `pg`, `zod`, `@anthropic-ai/sdk`.
+- The project was started after the hackathon opened (first commit Sept 19, 2026, 11:34 AM EDT).
+
+## Data: synthetic only
+
+This project uses **synthetic and sample data only**. No real account numbers, credentials or financial records are needed to use it or to judge it.
+
+- The reality check has a **"Use a sample statement"** button with a made-up statement. Please use it, and do not upload real account documents.
+- Grocery prices are **samples** unless a student scans a receipt, and the app says so on screen.
+- The bank console's students and events are **simulated**. Payouts and gift cards are simulated too.
+- Nothing pasted or uploaded to the scam check, payment check, statement reader or receipt scanner is stored.
+
 ## Quick start
 
 You need Node.js 18 or newer (`node -v` to check; install from https://nodejs.org or `brew install node`).
@@ -127,6 +158,25 @@ The starter samples in `data/scam-samples.json` are synthetic and easy. Add at l
 - **Rate limits.** Each visitor is limited per minute on every write action (scam check 20, events 120, redeem 30, recovery 60), and reset attempts are limited too.
 - **Model quota guard.** At most `MODEL_CALLS_PER_10MIN` (default 60) model calls are made across all visitors every 10 minutes. After that the scam check keeps working with rules only.
 - The bank simulator's events are left open on purpose: they are how the demo works. Do not share the link publicly before you present.
+
+## What could go wrong (and what we did about it)
+
+We tried to think about how this could hurt someone, be abused, or confuse people.
+
+| Risk | What we did |
+| --- | --- |
+| **The AI is wrong** about a scam or a document | Rules run first and are explained in plain words. The model can only raise or lower a borderline verdict, and we say the result is guidance, not proof. Statement and receipt readings are shown back to the person to check and edit before anything changes. |
+| **The AI makes up numbers** | Claude never computes money. All prices, totals, interest and payoff times come from code, and there are tests for them. |
+| **The AI is slow, down or out of budget** | Timeouts, caching, a call budget, and fallbacks: rules-only scam check, keyword grocery matching, plain-text advice. |
+| **Fraud and gaming the points** | Server-side daily caps, recovery rewards once a day, quiz bonus limits, per-visitor rate limits, and no points for spending or opening cards. |
+| **Private data leaks** | Uploads and pasted messages are read once and not saved. The app never asks for account numbers, card numbers or passwords, and warns people not to enter them. Demo data is synthetic. |
+| **Partner API abuse** | Hashed API keys, per-key and per-IP rate limits, signed webhooks, blocked private addresses (SSRF guard), admin lockout, and no real student names in partner data. |
+| **Bad or outdated local info** | Pantry hours are marked "not confirmed" when we have not verified them, with the check date, and only confirmed places show open or closed. Grocery prices are labeled as samples. |
+| **Confusing or inaccessible screens** | A first-visit welcome and per-page tips, plain language, keyboard and screen-reader support in dialogs, and a high-contrast light map. |
+| **Someone treats it as financial advice** | Educational only. No card recommendations and no promised score changes. Not affiliated with any bank. |
+| **Someone sends money to a scammer** | "Before you send money" checks a payment request for common scam patterns (gift cards, crypto, "send it back", secrecy, fake bank calls) and says what to do next, including calling the bank and reporting to the FTC. |
+
+Known limits: the payment and scam checks catch common patterns, not every scam. We have not tested with a real bank's data, and the bank events in the demo are simulated.
 
 ## Guardrails
 
