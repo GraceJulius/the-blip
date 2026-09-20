@@ -241,6 +241,7 @@
  "Text the code back": "把验证码回复过去",
  "That is under the 30% mark, which is good for your credit score.": "低于 30%，对你的信用评分有好处。",
  "That payment does not cover the monthly interest. Try a higher amount.": "这笔还款不够付每月利息。请试试更高的金额。",
+ "The AI double-check was not available, so this is a first-pass check only.": "AI 复核暂时无法使用，这只是初步检查结果。",
  "The model can take a few seconds when it is busy.": "系统繁忙时，模型可能要等几秒。",
  "The sender": "发件人",
  "The sender says they are your bank and asks you to share the code they just texted.": "发件人自称是你的银行，要你把刚收到的验证码告诉他。",

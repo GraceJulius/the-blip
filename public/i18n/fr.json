@@ -241,6 +241,7 @@
  "Text the code back": "Renvoyez le code par SMS",
  "That is under the 30% mark, which is good for your credit score.": "C'est sous la barre des 30 %, ce qui est bon pour votre cote de crédit.",
  "That payment does not cover the monthly interest. Try a higher amount.": "Ce paiement ne couvre pas les intérêts du mois. Essayez un montant plus élevé.",
+ "The AI double-check was not available, so this is a first-pass check only.": "La double vérification par l'IA n'était pas disponible : ceci est donc une première vérification seulement.",
  "The model can take a few seconds when it is busy.": "Le modèle peut prendre quelques secondes s'il est occupé.",
  "The sender": "L'expéditeur",
  "The sender says they are your bank and asks you to share the code they just texted.": "L'expéditeur dit être votre banque et vous demande de partager le code qu'il vient de vous envoyer par SMS.",

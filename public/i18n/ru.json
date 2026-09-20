@@ -241,6 +241,7 @@
  "Text the code back": "Отправить код в ответ",
  "That is under the 30% mark, which is good for your credit score.": "Это ниже отметки 30% — хорошо для вашей кредитной истории.",
  "That payment does not cover the monthly interest. Try a higher amount.": "Этот платёж не покрывает месячные проценты. Попробуйте сумму больше.",
+ "The AI double-check was not available, so this is a first-pass check only.": "Проверка с помощью ИИ была недоступна, поэтому это только первичная проверка.",
  "The model can take a few seconds when it is busy.": "Когда модель загружена, ответ может занять несколько секунд.",
  "The sender": "Отправитель",
  "The sender says they are your bank and asks you to share the code they just texted.": "Отправитель говорит, что он из вашего банка, и просит код, который вам только что прислали.",

@@ -1,0 +1,3266 @@
+[
+ {
+  "label": "scam",
+  "category": "package_fee",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "USPZ Notice: your parcel #US8841-2290 is on hold at our facility due to an incomplete house number. Update your address within 24h or the package returns to sender: usps-redeliver-now.top/fix"
+ },
+ {
+  "label": "scam",
+  "category": "package_fee",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hi! Quick one — I'm from the DHX Express delivery desk. Your item from an overseas seller cleared customs but there is an outstanding handling charge of $2.85 that our driver cannot collect in cash. Once you settle it here dhx-handling.co/pay the courier will attempt delivery tomorrow between 9am and 1pm. Sorry for the trouble!"
+ },
+ {
+  "label": "scam",
+  "category": "package_fee",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "FINAL ATTEMPT. Your package has been in our warehouse 5 days. Storage fee $1.99 per day is now applied. PAY NOW OR PACKAGE IS DESTROYED >> parcel-storagefee.top/id4471"
+ },
+ {
+  "label": "scam",
+  "category": "package_fee",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Customs Declaration Incomplete — Shipment BX-77120\n\nDear Customer,\n\nOur border agent was unable to process shipment BX-77120 because the customs declaration form was submitted without a valid tax identification entry. Under current import regulations a clearance fee of $3.40 must be paid by the recipient before the goods can be released from the bonded warehouse.\n\nPlease complete the declaration and payment at: globalpost-clearance-desk.com/declare\n\nIf no action is taken within 72 hours the shipment will be returned to the country of origin at your expense.\n\nRegards,\nClearance Department\nGlobalPost International"
+ },
+ {
+  "label": "scam",
+  "category": "package_fee",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "fedx delivery falied 2x. driver need new adress + 1.50 redelivery. click fedx-redeliver.info/now or we send back"
+ },
+ {
+  "label": "scam",
+  "category": "package_fee",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hello, this is Marcus with Northline Courier. I have a package for a student address on your campus but the dorm mail room refused it without a building code. If you can verify the delivery details and the $2.00 redirect fee at northline-redirect.top I'll drop it at the front desk this afternoon instead of returning it to the depot."
+ },
+ {
+  "label": "scam",
+  "category": "package_fee",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Action required: unpaid VAT on your inbound parcel\n\nHello,\n\nA parcel addressed to you (tracking QN-40928371) arrived at our sorting hub on Monday. Import VAT of 4.99 remains unpaid and our system automatically holds such items for 5 business days.\n\nTo avoid return-to-sender, settle the amount using the secure link below. Payment by card only — we cannot accept bank transfer for small VAT amounts.\n\nhttps://quantapost-vat-settle.com/QN40928371\n\nThank you,\nQuantaPost Customer Notifications (do not reply to this address)"
+ },
+ {
+  "label": "scam",
+  "category": "package_fee",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "ALERT: PACKAGE UNDELIVERED. Address verification failed. Update + pay $0.99 fee today: pkg-verify-center.top/a92 (Msg from automated system, reply STOP to end)"
+ },
+ {
+  "label": "scam",
+  "category": "toll_parking_fine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "E-ZRoute Toll Services: our records show an unpaid toll of $6.42 from 11/04. To avoid a $58.50 late penalty and a hold on your vehicle registration, settle now at ezroute-tollpay.top/settle"
+ },
+ {
+  "label": "scam",
+  "category": "toll_parking_fine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "FINAL NOTICE — Parking Citation #PK-88201\nVehicle: silver sedan, Lot D North Campus\nAmount due: $35.00\nIf not paid within 24 hrs the amount increases to $140 and a boot may be placed on your vehicle.\nPay: campusparking-pay.click/PK88201\nDo not reply to this message."
+ },
+ {
+  "label": "scam",
+  "category": "toll_parking_fine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "State Highway Authority notice: you have 1 outstanding toll charge ($4.85). Pay before 11:59pm today: hwy-tollnotice.info/pay . Failure to pay may result in DMV suspension proceedings. Questions: 555-0142"
+ },
+ {
+  "label": "scam",
+  "category": "toll_parking_fine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Hi, this is the automated billing line for Metro Bridge Authority. We attempted to charge the card on file for your transponder and it was declined twice. Your balance is $12.60. Please update your payment details at metrobridge-account-update.co so tolls can continue to process normally. If your account stays unfunded for 5 days it will be closed and unpaid crossings will be forwarded to collections."
+ },
+ {
+  "label": "scam",
+  "category": "toll_parking_fine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "trafic violation notice: red light camera captured your plate on Oct 29 at Maple & 5th. fine $95. pay online here to avoid court date -> ticketclear-online.top/rlc  (case ref 4471-B)"
+ },
+ {
+  "label": "scam",
+  "category": "toll_parking_fine",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Outstanding Toll Balance — Action Required (Ref TR-77315)\n\nDear Customer,\n\nOur system indicates an unpaid toll balance of $9.20 associated with your license plate. This balance has remained outstanding for 21 days.\n\nPer state regulation, unpaid balances over 30 days are assessed an administrative fee of $75.00 per transaction and may be referred to a collection agency.\n\nTo review the images of the crossing and pay the balance, visit the secure portal below:\n\nhttps://tollway-secure-billing.net/ref/TR-77315\n\nPlease have your plate number and a valid debit or credit card available. Payment by gift card is also accepted at participating locations.\n\nRegards,\nBilling Department\nRegional Tollway Commission"
+ },
+ {
+  "label": "scam",
+  "category": "toll_parking_fine",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Campus Safety Parking Office here. Youve got 3 unpaid tickets totaling $110. Students with unpaid parking balances cannot register for spring classes. Clear it today: parkinghold-clear.top/student"
+ },
+ {
+  "label": "scam",
+  "category": "toll_parking_fine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "ALERT!! Unpaid toll $3.75. ur account is past due. click paynow-tolls.top/x to pay in 12 hours or a warrent may be issued for your veichle. thank you"
+ },
+ {
+  "label": "scam",
+  "category": "refund_overpayment",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "NOTICE: Your Fall semester tuition account was overcharged $418.60 due to a billing system error. Refunds are processed through our secure portal only. Confirm your debit card + routing details here: bursar-refund-portal.top/verify — unclaimed refunds are returned to the state after 48 hrs."
+ },
+ {
+  "label": "scam",
+  "category": "refund_overpayment",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hi! Sorry to bother you on here. I'm the hiring coordinator for the remote Campus Brand Ambassador role you applied to on the student job board. Your first check for $1,950 was sent early by mistake — it was supposed to be $450 plus equipment funds. Please deposit it, keep your $450, and Zelle the remaining $1,500 back to our equipment vendor (details below) today so payroll can close the cycle. Let me know once it's sent and I'll mail your welcome packet."
+ },
+ {
+  "label": "scam",
+  "category": "refund_overpayment",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Dear Student,\n\nOur audit of student housing accounts for the 2024 year found that your security deposit of $612.00 was withheld in error. We are issuing a full refund with interest.\n\nTo release the funds, please complete the refund authorization form within 24 hours:\nhttps://housing-deposit-return.top/claim\n\nYou will be asked to verify your bank login so the deposit can be matched to the correct account. Failure to respond will result in the balance being forfeited to the housing reserve fund.\n\nRegards,\nMarisol Trent\nRefund Operations, Westbrook Residential Services"
+ },
+ {
+  "label": "scam",
+  "category": "refund_overpayment",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hello — this is Dana from PaySprint Support. We show a duplicate charge of $89.99 on your account from Riverbend Textbooks. I can reverse it right now. To confirm it's really you, I'm sending a 6-digit code to your phone — read it back to me and the refund posts in 10 minutes."
+ },
+ {
+  "label": "scam",
+  "category": "refund_overpayment",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Your StreamNest subscription was canceled and you are owed $74.97. Our refund agent tried your card 3x and it declined. Reply REFUND with your card number + exp to reissue, or call 555-0163."
+ },
+ {
+  "label": "scam",
+  "category": "refund_overpayment",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Re: Sublet payment sent — small problem\n\nHey, so my dad handles the transfers and he messed up. He sent $2,300 instead of the $800 for first month's rent on the apartment. I'm still overseas until the 20th so I can't fix it on my end.\n\nCan you please just send the extra $1,500 back to my relocation agent? She takes Apple Pay or cash app, I'll send her tag. I trust you, you seem like a good person and I really want this place to work out. Once that's cleared I'll have the keys couriered to you.\n\nThanks so much,\nGreg"
+ },
+ {
+  "label": "scam",
+  "category": "refund_overpayment",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "FINAL NOTICE: Federal student aid overpayment of $1,206 has been approved for return to you. Claim window closes tonight 11:59pm. Verify SSN and bank at fsa-overpay-return.top or funds are voided."
+ },
+ {
+  "label": "scam",
+  "category": "refund_overpayment",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Hi, this is Accounts Receivable at Lakemont Tutoring Co-op. Our processor shows your invoice was paid twice this month ($260 x2). We've issued a check for $1,260 by mistake — the extra $1,000 was an internal coding error on our side. Please deposit the check as normal, then send $1,000 back via wire to the account listed in the attached PDF within 2 business days so our books reconcile before the quarterly close. Apologies for the inconvenience, and thank you for handling this quickly."
+ },
+ {
+  "label": "scam",
+  "category": "bank_impersonation_code",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "NORTHBRIDGE CU ALERT: Card ending 4417 attempted $412.88 at an electronics store in Dover, DE. If this wasn't you reply NO. We will text a 6-digit verification code - send it back here so we can block the charge."
+ },
+ {
+  "label": "scam",
+  "category": "bank_impersonation_code",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hi, this is Dana from the Fraud Prevention Desk at Larkspur Savings Bank. I'm reaching out through chat because our phone lines are backed up tonight.\n\nWe've flagged three pending transfers from your student checking account totaling $1,246. To stop them, we need to verify you're the account holder. I'm sending an authorization code to your phone right now. Please type it in this chat within 5 minutes or the code expires and the transfers will post.\n\nPlease do not close this window while I'm working on your case."
+ },
+ {
+  "label": "scam",
+  "category": "bank_impersonation_code",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Wells Harbor Bank Security: we detected unauthorized ACH pull. To protect funds, move your balance to the secure holding account below using Zelle.\nAcct: 8840029117 Routing: 021000021\nName: W H B SAFEKEEPING\nFunds returned in 24-48 hrs after review. Do not discuss with branch staff, account under fraud lock."
+ },
+ {
+  "label": "scam",
+  "category": "bank_impersonation_code",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: [Action Required] Suspicious Login - Case #FR-99231\n\nDear Valued Member,\n\nOur automated monitoring system has detected a login to your Cedarline Bank online banking profile from an unrecognized device located in Bucharest, RO at 03:12 AM.\n\nAs a precaution your debit card has been temporarily restricted. To lift the restriction, please confirm your identity at the secure portal below within 12 hours. You will be asked for your username, password, and the one-time passcode we send to your mobile device.\n\nhttps://cedarline-verify-center.top/unlock\n\nFailure to complete verification may result in permanent account closure and forfeiture of pending deposits.\n\nSincerely,\nFraud Operations Team\nCedarline Bank, Member FDIC"
+ },
+ {
+  "label": "scam",
+  "category": "bank_impersonation_code",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "this is the fraud dept for ur bank. someone tried to add a new payee. we sent u a code. text it back NOW or we cant reverse it. do not ignore this msg"
+ },
+ {
+  "label": "scam",
+  "category": "bank_impersonation_code",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hello! Pike Street Financial Fraud Team here. Quick note before we continue: a real representative will NEVER ask for your full card number, so we won't. We only need the 6-digit security code that just landed on your phone, plus the last 4 of your SSN, so I can freeze the compromised card and issue a new one to your campus address. Ready when you are."
+ },
+ {
+  "label": "scam",
+  "category": "bank_impersonation_code",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Urgent - Protect Your Deposit Before 5PM\n\nHi,\n\nI'm Marcus Ellery, senior investigator with the Fraud Resolution Unit at Havenmark Bank. An employee at one of our processing partners has been skimming student accounts, and yours appears on the affected list.\n\nBecause the internal investigation is ongoing, we are asking affected customers to temporarily transfer their available balance to a bank-controlled protection wallet while we rebuild the account. Steps:\n\n1. Log in and note your available balance.\n2. Send that amount via wire or Zelle to the protection wallet listed in the attached instructions.\n3. Reply to this email with the confirmation number and the one-time code we send to your phone.\n\nFunds are insured during the hold and returned within two business days. Please keep this confidential; disclosing an active investigation to branch employees may compromise it.\n\nRegards,\nMarcus Ellery, FRU\nhavenmark-fru-secure.net"
+ },
+ {
+  "label": "scam",
+  "category": "bank_impersonation_code",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "AUTOMATED CALLBACK FAILED. Oakfield Bank Fraud Team. $899.00 wire pending to unknown beneficiary. Reply STOP-WIRE with the 8 digit code we just sent to cancel. Reply after 20 min = wire final."
+ },
+ {
+  "label": "scam",
+  "category": "friend_in_need",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "hey its Marcus, im on my cousins phone. my phone got stolen at the bus station last night. im stuck and need $120 for a replacement sim + ride home. can u cashapp it to $mrcs.help24 and ill pay u back friday i swear"
+ },
+ {
+  "label": "scam",
+  "category": "friend_in_need",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Hi sweetie, it's Aunt Deb. I got a new number, save it. Listen, I'm at the hospital with your uncle and I can't leave to buy something. Could you pick up two $100 Vantage Mart gift cards for the nurses gift basket and text me the codes on the back? I'll write you a check this weekend. Don't call, phones aren't allowed in here."
+ },
+ {
+  "label": "scam",
+  "category": "friend_in_need",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "yo u up?? need a huge favor. locked out of my bank app and my rent auto pay bounces at midnight. can u send 200 to my roommate venmo @tyler.g.pays and ill transfer u back when the app unlocks. pls dont tell my mom she will freak"
+ },
+ {
+  "label": "scam",
+  "category": "friend_in_need",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: need your help quickly (from Jenna)\n\nHey,\n\nI'm emailing from my backup account because my main one is acting weird. I'm travelling with the choir group and my card got flagged for fraud so I have zero access to money until Monday. The hostel wants 180 EUR tonight or they put our bags out.\n\nIs there any way you could send it through the transfer link the front desk gave me? swiftsend-guestpay.top/jenna They said it's the fastest way.\n\nI know this is a lot to ask. I'll pay you back the second I land.\n\n- Jenna"
+ },
+ {
+  "label": "scam",
+  "category": "friend_in_need",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "hey bro its dad. new phone new number lol. im in a meeting all day and cant talk. i need you to buy 3 apple gift cards 100 each for a client thank you gift. scratch the back and send me pictures. ill reimburse tonight. dont call the office"
+ },
+ {
+  "label": "scam",
+  "category": "friend_in_need",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "heyyy!! its me Priya 😭 my account got suspended so im messaging from my sisters. long story but i got scammed by a sublet guy and im short on my deposit. if u can spare even 75 it would save me. zelle works: priya.remit.pay@mailburrow.co . i NEED it in the next hour or i lose the room"
+ },
+ {
+  "label": "scam",
+  "category": "friend_in_need",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Hi hon, grandma here. I'm using a friend's phone. I don't want to bother your parents but I'm in a bit of trouble with a bill and the man says they'll shut off the power today. It's $340. Could you go to the store and get gift cards? The nice man on the phone said that's how they take payment now. Please don't mention this to your mother, I'd be embarrassed."
+ },
+ {
+  "label": "scam",
+  "category": "friend_in_need",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: URGENT - stranded (Kev)\n\nhey man sorry for the weird email. my phone is dead and im using a computer at the airport lounge. missed my connecting flight and the rebooking desk wants 260 usd. my debit card is declining for some reason.\n\ncan you pay it from your end? the airline sent me a payment portal: flyrebook-desk.top/KV82\n\nplease hurry the counter closes in 40 min. i will venmo you the second i land i promise\n\nkev"
+ },
+ {
+  "label": "scam",
+  "category": "rental_deposit",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Hi! Saw your inquiry about the 2BR near campus on Elm St. $750/mo all utilities included. I am currently out of state on a mission trip so I cannot show the unit in person, but my nephew can drop the keys once the holding deposit of $600 is sent via Zelle to graceholdings.rentals@mail-box.co. The apartment is going fast, 4 other students asked today."
+ },
+ {
+  "label": "scam",
+  "category": "rental_deposit",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Hello,\n\nThank you for your interest in the studio at 118 Warren Court (listing #RT-4471). Rent is $695/month, which I understand is below market — I recently relocated for work and prefer a quiet tenant over maximum profit.\n\nOur process: because of the volume of applicants, viewings are scheduled only after a refundable $400 reservation deposit is received. The deposit is fully credited toward your first month or returned within 48 hours if you decide not to proceed after the walkthrough.\n\nPayment link: https://warrencourt-reserve.top/pay\n\nOnce received I will email you the viewing window and the lockbox code.\n\nRegards,\nD. Whitfield\nWhitfield Property Group"
+ },
+ {
+  "label": "scam",
+  "category": "rental_deposit",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "hey this is about the room u messaged on the housing board. still open. $500 deposit thru cash app $RentFastHomes and i mail u the keys. cant do a showing right now cus the current tenant is still moving out but i can send more pics"
+ },
+ {
+  "label": "scam",
+  "category": "rental_deposit",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Good afternoon. This is Marcy with Cedarline Student Rentals. The 1BR you asked about at 44 Halvern Ave is available Aug 1 at $820. We have 11 showing requests, so we go in order of who submits the application fee + holding deposit ($350 total). Pay here: cedarline-apply.click/secure. After payment I'll call you to set the tour."
+ },
+ {
+  "label": "scam",
+  "category": "rental_deposit",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: RE: Furnished apt, 3 min walk to campus\n\nHi there,\n\nSorry for the slow reply — I'm a travel nurse and I'm on assignment in Qatar until next month, so the unit is locked and no agent has access. That's why I can offer it at $640 instead of the usual $1,100.\n\nIf you want it, send the first month's rent as a good faith deposit through Western Union to my brother-in-law who manages my affairs (details below). The moment it clears, FedEx will deliver the keys and you can view the place yourself and move in the same day. If you don't like it, just mail the keys back and I refund everything.\n\nReceiver: Anthony Okorie\nCity: Dallas, TX\n\nPlease hurry, I have two other students waiting.\n\nGod bless,\nSandra"
+ },
+ {
+  "label": "scam",
+  "category": "rental_deposit",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hi, regarding the townhouse share on Ridgemont: the landlord requires a $250 viewing deposit to weed out no-shows (we had 9 people ghost us last week). It goes toward your deposit if you sign, or is refunded after the tour. Venmo @RidgemontLease-Mgmt with your name in the note and I'll text you a time slot for Saturday."
+ },
+ {
+  "label": "scam",
+  "category": "rental_deposit",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "URGENT — 3 UNITS LEFT!! Student housing $499/mo, water+wifi FREE, 5 min from campus. To reserve your viewing slot pay the $199 non refundable booking fee at rent-reserve-now.online within 2 HOURS or your spot is released to the next applicant. NO VIEWINGS WITHOUT BOOKING FEE. Reply STOP to opt out."
+ },
+ {
+  "label": "scam",
+  "category": "rental_deposit",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Hello,\n\nI'm the property coordinator for the Bellwood Flats listing you saved. Before I can release the address and schedule an in-person viewing, our office requires a background-check and holding fee of $275. This is standard practice for our portfolio and protects serious applicants.\n\nPlease note we cannot accept cards or checks at this stage — payment must be made in Apple gift cards, which our accounting department converts. Send the card codes to this address and I will confirm your viewing for Thursday at 5pm.\n\nThank you,\nKevin Ortiz\nBellwood Flats Leasing"
+ },
+ {
+  "label": "scam",
+  "category": "job_check_equipment",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "HR Dept - Campus Hiring\n\nCongrats! Your resume was selected from the university career portal for a Remote Data Entry Assistant position at Velmora Logistics Group. Pay is $480/week for 8-10 hrs.\n\nNo interview needed. To start, reply with your full name, address and bank name so payroll can mail your first check in advance.\n\nText HR Manager Daniel at 555-0174 to confirm."
+ },
+ {
+  "label": "scam",
+  "category": "job_check_equipment",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Offer of Employment — Personal Assistant (Remote, $650/wk)\n\nHello,\n\nMy name is Gregory Halston. I am a research consultant currently traveling for a project in Denmark. I obtained your contact from your school's student employment listing and would like to hire you as my remote personal assistant.\n\nDuties: running occasional errands, purchasing supplies, mailing packages. 5-8 hours weekly, $650 weekly.\n\nAs my first task, I will mail you a certified check for $2,940. Deposit it, keep $650 as your first week pay, and use the balance to purchase art supplies from my supplier, who only accepts wire transfer. I will send instructions once the check clears.\n\nKindly confirm your mailing address and phone number so the check can be dispatched today.\n\nRegards,\nGregory Halston"
+ },
+ {
+  "label": "scam",
+  "category": "job_check_equipment",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Hi! Is this still your number? I'm Alicia from Northbay Talent Partners. We placed a student from your program last semester and have another opening — Social Media Evaluator, $22/hr, fully remote.\n\nOne detail up front: our contractors use a specific monitoring software suite, so there's a one-time equipment setup of $189 (laptop stand, headset, license key). It's reimbursed on your second paycheck.\n\nIf you're interested I'll send the onboarding link: northbay-talent-onboarding.co"
+ },
+ {
+  "label": "scam",
+  "category": "job_check_equipment",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Congratulations – Position Confirmed (Quillspring Analytics)\n\nDear Applicant,\n\nWe are pleased to inform you that you have been APPROVED for the role of Remote Quality Analyst with Quillspring Analytics. Weekly salary: $700. Schedule: flexible.\n\nYour employment package has been processed. A funds transfer of $3,150.00 has been released to cover the purchase of your home office equipment (laptop, printer, secure router) from our APPROVED VENDOR only.\n\nSTEP 1: Deposit the check.\nSTEP 2: Notify your onboarding officer.\nSTEP 3: Send the equipment amount to the vendor via Zelle as instructed.\n\nFailure to complete step 3 within 24 hours will result in cancellation of your onboarding.\n\nOnboarding Officer: Mr. Kevin Ross, 555-0138"
+ },
+ {
+  "label": "scam",
+  "category": "job_check_equipment",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "hey are u the one who applied for the campus ambassador job? we got ur info from the job board. position pays $350/wk posting flyers + 2 hrs online. ur welcome package with the check is going out today, just need ur address. also the check will be a bit more than expected, thats normal, u just send the extra to our print vendor"
+ },
+ {
+  "label": "scam",
+  "category": "job_check_equipment",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Hello — following up on your application to the Lab Assistant (Remote Support) role at Trentmoor BioSciences.\n\nThe hiring team would like to move forward. Before we can finalize, our IT policy requires all remote staff to work on a company-imaged device. We partner with a fulfillment vendor who ships these out.\n\nThe device is provided at no cost to you; however, students are asked to cover the refundable $240 shipping and imaging deposit. This is returned in full with your first direct deposit.\n\nPayment portal: trentmoor-onboarding-pay.net\n\nPlease complete within 48 hours so we can hold your start date. Let me know if you have questions.\n\nBest,\nMarisol Kane\nTalent Operations"
+ },
+ {
+  "label": "scam",
+  "category": "job_check_equipment",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "URGENT: Your check for the Student Shopper Program ($1,875) has been delivered to your address. Deposit today, keep $300, and purchase 3 gift cards at Target as your first evaluation task. Photograph the codes and text them to your supervisor at 555-0192. Do NOT discuss this assignment with store staff — it affects evaluation accuracy."
+ },
+ {
+  "label": "scam",
+  "category": "job_check_equipment",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hi, this is Owen with Pell & Rourke Staffing. Sorry for the odd hour — I'm on a different timezone.\n\nWe're filling a part-time bookkeeping support seat for a client and your profile matched. $19/hr, 12 hrs a week, all remote.\n\nOne thing I should mention early so it isn't a surprise later: the client requires contractors to use QuietDesk, a licensed accounting workspace. It's $74 for the student license. Most people expense it back after 30 days but I'll be honest, the reimbursement does take a full cycle.\n\nI can send the license invoice and the offer letter together if you want to move ahead. Just need your email and a photo of your ID for the background file."
+ },
+ {
+  "label": "scam",
+  "category": "prize_giveaway",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "CONGRATS!! Your student email was picked in the CampusFest Spring Giveaway. You won a $1,000 BrightMart gift card. Claim within 24 hrs here: campusfest-claim.top/win \nSmall verification fee of $4.95 required to unlock card."
+ },
+ {
+  "label": "scam",
+  "category": "prize_giveaway",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Hi! I'm Megan from the Loopgram Creator Team 🎉 You were tagged as one of our 5 winners for the AirBuds Pro + $500 cash bundle. To release your prize I just need: full name, home address, DOB, and a photo of your student ID or driver license. Shipping insurance is $12.50 payable by gift card code (Steammart or BrightMart). Reply here and I'll walk you through it!"
+ },
+ {
+  "label": "scam",
+  "category": "prize_giveaway",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: FINAL NOTICE — Unclaimed Prize #A88-2231 (Bookstore Textbook Grant)\n\nDear Student,\n\nOur records indicate you have not yet collected the $750 Textbook Grant awarded to you by the National Student Rewards Board during the Fall semester drawing.\n\nTo process disbursement we require the following within 48 hours:\n\n1. Full legal name and permanent address\n2. Date of birth\n3. Bank routing and account number (for direct deposit)\n4. A one-time processing charge of $19.00\n\nComplete the form at: studentrewards-disburse.info/claim\n\nFailure to respond will result in the grant being reassigned to an alternate recipient.\n\nSincerely,\nD. Whitaker, Disbursement Officer"
+ },
+ {
+  "label": "scam",
+  "category": "prize_giveaway",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Hello, this is the promotions desk for Vellora Coffee. You were the 300th customer scanned at our campus kiosk and won a year of free drinks plus a $200 card. Text back your name, address, SSN last 4 and card number for identity match. Reply STOP2 to decline. 555-0142"
+ },
+ {
+  "label": "scam",
+  "category": "prize_giveaway",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "hey!! did u see the email? we both got picked in that dorm raffle thing lol. i already claimed mine, it took like 5 min. u just pay the $6 courier hold and they mail the visa card. link is dormraffle-prizes.online/claim — do it before midnight tho, mine almost expired"
+ },
+ {
+  "label": "scam",
+  "category": "prize_giveaway",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Your ScholarTrack survey reward is ready\n\nHi there,\n\nThank you for participating in our campus wellbeing survey last month. You have been selected in the incentive drawing for a $300 prepaid gift card.\n\nBecause prizes over $250 are subject to courier bonding, a refundable bond of $24.99 must be posted before the card is released. Please confirm your mailing address, date of birth, and the last four digits of the account you'd like the bond refunded to.\n\nClaim portal: scholartrack-incentives.co/reward\n\nThis reward expires 72 hours after this notice.\n\nRewards Fulfillment, ScholarTrack Research"
+ },
+ {
+  "label": "scam",
+  "category": "prize_giveaway",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "WINNER ALERT 🎁 Your number was drawn in the RoamTel Loyalty Sweepstakes! Prize: new phone + $400 credit. Confirm eligibility by sending the 6-digit code we just texted you and a $9.99 activation payment via card. Reply YES to start."
+ },
+ {
+  "label": "scam",
+  "category": "prize_giveaway",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Greetings student! The Off-Campus Housing Expo drawing has selected you for the $1,500 Move-In Prize Pack. Winners must verify enrollment by uploading their student ID and paying the $35 non-refundable prize tax at moveinprize-verify.net. Note: prize funds cannot be mailed until the tax clears. Questions? Call our claims line 555-0178 (9am-9pm)."
+ },
+ {
+  "label": "scam",
+  "category": "tech_support",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "MicroGuard Security Alert: 3 viruses detected on your device (Trojan.W32.Blaster). Your banking data may be exposed. Call our support line immediately at 555-0142 to run a free removal. Do not use online banking until cleared."
+ },
+ {
+  "label": "scam",
+  "category": "tech_support",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Renewal Confirmation - NovaShield Total Protect ($419.88)\n\nDear Customer,\n\nThank you for renewing your NovaShield Total Protect plan. The amount of $419.88 USD has been charged to the payment method on file and will appear on your statement within 24 hours.\n\nOrder ID: NVS-88412-QC\nPlan: 3 Year Auto-Renew (5 devices)\n\nIf you did not authorize this renewal, our billing department must cancel it manually within 24 hours. Auto-renewals cannot be reversed through email. Please call our cancellation desk:\n\nBilling Support: 555-0173 (open 24 hours)\n\nRegards,\nNovaShield Billing Team\nnovashield-billing-center.top"
+ },
+ {
+  "label": "scam",
+  "category": "tech_support",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "WINDOWS DEFENDER HAS EXPIRED!! your pc is UNPROTECTED and hackers can see your files RIGHT NOW. dont restart your computer. call certified technician: 555-0119 (Tech Support Dept)"
+ },
+ {
+  "label": "scam",
+  "category": "tech_support",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Hello, I am Aaron from the PC Care Help Desk. Our monitoring server received 47 error reports from your computer's IP address last night. This usually means a remote access tool was installed without your knowledge. I can walk you through the fix, but I need you to call 555-0188 so I can verify your license key over the phone. Please do not ignore this message, the infection spreads to devices on the same wifi network."
+ },
+ {
+  "label": "scam",
+  "category": "tech_support",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Action needed: your CloudNest storage subscription was charged twice\n\nHi,\n\nDuring a system migration a number of accounts were billed twice for the annual CloudNest 2TB plan. Our records show two charges of $129.00 on your account.\n\nWe are issuing refunds by phone only, as our online refund portal is offline during the migration. Please contact the refund line at 555-0164 with your invoice number (CN-70225) ready. An agent will confirm your card details so the amount can be returned.\n\nRefunds not claimed within 5 business days will be converted to account credit.\n\nCloudNest Customer Accounts"
+ },
+ {
+  "label": "scam",
+  "category": "tech_support",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Apple iCloud Support: Your device has been locked due to suspicious activity from 2 unknown devices. Unlock assistance: 555-0156. Reply STOP to opt out."
+ },
+ {
+  "label": "scam",
+  "category": "tech_support",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "hey is this the right number? i work at the campus tech helpdesk overflow center. we got an alert that a laptop registered to your student email is sending spam on the university network. before IT disables your account you should call 555-0102 and ask for ticket 3391. we can clean it remotely in like 10 min, just need your login to start the session"
+ },
+ {
+  "label": "scam",
+  "category": "tech_support",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Invoice #GS-45102 — GameStream Plus Premium (Annual) $89.99\n\nYour subscription to GameStream Plus Premium has been successfully activated and the annual fee of $89.99 has been debited.\n\nDidn't sign up? Someone may have used your email during checkout. Our automated system cannot process disputes. Call the Subscription Cancellation Helpline within 12 hours:\n\n  +1 555-0131\n\nHave your card handy so the agent can locate and void the transaction. Lines are busy in the morning, calling after 6pm is recommended.\n\nThis is an automated notice from gamestream-invoices.co — please do not reply."
+ },
+ {
+  "label": "scam",
+  "category": "crypto_investment",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "yo saw ur post in the campus finance group. im running a small crypto mining pool, $200 in = $2,400 back in 14 days GUARANTEED. no risk at all, i cover losses myself. 6 spots left, dm me"
+ },
+ {
+  "label": "scam",
+  "category": "crypto_investment",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Your Invitation — Velmora Digital Assets Student Growth Program\n\nHello,\n\nYou have been pre-selected for the Velmora Digital Assets Student Growth Program, a closed group for undergraduates seeking passive income.\n\nOur AI arbitrage engine has produced a verified 8.4% WEEKLY return for 31 consecutive weeks. Capital is insured by our internal reserve fund, so your principal is guaranteed. Minimum entry is $150.\n\nRegistration closes Friday at midnight. Activate your account here:\nhttps://velmora-growth-portal.top/student\n\nWarm regards,\nDarian Fosse\nSenior Onboarding Advisor, Velmora Digital Assets"
+ },
+ {
+  "label": "scam",
+  "category": "crypto_investment",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hi! This is Mia from the alumni mentoring network — I think we matched last semester? Anyway I wanted to share something since you mentioned struggling with tuition. My uncle manages a private fund (NorthArc Capital) that takes small deposits from students and runs them through a stablecoin yield strategy. It's not public. Returns are locked at 4% a week and he covers any downside personally so you literally cannot lose money. I started with $300 in September and I'm at $2,100 now. Happy to introduce you if you want, he only takes referrals."
+ },
+ {
+  "label": "scam",
+  "category": "crypto_investment",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "CONGRATS 🎉 Your wallet was selected in the LunaChain airdrop. Send 0.02 ETH to verify ownership and receive 0.6 ETH back INSTANTLY, guaranteed. Verify: lunachain-claim-drop.top"
+ },
+ {
+  "label": "scam",
+  "category": "crypto_investment",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Re: our conversation about the trading desk\n\nGood evening,\n\nFollowing up as promised. Attached is the one-page summary for the Halbrook Yield Note.\n\nKey terms: 90-day term, fixed 22% return paid at maturity, principal protected by our clearing partner. We accept funding by bank transfer or USDT. Several students from your department are already participating and I can share their notes if it helps you decide.\n\nAllocation for this quarter closes Monday and I would hate for you to miss the window again. Reply with the amount you'd like reserved and I'll send funding instructions.\n\nRegards,\nT. Halbrook\nHalbrook Private Yield | halbrook-yield.co"
+ },
+ {
+  "label": "scam",
+  "category": "crypto_investment",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Hey it's Kev from Econ 210 — got a new number. Remember I told u about the forex bot? I turned $500 into $4,300 in 3 weeks 😭 my guy guarantees a min 300% or full refund. lmk if u want the link before he closes signups"
+ },
+ {
+  "label": "scam",
+  "category": "crypto_investment",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "good morning ☀️ posting today's results for the group: +11.2% again. that's 9 green weeks straight. reminder for the new members — deposits are made to the wallet address pinned above, NOT to me personally. minimum is $100 for students. your capital is protected under our guarantee policy so the only thing you risk is missing out. withdrawals process after a 30-day maturity period. any questions drop them below 👇"
+ },
+ {
+  "label": "scam",
+  "category": "crypto_investment",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Withdrawal on hold — verification fee required\n\nDear Investor,\n\nCongratulations. Your Orinth Capital account has reached a balance of $6,842.19 from your initial $250 deposit, in line with our guaranteed growth schedule.\n\nBefore funds can be released, a one-time network verification fee of $340 must be paid from an external source (regulations prohibit deducting it from your balance). Once received, your full withdrawal is processed within 2 hours.\n\nPay here: https://orinth-withdraw-verify.top/fee\n\nUnpaid accounts are frozen after 48 hours and the balance is forfeited to the reserve pool.\n\nOrinth Capital Support\nsupport@orinth-capital-desk.com | 555-0173"
+ },
+ {
+  "label": "scam",
+  "category": "student_loan_fafsa",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "FEDERAL STUDENT AID ALERT: Your loan forgiveness application is 1 step from approval. Verify your FSA login before 11:59pm to lock in $0 balance: fsa-forgive-portal.top/verify"
+ },
+ {
+  "label": "scam",
+  "category": "student_loan_fafsa",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Hi! This is Danielle from the National Borrower Relief Office. We were assigned your file after the new forgiveness ruling. To release your discharge we need the $249 document processing fee (refundable) plus your FSA ID username and password so our specialists can file on your behalf. Can you send those over this afternoon? Spots in this round close Friday."
+ },
+ {
+  "label": "scam",
+  "category": "student_loan_fafsa",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Action Required - Unclaimed Financial Aid Disbursement ($4,812)\n\nDear Student,\n\nOur records indicate a Pell supplement of $4,812.00 was allocated to your account for the current term but was returned by your institution due to an incomplete verification profile.\n\nTo re-issue funds, log into the Disbursement Recovery Center within 72 hours and confirm your identity:\n\nhttps://aid-disbursement-recovery.net/claim\n\nYou will need: FSA ID, date of birth, SSN, and the bank routing/account number where funds should be deposited. A one-time $35 re-issuance fee will be deducted from your award.\n\nFailure to respond will result in permanent forfeiture of this award.\n\nSincerely,\nOffice of Student Disbursement Services"
+ },
+ {
+  "label": "scam",
+  "category": "student_loan_fafsa",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Congradulations! You qualify for the 2024 Student Debt Cancellation Program. Reply YES with your full name, school, and last 4 of SSN and a agent will call you within 10 mins to collect the small enrollment payment."
+ },
+ {
+  "label": "scam",
+  "category": "student_loan_fafsa",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Your forgiveness file 8842-KR is on hold\n\nHello,\n\nI'm the case advisor assigned to your consolidation + forgiveness package. Everything is approved on our end, but the servicer will not release the discharge letter until the $89 filing charge is paid. We accept Zelle or prepaid card only at this stage because ACH takes 10 business days and your window closes Thursday.\n\nAlso please reply with your StudentAid.gov username and password so I can upload the signed forms directly. I cannot complete the submission without portal access.\n\nRegards,\nMarcus Webb\nSenior Relief Advisor, Borrower Assistance Group\n555-0182"
+ },
+ {
+  "label": "scam",
+  "category": "student_loan_fafsa",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Campus Aid Office notice: your FAFSA verification failed. Re-verify now to avoid your spring aid being cancelled -> myfafsa-reverify.top/login"
+ },
+ {
+  "label": "scam",
+  "category": "student_loan_fafsa",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "hey is this the right number? im with the grant assistance team, you were selected for a $7,500 education grant that doesnt need to be paid back. we just need the 4% release fee ($300) sent to cover the treasury transfer, then the rest hits your account same day. want me to text you the payment link?"
+ },
+ {
+  "label": "scam",
+  "category": "student_loan_fafsa",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: FINAL NOTICE — Loan Forgiveness Enrollment Expires Today\n\nStudent Borrower,\n\nOur system shows you have not yet activated your forgiveness benefit under the updated repayment adjustment. Enrollment closes at midnight and will not reopen this academic year.\n\nStep 1: Sign in at secure-loanforgive-center.com/activate\nStep 2: Confirm your FSA ID credentials\nStep 3: Pay the $199 lifetime enrollment fee by debit card\n\nOnce complete, your remaining balance will be cancelled within 30 days. Do not forward this email, your enrollment code is tied to your account.\n\nBorrower Services Department"
+ },
+ {
+  "label": "scam",
+  "category": "scholarship_fee",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "CONGRATS! You have been pre-selected for the Merit Horizon Student Grant of $4,750. No essay required. To release funds, submit the one-time application processing fee of $35 via the portal: meritgrant-release.top/claim. Fee must be paid within 24 hrs or award passes to next applicant."
+ },
+ {
+  "label": "scam",
+  "category": "scholarship_fee",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Hi! I'm Danielle with the Campus Futures Foundation. Your name came up on our list of eligible sophomores for our $2,500 textbook scholarship. There's no essay and no GPA minimum — the only requirement is a refundable $49 verification deposit so we know applicants are serious. You get the deposit back with your award check. Want me to hold your spot? Just send the deposit through the link I'll message you."
+ },
+ {
+  "label": "scam",
+  "category": "scholarship_fee",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: FINAL NOTICE — Your Scholarship Award #SA-99183 Awaits Disbursement\n\nDear Student,\n\nThe National Undergraduate Achievement Board has approved your file for a $6,000 non-repayable education award for the upcoming term. Our records indicate your award remains UNCLAIMED.\n\nTo complete disbursement, the following must be received by our office:\n1. Completed disbursement form (attached)\n2. Administrative processing fee of $87.50\n3. Copy of your student ID\n\nThe processing fee covers federal filing and notarization and is deducted from no award. Payment may be submitted at nuab-disburse-center.com or by calling our awards desk at 555-0164.\n\nFailure to remit within 3 business days will result in reassignment of your award to an alternate recipient.\n\nSincerely,\nOffice of Awards Administration\nNational Undergraduate Achievement Board"
+ },
+ {
+  "label": "scam",
+  "category": "scholarship_fee",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "hey are u still looking for scholarship money? my cousin got 3k from studentawardvault.net last semester. u pay like 25 for the application review and they match u with grants. i can send u my referral so u get priority processing"
+ },
+ {
+  "label": "scam",
+  "category": "scholarship_fee",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Your application to the Lakebridge Scholars Program has advanced to Round 2\n\nCongratulations,\n\nOut of 11,400 submissions, your profile has advanced to the second round of consideration for the Lakebridge Scholars Program ($10,000 renewable).\n\nRound 2 candidates must confirm participation by remitting the standard candidate file fee of $60. This fee is non-refundable and covers third-party transcript verification and committee review hours. Scholarship funds cannot legally be used to offset the fee.\n\nConfirm here: lakebridge-scholars-round2.org/confirm\n\nDeadline: 48 hours from receipt of this notice. Candidates who do not confirm are withdrawn automatically and may not reapply for two award cycles.\n\nWarm regards,\nSelection Committee Secretariat"
+ },
+ {
+  "label": "scam",
+  "category": "scholarship_fee",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "STUDENT ALERT: $3,200 Minority Education Grant approved in your name. Claim requires $19.99 file activation. Pay now: grantactivate-us.top/id7741 Reply STOP to opt out."
+ },
+ {
+  "label": "scam",
+  "category": "scholarship_fee",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Good afternoon. I'm the awards coordinator for the Tri-State Nursing Scholarship Fund. We received your interest form and you qualify for our $5,000 clinical award. I can reserve the award today. The reservation requires a $75 processing payment by Zelle or gift card — Zelle is faster. Once received I'll email your award letter within one hour. Please note we cannot accept checks and the fee cannot be waived."
+ },
+ {
+  "label": "scam",
+  "category": "scholarship_fee",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Scholarship Match Results — Action Required\n\nHello,\n\nOur database matched your academic profile with 14 scholarships totaling an estimated $22,000. Below are your top three matches:\n\n• Regional STEM Persistence Award — $7,500\n• First-Generation Completion Grant — $4,000\n• Commuter Student Support Fund — $2,800\n\nTo unlock your full match list and submit to all 14 sponsors with a single form, activate your Award Access account. The activation fee is $29 for one year, or $12 for students who respond within 12 hours of this email.\n\nActivate: awardaccess-match.co/unlock\n\nQuestions? Our student line is 555-0132, Monday-Friday.\n\nAward Access Student Services"
+ },
+ {
+  "label": "scam",
+  "category": "government_threat",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "NATIONAL TAX BUREAU FINAL NOTICE: Our records show an unpaid balance of $1,483.22 from tax year 2022. A lien has been prepared against your account. To stop enforcement, settle today at ntb-settlement-portal.top or call 555-0142. Payment accepted by bank transfer or prepaid card only."
+ },
+ {
+  "label": "scam",
+  "category": "government_threat",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Student Visa Status - Action Required Within 24 Hours\n\nDear Applicant,\n\nThe Office of Immigration Review has flagged your F-1 record for a missing compliance fee of $389.00. Under section 7(b), failure to remit this fee within 24 hours will result in automatic termination of your student status and referral for removal proceedings.\n\nDo not contact your university international office, as this case is sealed during review. Remit payment here: immigration-compliance-review.top/pay\n\nOfficer D. Whitlock\nCase #IR-2291-88"
+ },
+ {
+  "label": "scam",
+  "category": "government_threat",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Hello, this is Agent Marcus Reed from the Federal Revenue Service Enforcement Division. A warrant has been issued in your name for tax fraud. You must remain on this chat. Do not hang up or contact anyone. To avoid arrest today, purchase $900 in gift cards and send me the codes as a good-faith bond. Your funds will be returned after your hearing."
+ },
+ {
+  "label": "scam",
+  "category": "government_threat",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "STUDENT BENEFITS OFFICE: Your education grant of $2,100 is on hold due to unverified identity. Pay the $48 verification fee at grant-verify-now.top within 48hrs or the award is forfeited and returned to the state fund."
+ },
+ {
+  "label": "scam",
+  "category": "government_threat",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Notice of Intent to Levy - Tax Account Review\n\nOur system has completed an audit of your filings and identified an underpayment of $746.90 including penalties and interest. If payment is not received by 5:00 PM Friday, we will initiate a levy on your bank account and notify your employer's payroll department.\n\nYou may resolve this immediately using the secure link below. We accept bank transfer, cryptocurrency, or retail payment vouchers.\n\nirs-resolution-desk.co/casefile\n\nDepartment of Revenue Collections\nDo not reply to this message."
+ },
+ {
+  "label": "scam",
+  "category": "government_threat",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "USCIS ALERT: your work authorization renewal was rejected, fee payment did not clear. Re-submit $410 today at uscis-renewal-fee.top/pay or file is closed permanantly and status ends. Ref 8812-KQ"
+ },
+ {
+  "label": "scam",
+  "category": "government_threat",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hi! I'm from the State Unemployment Benefits Recovery Unit. Our records show you were overpaid $1,260 in benefits. We can settle this quietly today for $340 if you pay before the case goes to the fraud division. I can send you a payment link on this chat. Which do you prefer, Zelle or a prepaid card?"
+ },
+ {
+  "label": "scam",
+  "category": "government_threat",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: FINAL WARNING — Deportation Order Pending\n\nThis is the third and final attempt to contact you regarding immigration case #DHS-44012. An order of removal has been drafted due to an outstanding administrative penalty of $1,150.\n\nYou have 12 hours to pay. Officers have been assigned to your last known address. Payment must be made by wire transfer to the account details provided after you confirm your full name, date of birth and passport number by replying to this email.\n\nHomeland Enforcement Notices Division\nhomeland-notices-dept.top"
+ },
+ {
+  "label": "scam",
+  "category": "payment_app_request",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Zelle Alert: A payment of $480.00 was RECEIVED into your account from A. MORALES. If this was not authorized, cancel within 30 minutes at zelle-reversal-desk.top or call 555-0162."
+ },
+ {
+  "label": "scam",
+  "category": "payment_app_request",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "hey!! sorry random - i sent $250 to your cashapp by mistake, wrong $cashtag 😭 my landlord money. can u send it back? i can do zelle or venmo whichever is easier. please im already late on rent"
+ },
+ {
+  "label": "scam",
+  "category": "payment_app_request",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Venmo Security <alerts@venmo-holdcenter.net>\n\nFunds On Hold — Action Needed\n\nA transfer of $612.50 from CAMPUS HOUSING LLC is pending in your Venmo balance. Because this amount exceeds your unverified limit, we must confirm your identity before release.\n\nStep 1: Visit venmo-holdcenter.net/release\nStep 2: Log in and enter the 6-digit code we text you\nStep 3: Funds appear instantly\n\nUnclaimed transfers are returned to sender after 24 hours and cannot be resent.\n\nVenmo Support Team"
+ },
+ {
+  "label": "scam",
+  "category": "payment_app_request",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "CASH APP: You have a pending gift of $750 from our Friday Giveaway! 🎉 Claim requires a small $25 activation payment to $CashTagVerifyPro. Reply CLAIM to start. Offer expires tonight."
+ },
+ {
+  "label": "scam",
+  "category": "payment_app_request",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Zelle® Business Notice: Invoice #44182 payment request for $189.00 from BRIGHTLINE TUTORING is awaiting your approval. Approve or dispute here: zelle-invoice-portal.top/44182. Ignoring this request may result in collections."
+ },
+ {
+  "label": "scam",
+  "category": "payment_app_request",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "This is Marcus from your bank's fraud dept. We see someone tried to Zelle $900 out of your account. To block it, you need to send the money to yourself at the safe holding tag $SecureVaultHold using your app. Do this now, I will stay on chat with you. Do not hang up or the transfer completes."
+ },
+ {
+  "label": "scam",
+  "category": "payment_app_request",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Payment received: $325.00 from D. Whitfield (Venmo). Note: \"couch pickup\". If you do not recognize this sender, reverse it at my-venmo-reverse.co within 1 hour or the charge stays on your linked debit card."
+ },
+ {
+  "label": "scam",
+  "category": "payment_app_request",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "From: Cash App Support <no-reply@cashapp-refunds-center.com>\nSubject: $1,204.00 credited — verification required\n\nHello,\n\nOur records show a deposit of $1,204.00 was credited to your Cash App balance on behalf of a closed merchant account. To keep these funds you must verify ownership within 48 hours.\n\nVerify now: cashapp-refunds-center.com/verify\n\nYou will be asked for your $Cashtag, the debit card linked to your account, and the sign-in code sent to your phone. Do not share this email with others as it contains funds specific to you.\n\nFailure to verify will result in the balance being forfeited to the state unclaimed property office.\n\nRegards,\nBenjamin O., Refund Operations"
+ },
+ {
+  "label": "scam",
+  "category": "utility_shutoff",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "NOTICE: Your BrightVale Power account is past due $147.32. Service disconnection is scheduled for TODAY between 2-5pm. Pay now to avoid shutoff: brightvale-payportal.top/stop"
+ },
+ {
+  "label": "scam",
+  "category": "utility_shutoff",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "From: Billing Department <billing@northgrid-utility-services.info>\nSubject: FINAL DISCONNECT NOTICE - ACTION REQUIRED TODAY\n\nDear Valued Customer,\n\nOur records indicate that payment on your NorthGrid Utility account has not been recieved for two consecutive cycles. A field technician has been dispatched to your service address today to terminate electrical service.\n\nTo cancel the disconnection order, remit the outstanding balance of $203.88 within 4 hours using the secure link below.\n\nhttp://northgrid-utility-services.info/paynow\n\nAccepted: debit card, bank transfer, prepaid voucher cards.\n\nFailure to comply will result in a reconnection fee of $175 plus a new deposit.\n\nSincerely,\nCollections Unit"
+ },
+ {
+  "label": "scam",
+  "category": "utility_shutoff",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "CitiStream Water: acct ending 4471 is 62 days delinquent. Shutoff crew arrives today. Call 555-0182 now with card in hand to stop service interruption."
+ },
+ {
+  "label": "scam",
+  "category": "utility_shutoff",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hi, this is Marcus from ClearLine Mobile account retention. I'm reaching out because your line is flagged for suspension at 6:00 PM tonight for non payment of $89.14. I can hold your number if you settle it with me here in chat. We take card, or if you prefer, a prepaid payment card from any drugstore works too - just send me the code on the back and I'll apply it instantly."
+ },
+ {
+  "label": "scam",
+  "category": "utility_shutoff",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "URGENT - VALEPOINT GAS\nBalance: $158.40\nStatus: DISCONNECT PENDING TODAY\nAvoid shutoff + $200 reconnect fee:\nvalepoint-gas-pay.top/acct\nDo not reply to this message."
+ },
+ {
+  "label": "scam",
+  "category": "utility_shutoff",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "From: Meridian Electric Cooperative <no-reply@meridian-electric-billing.co>\nSubject: Disconnection today — 3 hour window\n\nHello,\n\nWe attempted to process your autopay on two occasions and the card on file was declined. Because your account is now 47 days overdue, our system has generated a same-day disconnection order for your residence.\n\nAmount due: $131.06\nDeadline: 5:00 PM local time today\n\nUpdate your payment method here: meridian-electric-billing.co/restore\n\nIf you have already paid within the last 24 hours, please disregard, however we recommend confirming through the link above as manual payments may not post in time to stop the order.\n\nMeridian Electric Cooperative Billing"
+ },
+ {
+  "label": "scam",
+  "category": "utility_shutoff",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "OAKRIDGE TELECOM: Final warning. Your phone & internet will be cut off at midnight tonight for unpaid invoice #88231 ($96.55). Settle here: oakridge-telecom-billing.top . Late accounts referred to collections after 24hrs."
+ },
+ {
+  "label": "scam",
+  "category": "utility_shutoff",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hello — I'm with Summit Utilities emergency billing. Your name came up on today's disconnect list for apartment service. The office is closed for walk-ins but I can process it over chat. Before we start I need to verify you: full name, date of birth, last 4 of your social, and the card number you'd like to use. Once that's in I'll email you the stop-work order for the technician. Please respond quickly, the crew is about 40 minutes out."
+ },
+ {
+  "label": "scam",
+  "category": "gift_card_request",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Hi, are you available? I'm heading into a faculty meeting and can't take calls. I need you to pick up 4 Apple gift cards ($100 each) for the department's student awards. I'll reimburse through the payroll office Friday. Just send me photos of the back with the codes when you have them. -Dr. Halvorsen, Chem Dept"
+ },
+ {
+  "label": "scam",
+  "category": "gift_card_request",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Good morning,\n\nI hope your semester is going well. As my new research assistant, your first task is a bit unusual. We are recognizing six undergraduate volunteers at Thursday's poster session and I am currently in a conference session in Denver with limited phone access.\n\nPlease purchase six $50 Vistagreen Market e-gift cards and email me the redemption codes at profwhitaker.admin@faculty-mailhub.top. Keep the receipts and submit them to the Sponsored Research office for reimbursement within 7 business days.\n\nI appreciate the discretion, as the awards are meant to be a surprise.\n\nRegards,\nProf. A. Whitaker"
+ },
+ {
+  "label": "scam",
+  "category": "gift_card_request",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "hey its your manager from the campus bookstore. phone is dead using my cousins. need a quick favor, buy 3 google play cards 200 total for a vendor gift, scratch the back and text me the numbers. payroll will add it to ur next check. dont tell anyone yet its a surprise for cheryl"
+ },
+ {
+  "label": "scam",
+  "category": "gift_card_request",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "OFFICE OF STUDENT ACCOUNTS — FINAL NOTICE\n\nOur records show an unresolved balance of $340.00 on your account. Due to a temporary outage of our payment processor, balances this week must be settled using prepaid retail gift cards (Steam or Apple accepted). Purchase the cards at any pharmacy, then reply to this message with the card numbers and PINs so a cashier can apply them to your student ledger. Failure to settle within 24 hours will result in course deregistration."
+ },
+ {
+  "label": "scam",
+  "category": "gift_card_request",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hello — this is Marta from the Dean of Students office. Are you near a store right now? We're finalizing thank-you gifts for the orientation leaders before the 3pm ceremony and our purchasing card was just declined. If you can grab 5 x $100 Lumen Cafe gift cards I'll have the office cut you a check this afternoon. Please confirm here first, then send me the activation codes so I can load them into the certificates."
+ },
+ {
+  "label": "scam",
+  "category": "gift_card_request",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "This is Coach Deveraux. Team fundraiser dinner is tonight and I'm stuck at the airport. Need you to buy 2 Walmart gift cards, $250 each, for the caterer. Text me the codes, DO NOT call, I can't take calls here. You'll get the money back from the booster fund tomorrow. Handle it now please."
+ },
+ {
+  "label": "scam",
+  "category": "gift_card_request",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Quick errand before payroll closes\n\nHi,\n\nSince you're the only work-study assistant on shift today, I need your help with something time sensitive. Our department is sending condolence gifts to two staff families and I'm travelling with no access to the university purchasing system until Monday.\n\nCould you buy four $100 gift cards (any major retailer is fine — the recipients aren't picky) and photograph the codes for me? Please reply from your personal email, the campus filter has been blocking my address all week. I'll walk your receipts down to Accounts Payable myself on Monday morning.\n\nThank you for stepping up on short notice.\n\nJ. Okonkwo\nAssistant Director, Student Life"
+ },
+ {
+  "label": "scam",
+  "category": "gift_card_request",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "hi its prof lindqvist. im in lecture so only chat. i need gift cards for the TA appreciation thing, 3 amazon 100 each. you can expense it later thru the dept form. send pics of codes here when done. dont post about it in the class group chat, i want it to be a surprise"
+ },
+ {
+  "label": "scam",
+  "category": "account_unusual_activity",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "CampusKey Alert: unusual sign-in to your student portal from Bucharest, RO at 3:14 AM. If this wasn't you, lock your account now: campuskey-verify.top/secure. Ignoring this notice will result in permanent suspension of course registration."
+ },
+ {
+  "label": "scam",
+  "category": "account_unusual_activity",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "From: IT Helpdesk <no-reply@northvale-edu-support.com>\nSubject: [ACTION REQUIRED] Your Northvale University account has been locked\n\nDear Student,\n\nOur security systems detected 4 failed password attempts followed by a successful login from an unrecognized device (Windows 10, IP 45.132.88.7). As a precaution your account has been temporarily locked and outgoing email disabled.\n\nTo restore access you must re-validate your credentials within 24 hours using the secure portal below:\n\nhttps://northvale-edu-support.com/account/unlock\n\nFailure to validate will result in deletion of your mailbox and stored files per IT retention policy 8.2.\n\nRegards,\nNorthvale IT Security Operations"
+ },
+ {
+  "label": "scam",
+  "category": "account_unusual_activity",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hi! this is Dana from the Helpdesk chat queue. We got an automated flag on your account — someone in another country tried signing in twice today. I can restore it from my side but I need you to confirm your identity first at helpdesk-restore.click/id and then paste me the 6 digit code you get so I can close the ticket."
+ },
+ {
+  "label": "scam",
+  "category": "account_unusual_activity",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "BLUEHARBOR BANK: new device sign-in detected. Acct ****4417 LOCKED. Restore: blueharbor-secure-login.info/restore"
+ },
+ {
+  "label": "scam",
+  "category": "account_unusual_activity",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Suspicious activity on your StudyCloud Drive\n\nHello,\n\nWe noticed a sign-in to your StudyCloud account from a device we don't recognize:\n\nDevice: Samsung Galaxy A12\nLocation: Lagos, NG\nTime: Today, 02:47\n\nYour files are currently frozen while we verify ownership. Please confirm it was you by signing in at studycloud-accounts.verify-id.co within 12 hours. Accounts not verified are archived and cannot be recovered.\n\n— The StudyCloud Team"
+ },
+ {
+  "label": "scam",
+  "category": "account_unusual_activity",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "⚠️ SECURITY NOTICE ⚠️ Your student email was accessed from a unknown ip adress. Acount will be disable in 6 hours. Verify here >> mailsecure-student.top/login <<  Do not reply to this msg."
+ },
+ {
+  "label": "scam",
+  "category": "account_unusual_activity",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "From: Financial Aid Portal Security <alerts@fin-aid-portal-secure.net>\nSubject: Sign-in blocked — disbursement on hold\n\nWe blocked a sign-in attempt to your financial aid account from an unrecognized browser. Because your spring disbursement is scheduled this week, the account has been placed on hold until you confirm your identity.\n\nConfirm here: fin-aid-portal-secure.net/identity-check\n\nYou will be asked for your student ID, date of birth, and the last four digits of the bank account on file so we can match the record. If we do not hear from you by Friday the disbursement will be returned to the issuing office.\n\nOffice of Student Financial Services"
+ },
+ {
+  "label": "scam",
+  "category": "account_unusual_activity",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "hey — automated msg from RamPay support. your wallet was locked after a login from a new device. tap ram-pay-unlock.live to unlock, or call 555-0142 and our agent will walk you thru it. balance is safe but transfers are paused"
+ },
+ {
+  "label": "scam",
+  "category": "fake_invoice_subscription",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "NortonGuard Total Security - AUTO RENEWAL CONFIRMED. Amount: $389.99 charged to your saved card ending 4412. If you did not authorize this renewal call our billing desk at 555-0143 within 24 hrs to cancel and recieve full refund."
+ },
+ {
+  "label": "scam",
+  "category": "fake_invoice_subscription",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Invoice #ZQ-77412\n\nThank you for your continued subscription to PixelForge Creative Cloud Suite (Annual Plan).\n\nItem: PixelForge Suite - 12 months\nSubtotal: $412.00\nTax: $31.88\nTotal charged: $443.88\nPayment method: Card on file\n\nThis charge will appear on your statement within 2 business days. If you believe this invoice was issued in error, do NOT reply to this email. Open the cancellation portal here: pixelforge-billinghelp.top/cancel-order and enter your invoice number and the last 4 digits of the card charged.\n\nBilling Department\nPixelForge Digital Ltd."
+ },
+ {
+  "label": "scam",
+  "category": "fake_invoice_subscription",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "hi this is Marcus from GeekHelp Desk support. our system shows a renewal of $299 for your 3 year tech protection plan went thru this morning. i can reverse it but i need you to confirm the email on the account and let me connect to your computer so i can see the refund form. are you at a laptop right now"
+ },
+ {
+  "label": "scam",
+  "category": "fake_invoice_subscription",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "AmazonPrimeCare: Your yearly membership was renewed $159.44. Not you? Cancel: prime-care-billing.info/stop-543"
+ },
+ {
+  "label": "scam",
+  "category": "fake_invoice_subscription",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Receipt for your order (do not discard)\n\nOrder date: today\nMerchant: LumenFit Pro Wellness\nPlan: Elite Coaching - recurring monthly\nAmount: $89.99/mo\n\nYour trial has ended and billing has begun. Cancellation requests are processed only through our verified line. Call 555-0188 between 8am-11pm. Have your bank card ready so the representative can locate and void the transaction.\n\nLumenFit Pro Billing Team"
+ },
+ {
+  "label": "scam",
+  "category": "fake_invoice_subscription",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "NOTICE: Invoice 88231 past due. StudyVault Premium Notes - $74.50. Unpaid balances are forwarded to collections after 48 hours and may be reported to your school billing office. Pay or dispute: studyvault-invoices.top"
+ },
+ {
+  "label": "scam",
+  "category": "fake_invoice_subscription",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Hello,\n\nThis is an automated notification from CloudNest Storage regarding invoice CN-2291-B.\n\nYour 2TB plan auto-renewed at $221.00. We understand some students forget they enrolled during the campus promotion last semester. If this renewal was unintended, you may request a refund within 72 hours by completing the short verification form attached (Refund_Form_CN2291.htm). Please include your bank routing details so the reversal can be issued directly rather than to the card, which is slower.\n\nRegards,\nCloudNest Accounts Receivable"
+ },
+ {
+  "label": "scam",
+  "category": "fake_invoice_subscription",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Payment of $532.10 to DriveShield Auto Warranty Renewal is being processed. Reference 7741-KC. To dispute this transaction reply STOP or contact 555-0126. Failure to respond is treated as acceptance of the charge."
+ },
+ {
+  "label": "scam",
+  "category": "qr_code",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "CAMPUS PARKING SERVICES: Your permit #44812 was flagged as unpaid. Scan the QR code posted on the notice placed on your windshield to settle $48.75 before your vehicle is booted. Online payment at parkclear-notice.top also accepted."
+ },
+ {
+  "label": "scam",
+  "category": "qr_code",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hi! This is Dana from the Student Housing billing office. Our card terminal is down this week so we are collecting the $150 room deposit by QR. I can text you the code image, just scan it with your phone camera and follow the steps. Deposit must post today or your room assignment is released at 5pm."
+ },
+ {
+  "label": "scam",
+  "category": "qr_code",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Action required - meal plan account suspended\n\nDear Student,\n\nOur records show a failed transaction on your dining account. Until this is corrected your card will be declined at all campus locations.\n\nTo restore access, open the attached image and scan the QR code with your phone. You will be asked to confirm your student ID, date of birth and the debit card linked to the plan.\n\nThis notice expires in 24 hours after which a $25 reinstatement fee applies.\n\nDining Account Services\nsupport@dining-reinstate-center.com"
+ },
+ {
+  "label": "scam",
+  "category": "qr_code",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Package could not be delivered - address incomplete. Scan QR on the yellow slip left at your door or visit redeliver-qrscan.top to reschedule. Small $2.99 verification charge applies."
+ },
+ {
+  "label": "scam",
+  "category": "qr_code",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "NOTICE FROM LIBRARY SYSTEMS: 3 items overdue, account frozen. Fines can no longer be paid at the desk. Scan the QR code on the flyer near the front entrance, or reply SCAN and we will send the code to this number. Unpaid balances over $30 are reported to the registrar and may block registration."
+ },
+ {
+  "label": "scam",
+  "category": "qr_code",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hey, quick heads up from the IT helpdesk chat queue. Your multi factor device stopped syncing last night. To re-pair it you need to scan the QR code we generated for your account: I'm sending the image now. After scanning, type the 6 digit number it shows back into this chat so I can confirm the pairing worked on our end. If we don't finish this today your email gets locked out."
+ },
+ {
+  "label": "scam",
+  "category": "qr_code",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Your tuition refund of $842.10 is on hold\n\nHello,\n\nThe bursar's disbursement to your account was returned by the bank. To release the funds, scan the QR code below with your phone and enter the routing and account number where you want the refund deposited.\n\n[QR CODE]\n\nFunds not claimed within 72 hours are returned to the state unclaimed property office and cannot be recovered by our office.\n\nRefund Processing Unit\nbursar-refund-release.net"
+ },
+ {
+  "label": "scam",
+  "category": "qr_code",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Your scooter rental is showing an unpaid trip ($11.40) and your account has been locked. Do not attempt payment in the app, it will fail. Scan the QR sticker on any parked scooter to open the payment fix page and enter your card details to unlock riding."
+ },
+ {
+  "label": "scam",
+  "category": "romance_investment",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Hi Dr. Meng, this is Amara. I'm confirming our dinner at Lotus Pavilion for 7pm Saturday. Please let me know if that still works!"
+ },
+ {
+  "label": "scam",
+  "category": "romance_investment",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Hey Michael, are you still picking up the cake tomorrow? — Sorry?? Who is this? — Oh no, is this not Michael's number? My assistant must have saved it wrong. I'm so sorry to bother you! You seem polite though, most people just curse at me lol. Are you a student? I'm in Seattle, I do digital asset portfolio management. Honestly meeting you feels like fate, my uncle just opened a new quant pool on GlobalArcTrade and he lets me invite 3 people. Even $200 turns into steady daily returns. Want me to walk you through it?"
+ },
+ {
+  "label": "scam",
+  "category": "romance_investment",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "good afternoon! is this Kelsey from the yoga studio? ... oh my apologies, wrong contact. Have a lovely day anyway :) By the way you sound young, still in school? I remember those days, I was broke until I learned about crypto mining contracts. My mentor's group on arcpeak-invest.top turns 500 into 3400 in 20 days, no experience needed. I can send screenshots of my wallet if you're curious."
+ },
+ {
+  "label": "scam",
+  "category": "romance_investment",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hello, sorry — is this the number for the moving company? I was given it by a friend. // Wrong number, sorry. // Ah, no problem at all, thank you for replying so kindly. Most people ignore strangers. May I ask where you're based? I'm currently in Boston handling gold spot contracts for a small family office. If you ever want to learn, I teach my nieces the same method. No fee, I just enjoy teaching."
+ },
+ {
+  "label": "scam",
+  "category": "romance_investment",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Hi! Just landed, dropping my bags at the hotel now. Dinner at 8? — I think you texted the wrong number. — Oh goodness, I'm so sorry! My new phone imported my old contacts badly. Since I'm bothering you anyway — do you like coffee? Haha. I'm Vivian, 31, I trade index futures. You ever tried investing? My platform NexoraVault pays out 4% daily and I can add you under my referral so the minimum is only $150 instead of $1000."
+ },
+ {
+  "label": "scam",
+  "category": "romance_investment",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Sorry — wrong address, but a quick hello\n\nHi there,\n\nI was trying to reach my nephew Daniel about his tuition payment and clearly typed the wrong email. Apologies for the intrusion.\n\nSince you replied so politely, I wanted to say thank you. I'm Helena, I manage a small private fund from Zurich. If you're a student and money is tight, I sometimes share my weekly allocation notes with young people — several of my readers doubled a $300 starting balance last quarter through meridian-capitalpool.co. No obligation, just reply YES and I'll add you to the list.\n\nWarmly,\nHelena"
+ },
+ {
+  "label": "scam",
+  "category": "romance_investment",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "是你吗? ... sorry, English! I meant to message my cousin. Wrong number I think. You are very nice for answering. Do you study or work? I just finished my masters and now I help my aunt run a trading desk. She only accepts small accounts from people she trusts. Minimum is $100 USDT and withdrawals are same day. Interested? I'll send the app link, it's not in the store you have to install it manually."
+ },
+ {
+  "label": "scam",
+  "category": "romance_investment",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Hi Marcus, the contractor said the tile arrives Thursday. — wrong number friend. — Oops! Sorry about that. Honestly my week has been chaos. Anyway, hope you're having a better one. ... Hey, random question since we're talking, do you know anything about ETFs? My study group meets Sundays on a private chat, we pool small amounts into a managed account. Last month everyone got 22%. I can add you if you want, we only have two seats left before it closes."
+ },
+ {
+  "label": "scam",
+  "category": "task_scam",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Hi! I'm Megan from GrowLeap Digital Team. We are hiring part-time app reviewers. You just rate apps on our site, 30 seconds per task, $25 each task, paid daily to your bank. Students welcome, no experience. Reply YES for details."
+ },
+ {
+  "label": "scam",
+  "category": "task_scam",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Congratulations, your account has completed 38/40 tasks today! Your balance is $312.00. To unlock withdrawal you must complete the last combo task set, which requires a prepaid boost of $99 USDT to your merchant wallet. The boost is returned together with your commission within 5 minutes. Please top up now, the task window closes at 22:00."
+ },
+ {
+  "label": "scam",
+  "category": "task_scam",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Remote Position Confirmed - App Rating Specialist (Flexible Hours)\n\nDear Applicant,\n\nWe are pleased to inform you that you have been selected for the position of App Rating Specialist at Norvale Media Labs. Duties: rate and screenshot mobile applications on our partner platform, 60-90 minutes per day, weekly salary range $480-$760 USD.\n\nTo activate your worker profile, log in at norvale-worklab.top with the temporary code 88210 and complete the onboarding module. Note that our task system operates on a merchant prepayment model: some high value tasks require you to advance the task amount from your own balance, which is refunded with your commission immediately after submission.\n\nPlease reply with your name, WhatsApp number and preferred payout wallet to begin.\n\nHR Department, Norvale Media Labs"
+ },
+ {
+  "label": "scam",
+  "category": "task_scam",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "hey are u still looking for a side job? my cousin got me into this app review thing, i made 218 yesterday just tapping stars lol. add the manager on telegram @Kylie_TaskSupport7 and say Ruby referred you, she sets up ur account free"
+ },
+ {
+  "label": "scam",
+  "category": "task_scam",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Welcome to StarBoost Reviewer Hub! Your trial account has been credited with $18 bonus. Rules: 1) Complete 35 rating tasks per day. 2) Tasks 1-20 are free. 3) Tasks 21+ are merchant-sponsored and require a matching deposit (min $50, max $1,200). Higher deposit = higher commission tier. 4) Withdrawals are processed after ALL 35 tasks are complete. Please send a screenshot of your deposit to your trainer after transferring."
+ },
+ {
+  "label": "scam",
+  "category": "task_scam",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "URGENT: Your task set is frozen at 27/35. Account debt -$146. If the combination is not finished within 40 minutes your previous earnings of $509 will be cleared per platform rules. Deposit $146 now to the wallet address sent earlier and continue."
+ },
+ {
+  "label": "scam",
+  "category": "task_scam",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Payment Pending - Action Required on Your Reviewer Account\n\nHello,\n\nYour reviewer account (ID 44-7719) currently shows accrued earnings of $684.50 from 212 completed rating tasks. Before we can release funds to your bank we require a one-time account verification deposit of $120, which confirms that the payout account belongs to you. The deposit is credited back to your balance along with your earnings in the same transfer.\n\nSend the verification amount via the link below within 24 hours or the earnings will expire and the account will be closed.\n\nhttps://reviewer-payout-verify.top/id44-7719\n\nFinance Team, BrightTap Reviewer Network"
+ },
+ {
+  "label": "scam",
+  "category": "task_scam",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Good afternoon, this is Daniel, your assigned team leader. Before we start today I want to be transparent: our platform works with merchants who pay us to boost app visibility. Members occasionally need to prepay a task order using their own funds, and the platform returns it plus 20% commission. Many students hesitate at this step, which is normal. You can start small, a $30 order is fine, and once you see the refund arrive you can decide if you want to continue. Shall I open your first order?"
+ },
+ {
+  "label": "legit",
+  "category": "otp_code",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Your Brightloom Bank verification code is 481902. It expires in 10 minutes. We will never call or text you asking for this code — never share it with anyone."
+ },
+ {
+  "label": "legit",
+  "category": "otp_code",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "294517 is your CampusKey login code. Do not share this code, even with someone claiming to be IT Help Desk. If you didn't try to sign in, change your password at the campus portal."
+ },
+ {
+  "label": "legit",
+  "category": "otp_code",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "PineRidge Credit Union: 730268 is your one-time passcode for the transfer of $240.00 to Jordan M. Code expires in 5 min. Never share it. Didn't authorize this? Call the number on the back of your card."
+ },
+ {
+  "label": "legit",
+  "category": "otp_code",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Your Verdant Mail security code\n\nHi Priya,\n\nSomeone requested a sign-in code for your Verdant Mail account from a device in Columbus, OH.\n\nYour code: 559 214\n\nThis code is valid for 15 minutes and can only be used once. Verdant Mail staff will never ask you for this code by phone, email, or chat. If you did not request it, you can ignore this message — no one can access your account without the code — but we recommend reviewing your recent activity from your account settings page.\n\n— The Verdant Mail Security Team"
+ },
+ {
+  "label": "legit",
+  "category": "otp_code",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Your code is 106433. Use it to finish setting up two-factor authentication on Quillstack. Anyone who asks you for this code is trying to steal your account."
+ },
+ {
+  "label": "legit",
+  "category": "otp_code",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hi! It's Dana from the Lantern Housing office. I'm in your chat window now to verify it's you before we update the bank details on your deposit refund. The system just sent a 6-digit code to your phone — please type it here in this chat so I can confirm, or if you'd rather not share it, I can verify you with your student ID and move-in date instead."
+ },
+ {
+  "label": "legit",
+  "category": "otp_code",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "ORCHARD PAY: 884120 is your code to confirm a new device. Expires 10:42 PM. Never share this code. Standard msg rates may apply. Reply STOP to opt out of security alerts."
+ },
+ {
+  "label": "legit",
+  "category": "otp_code",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: One-time code for your Northgate Student Loans account\n\nYour verification code is 621805.\n\nEnter it on the page where you requested it. The code expires in 20 minutes and works only once.\n\nSecurity reminder: Northgate Student Loans will never phone, email, or text you asking for this code, your password, or your full Social Security number. If someone does, hang up and contact us using the number printed on your statement.\n\nIf you did not request this code, no action is needed."
+ },
+ {
+  "label": "legit",
+  "category": "otp_code",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Ridgeline Rideshare code: 330715. Give this to your driver only when you start the trip. Do not share it with anyone who contacts you claiming to be support."
+ },
+ {
+  "label": "legit",
+  "category": "otp_code",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "heads up — you should get a 6 digit text from the ticket site in a sec, that's just to confirm the transfer of your seat. don't send it to me or anyone, just type it into the site yourself. lmk once it goes through"
+ },
+ {
+  "label": "legit",
+  "category": "bank_alert_genuine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Northvale Credit Union Alert: A purchase of $128.44 at CAMPUS BOOK EXCHANGE was declined due to insufficient funds. Your available balance is $12.07. No action needed if this was expected."
+ },
+ {
+  "label": "legit",
+  "category": "bank_alert_genuine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Harborline Bank: Did you attempt a $499.00 online purchase at PIXELGEAR? Reply YES to approve or NO to block. We will never call or text you asking for your PIN, password, or one-time code."
+ },
+ {
+  "label": "legit",
+  "category": "bank_alert_genuine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Balance alert from Meridian Student Checking: your account ending 7741 dropped below your $50 low-balance setting. Current available: $38.16. Manage alerts anytime in the app."
+ },
+ {
+  "label": "legit",
+  "category": "bank_alert_genuine",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Unusual sign-in blocked on your Oakfield Bank account\n\nHello,\n\nWe blocked a sign-in attempt to your online banking from a device we didn't recognize (location shown as Dover, DE) at 2:14 AM on Tuesday. Nothing was changed and your account is fine.\n\nIf this was you, just sign in again from the Oakfield Bank app and approve the device. If it wasn't, please change your password from inside the app and call the number printed on the back of your debit card.\n\nWe will never email you a link to log in, and we will never ask you for your one-time passcode.\n\n— Oakfield Bank Security Operations"
+ },
+ {
+  "label": "legit",
+  "category": "bank_alert_genuine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Alert: Your Riverstone Bank card ending 0312 was used for a $6.75 contactless payment at a merchant outside your usual area. If this was you, ignore this message. If not, freeze the card in the app under Card Controls."
+ },
+ {
+  "label": "legit",
+  "category": "bank_alert_genuine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Greenfern Bank: Your direct deposit of $412.90 posted today. Available balance $589.33. Reminder: we never ask for codes by text."
+ },
+ {
+  "label": "legit",
+  "category": "bank_alert_genuine",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hi, this is Dana from the Lakemont Bank fraud team on secure chat. I'm following up on the two declined charges from last night at an online electronics store. I don't need any account details from you here — I can already see the account you're signed into. Just let me know if either charge was yours, and I'll release or block them from my side."
+ },
+ {
+  "label": "legit",
+  "category": "bank_alert_genuine",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Monthly statement and one security note\n\nYour September statement for Bellrock Bank Student Checking is ready to view in online banking.\n\nSecurity note: we've seen an increase in texts pretending to be from us asking people to \"verify\" a card by sending a code. We will never ask for a verification code, PIN, or full card number. If you get one of those, delete it and report it from the Help section of the app.\n\nThanks,\nBellrock Bank"
+ },
+ {
+  "label": "legit",
+  "category": "bank_alert_genuine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Pinecrest FCU: overdraft notice. Your account ending 5580 is overdrawn by -$21.40 as of today. A $29 fee may apply if not covered by 11:59 PM. Deposit through the app or at any branch."
+ },
+ {
+  "label": "legit",
+  "category": "bank_alert_genuine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Silverbrook Bank fraud alert: card ending 9162 temporarily locked after 4 declined attempts at an unfamiliar merchant. Unlock it yourself in the app or at any branch. We will never phone you to ask for your one-time code."
+ },
+ {
+  "label": "legit",
+  "category": "delivery_update",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Your package from Glover Outfitters is out for delivery today between 1:15pm and 3:15pm. Driver: Marcus. No signature needed — we'll leave it at the front door of your building's mailroom. Track anytime in the app."
+ },
+ {
+  "label": "legit",
+  "category": "delivery_update",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Hi! Quick heads up from the front desk — a box for you arrived this morning from Northvale Books. It's on the package shelf behind the counter. Desk hours today are until 9pm, bring your student ID."
+ },
+ {
+  "label": "legit",
+  "category": "delivery_update",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "PARCELINE UPDATE: Shipment 8842-KQ has arrived at the Eastside sorting facility. Estimated delivery Thursday. No action needed."
+ },
+ {
+  "label": "legit",
+  "category": "delivery_update",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Your order #55210 has shipped\n\nHi Dana,\n\nGood news — your two items shipped this morning from our Columbus warehouse.\n\nCarrier: Parceline Ground\nTracking: PL8842KQ00713\nEstimated arrival: Thursday, Oct 9\n\nIf your campus mailroom has limited hours, you can change the delivery day for free from the tracking page in your account. There is nothing to pay — shipping was included in your order.\n\nThanks for shopping with us,\nNorthvale Books Customer Care"
+ },
+ {
+  "label": "legit",
+  "category": "delivery_update",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Delivery attempted at 2:41pm. Nobody at the door, so your parcel is being held at Redwood Lockers, 400 Ash St. Pickup code will be shown in your Parceline app under Active Shipments. Held for 5 days."
+ },
+ {
+  "label": "legit",
+  "category": "delivery_update",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Update on your mattress topper: the truck is running behind because of weather on I-70. New window is tomorrow 8am–12pm. Sorry about the delay — no need to reply, we'll text when the driver is 30 min out."
+ },
+ {
+  "label": "legit",
+  "category": "delivery_update",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Delivery window confirmed for Saturday\n\nHello,\n\nYour desk chair (order 7731-B) is scheduled for Saturday between 9:00 AM and 1:00 PM. Our two-person team will bring it to the room, but they cannot assemble it.\n\nPlease make sure someone over 18 is present. If Saturday no longer works, reschedule from the link in your order confirmation email — rescheduling is free up to 24 hours before.\n\nMoss & Harlow Furniture"
+ },
+ {
+  "label": "legit",
+  "category": "delivery_update",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "hey your amazon-ish box thing got delivered to my apt again, the 4B vs 4D mixup. i put it outside your door around 6"
+ },
+ {
+  "label": "legit",
+  "category": "delivery_update",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Parceline: Your package was delivered at 4:07pm and left with the leasing office. Reply STOP to end delivery alerts."
+ },
+ {
+  "label": "legit",
+  "category": "delivery_update",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Two of your three items are arriving separately\n\nHi Priya,\n\nHeads up that your order split into two shipments because the lamp came from a different warehouse.\n\nShipment 1 (notebooks, pens): arriving Wednesday\nShipment 2 (desk lamp): arriving Friday\n\nYou were only charged once at checkout — the split does not add any cost. Both tracking numbers are listed under Orders when you sign in to our site directly.\n\n— Ridgeway Supply"
+ },
+ {
+  "label": "legit",
+  "category": "friend_split",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "hey so the pizza was 42.80 total, split 4 ways thats 10.70 each. no rush but venmo me whenever u get a sec"
+ },
+ {
+  "label": "legit",
+  "category": "friend_split",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "i covered your coffee this morning since the line was insane, you owe me exactly $4.25 lol. or just buy me one thursday, dealers choice"
+ },
+ {
+  "label": "legit",
+  "category": "friend_split",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Ok final tally for the beach trip: gas was 61, groceries 88, and the airbnb cleaning fee thing was 40. comes out to like $47 a person. I made a spreadsheet because I am insufferable. will send screenshot in the group chat tonight"
+ },
+ {
+  "label": "legit",
+  "category": "friend_split",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "dude you still have my $3 from the vending machine. im not mad im just keeping track"
+ },
+ {
+  "label": "legit",
+  "category": "friend_split",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Formal Bill Splitting (Birthday Dinner)\n\nHi everyone,\n\nThank you for coming out saturday, that was genuinely the best night I've had all semester. The bill came to $214 before tip, $256 after. We didn't include Maya's since it was her birthday, so that's 7 of us at about $36.60 each.\n\nI'm not going to chase anyone down, just send it over sometime this week if you can. If money is tight right now, seriously, tell me and we'll figure it out, no big deal.\n\nAlso whoever left a grey hoodie at the restaurant, they have it behind the host stand.\n\nJ"
+ },
+ {
+  "label": "legit",
+  "category": "friend_split",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "paid you back for the concert ticket! check your app. also my roommate says she owes u like 2 bucks for the parking meter which is honestly hilarious"
+ },
+ {
+  "label": "legit",
+  "category": "friend_split",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "hey can u spot me $6 for the laundry card until friday? my direct deposit is being weird this week. i will absolutely pay u back i always do"
+ },
+ {
+  "label": "legit",
+  "category": "friend_split",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "lol no you don't owe me anything for the uber, you already got the tickets. we're even. stop trying to give me money"
+ },
+ {
+  "label": "legit",
+  "category": "friend_split",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "ok I looked at the receipt again and I overcharged you by like a dollar fifty because I forgot the fries were shared. sending it back. financial integrity !!"
+ },
+ {
+  "label": "legit",
+  "category": "friend_split",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "hey! costco run tomorrow — I'm grabbing paper towels, the big thing of coffee, and dish soap for the apartment. probably $55ish total. I'll just put it on my card and text u the receipt photo after, split 3 ways like usual. lmk if u want anything else added"
+ },
+ {
+  "label": "legit",
+  "category": "university_admin",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Reminder: Spring registration opens for juniors and seniors on Monday, Nov 4 at 7:00 a.m. Your assigned time ticket is visible in the Student Center under Enrollment Dates. Please meet with your academic advisor before your ticket opens — advising holds will block registration. Walk-in advising is available in Curtis Hall 210, Tue–Thu, 1–4 p.m."
+ },
+ {
+  "label": "legit",
+  "category": "university_admin",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Hi! This is Marisol from the Financial Aid Office. I got your voicemail about the verification worksheet. You don't need to email it — just upload it through the Documents tab in your student portal after you log in the usual way. Once it's in, processing takes about 5 business days. Let me know if you hit a snag."
+ },
+ {
+  "label": "legit",
+  "category": "university_admin",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Tuition & fees for the spring term are due Friday, Jan 10. Balance and payment plan options are in your student account. Late fee $75 after the due date. Questions: Bursar's Office, Hale Building, first floor."
+ },
+ {
+  "label": "legit",
+  "category": "university_admin",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Housing selection update: your lottery number is posted in the Residence Portal. Room selection for returning students runs March 18–21. If you plan to live off campus next year, submit the release form by March 10 so you are not billed a housing deposit. Reminder that the $250 deposit you already paid is credited toward fall room charges, not refunded separately."
+ },
+ {
+  "label": "legit",
+  "category": "university_admin",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Your FAFSA was received and your award package for next year is now viewable. No action is needed today. You'll get a separate notice in June if we need additional documents."
+ },
+ {
+  "label": "legit",
+  "category": "university_admin",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Good afternoon — following up from our meeting. Your outstanding balance of $1,412.60 is what's keeping the registration hold on your account. Two options: (1) enroll in the 4-month payment plan through the Bursar tab, or (2) submit a short-term loan request, which our office reviews weekly. Either one clears the hold within 48 hours. Come by Hale 112 if you'd rather do it in person; I'm in until 4:30 most days. — Dennis Okoro, Student Accounts"
+ },
+ {
+  "label": "legit",
+  "category": "university_admin",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Maintenance notice: hot water in Prescott Hall will be shut off Wednesday 9am–2pm for boiler repair. Showers in the Rec Center are open to residents with a student ID during that window."
+ },
+ {
+  "label": "legit",
+  "category": "university_admin",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Hey everyone in the sophomore cohort — advising appointment sign-ups went live this morning. Slots fill fast the week before registration, so grab one now. Link is in the advising section of the student portal, not in this chat."
+ },
+ {
+  "label": "legit",
+  "category": "university_admin",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Your add/drop period ends Friday at 11:59 p.m. Courses dropped after that date will show a W on your transcript and are not eligible for tuition adjustment. If you're dropping below 12 credits, contact Financial Aid first — full-time status affects most scholarships and your housing eligibility."
+ },
+ {
+  "label": "legit",
+  "category": "university_admin",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Summer housing applications open Apr 1. Nightly rate is $38 and is billed to your student account at the end of each month. Priority given to students with on-campus jobs or research placements."
+ },
+ {
+  "label": "legit",
+  "category": "landlord_maintenance",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Hi! This is Dana from Brackenridge Property Group. Just a reminder that rent for November is due Friday the 1st. You can pay through the resident portal like usual, or drop a check at the office between 9-5. Let me know if you need anything."
+ },
+ {
+  "label": "legit",
+  "category": "landlord_maintenance",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Maintenance notice: The water will be shut off in Building C this Wednesday from 10am to about 1pm while we replace a valve in the basement. Please fill a pitcher the night before if you need it. Sorry for the hassle. - Willow Court Management"
+ },
+ {
+  "label": "legit",
+  "category": "landlord_maintenance",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Lease renewal window is open\n\nHi Marcus,\n\nYour lease for Unit 214 at Fenwick Commons ends July 31. We'd love to have you stay another year. The renewal rate would be $1,145/month, a $30 increase from your current rate.\n\nIf you want to renew, stop by the leasing office or reply to this email and I'll prepare the paperwork. If you're planning to move out, we need written notice 60 days before the end date, so by June 1.\n\nNo rush on deciding this week, but let me know either way before the deadline.\n\nBest,\nTanya Okoro\nLeasing Manager, Fenwick Commons\n(555) 0148"
+ },
+ {
+  "label": "legit",
+  "category": "landlord_maintenance",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "hey it's Rob, your landlord at the Elm St house. plumber can come thursday between 12 and 3 for the slow drain in the upstairs bathroom. will anyone be home? if not i can let him in with my key, just wanted to check first"
+ },
+ {
+  "label": "legit",
+  "category": "landlord_maintenance",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Your October rent payment posted\n\nHello,\n\nThis is a receipt confirming we received your rent payment of $890.00 on 10/02. Your balance is now $0.00.\n\nYou can view past statements any time by logging into the resident portal from our main website. We will never ask you to send rent by wire transfer, gift card, or payment app — if anyone contacts you claiming to be us and asks for that, please call the office at (555) 0132 first.\n\nThank you,\nHarlow Ridge Apartments"
+ },
+ {
+  "label": "legit",
+  "category": "landlord_maintenance",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Reminder: annual fire alarm inspection is Tuesday 10/14. Techs will enter every unit between 9am and 4pm whether or not you're home, as stated in your lease. Please make sure pets are crated and hallways to the alarm are clear. Thanks! — Stonebrook Mgmt"
+ },
+ {
+  "label": "legit",
+  "category": "landlord_maintenance",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hi, this is Priya from the leasing office. I saw your work order about the fridge not cooling. Our appliance guy is booked until Monday. If it's not keeping food cold at all, come grab a key to the vacant unit fridge in the basement, or we can reimburse a cooler and ice if you save the receipt. Sorry about that."
+ },
+ {
+  "label": "legit",
+  "category": "landlord_maintenance",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Parking permit renewal for residents\n\nResidents,\n\nNew parking decals for the 2025-26 lease year are available at the front desk starting Monday. Bring your license plate number and your unit number. Permits are included with your lease at no cost — there is no fee for this.\n\nOld decals stop being valid on September 15, after which unregistered cars in the resident lot may be ticketed by the towing company we contract with.\n\n— Greentree Student Housing Office"
+ },
+ {
+  "label": "legit",
+  "category": "landlord_maintenance",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "hey! quick heads up, the guys are pressure washing the balconies on the 3rd floor tomorrow morning starting around 8. move any chairs or plants inside tonight if you can. it gets loud, sorry in advance - Mike, building super"
+ },
+ {
+  "label": "legit",
+  "category": "landlord_maintenance",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Hi Jasmine — following up on our call. Your security deposit of $600 was mailed as a check to the forwarding address you gave us (the one on Ridge Ave). We deducted $45 for the carpet cleaning, which is itemized on the statement in the envelope. Should arrive in 7-10 business days. If it hasn't shown up by the 20th, call the office and we'll stop payment and reissue."
+ },
+ {
+  "label": "legit",
+  "category": "password_reset_requested",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Your Brightleaf Mail verification code is 418203. It expires in 10 minutes. We will never ask you for this code."
+ },
+ {
+  "label": "legit",
+  "category": "password_reset_requested",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Hi! This is an automated notice from the Campus Portal. A password reset was completed for your account at 3:42 PM today. If this was you, no action is needed. If not, contact the IT Help Desk at the number printed on the back of your student ID."
+ },
+ {
+  "label": "legit",
+  "category": "password_reset_requested",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "New sign-in to Kestrel Drive\n\nDevice: Windows laptop, Chrome\nLocation: near campus (approximate)\nTime: today, 9:07 AM\n\nIf this was you, you can ignore this message. If you don't recognize it, open the Kestrel Drive app and go to Settings > Security > Sign out of all devices. We don't include links in security emails on purpose."
+ },
+ {
+  "label": "legit",
+  "category": "password_reset_requested",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Lumen Study sign-in code: 902-441. Don't share it with anyone, not even Lumen staff."
+ },
+ {
+  "label": "legit",
+  "category": "password_reset_requested",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "You asked us to reset your password for your NorthPine Credit Union online banking account. Open the NorthPine app and tap \"Finish reset\" on the home screen within 30 minutes. We will not call you about this request. If you didn't request a reset, visit any branch or use the phone number on your debit card."
+ },
+ {
+  "label": "legit",
+  "category": "password_reset_requested",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "hey it's Priya from the lab — i just reset the shared account password for the microscope PC like we talked about. new one is in the group vault under \"ScopePC\". check your email for the confirmation from the vault app"
+ },
+ {
+  "label": "legit",
+  "category": "password_reset_requested",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Your two-factor authentication method was changed to the authenticator app on Oct 14 at 11:52 PM. You made this change while signed in. Backup codes have been regenerated — print or save them now from Account > Security."
+ },
+ {
+  "label": "legit",
+  "category": "password_reset_requested",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Auth code 55219 for Tidepool Gaming. If you didn't try to log in, change your password in the app."
+ },
+ {
+  "label": "legit",
+  "category": "password_reset_requested",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Hello,\n\nWe received your request to reset the password for your Harrowgate Library account (card ending 4471). A librarian at the circulation desk has temporarily unlocked your account. Please stop by with your ID within 7 days to set a new PIN in person. No links are sent for library account resets.\n\nHarrowgate Public Library Circulation Services"
+ },
+ {
+  "label": "legit",
+  "category": "password_reset_requested",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Password successfully changed. If you didn't do this, sign in and change it again immediately, then review your active sessions. — Fernbrook Notes"
+ },
+ {
+  "label": "legit",
+  "category": "appointment_reminder",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Reminder: you have an appointment with Dr. Okafor at Brightleaf Family Medicine on Tue Mar 4 at 10:15am. Please arrive 10 min early with your insurance card. Reply C to confirm or call 555-0142 to reschedule."
+ },
+ {
+  "label": "legit",
+  "category": "appointment_reminder",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Hi! This is Marisol from Copper Comb Salon. Just confirming your haircut Thursday at 5:30 with me. If you want to add the deep condition let me know so I can block a little extra time :) See you then!"
+ },
+ {
+  "label": "legit",
+  "category": "appointment_reminder",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Academic advising appointment - Thursday 2:00 PM, Halloway Hall 214\n\nHi,\n\nThis is a reminder that we're meeting Thursday at 2:00 PM in Halloway Hall, room 214 to go over your fall registration plan.\n\nBefore you come, please:\n- Log into the student portal and pull up your degree audit\n- Jot down 3-4 courses you're considering\n- Check whether you've cleared the MATH 141 prerequisite\n\nIf something comes up, just email me back and we'll find another slot. I have openings Friday morning.\n\nBest,\nDana Whitcomb\nAcademic Advisor, College of Arts & Sciences"
+ },
+ {
+  "label": "legit",
+  "category": "appointment_reminder",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Larkspur Dental: Appt reminder for cleaning w/ Dr. Nunez on 04/18 at 8:00am. Please brush before arrival. Text RESCHEDULE or call 555-0177. Std msg rates apply. Reply STOP to opt out."
+ },
+ {
+  "label": "legit",
+  "category": "appointment_reminder",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Hey, it's the front desk at Pinewood Counseling Center. Your intake session with Aaron is tomorrow at 1pm, second floor, suite 220. There's a short questionnaire in your client portal — takes about 5 minutes, and doing it beforehand gives you more time to actually talk. No worries if you can't get to it."
+ },
+ {
+  "label": "legit",
+  "category": "appointment_reminder",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Your dental visit on Monday — copay and forms\n\nHello,\n\nWe're looking forward to seeing you Monday, March 11 at 3:45 PM for your filling with Dr. Amari.\n\nA few notes:\n- Your estimated patient portion after insurance is $62. You can pay at the front desk after the visit; we do not collect payment in advance and we will never ask for card details by text or email.\n- If you need to update your insurance, bring the card with you.\n- Cancellations within 24 hours may incur a $25 fee.\n\nQuestions? Call the office at 555-0190 during business hours.\n\n— Larkspur Dental Group"
+ },
+ {
+  "label": "legit",
+  "category": "appointment_reminder",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Reminder from Wexler Vision: eye exam Wed 9/12 at 11:30am. Bring your current glasses and please skip contacts for 24 hrs before. Parking garage on Vine St is free with validation."
+ },
+ {
+  "label": "legit",
+  "category": "appointment_reminder",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "hi!! this is Jules at Fade Theory — you're booked sat 12:15 for the taper. shop moved next door to 118 Grand, same block, blue awning. cash or card both fine. see u sat"
+ },
+ {
+  "label": "legit",
+  "category": "appointment_reminder",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Reminder — Career Advising drop-in you signed up for\n\nHi,\n\nYou reserved a 20-minute slot with me tomorrow (Wednesday) at 11:40 AM in the Career Center, Sterling Union basement level.\n\nBring a printed copy of your resume if you can — it's easier to mark up on paper. If you'd rather meet over video, reply and I'll send a link through the campus scheduling system you booked with.\n\nNo prep needed beyond that.\n\nThanks,\nPriya Raghunathan\nCareer Advisor"
+ },
+ {
+  "label": "legit",
+  "category": "appointment_reminder",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Hollis Sports Medicine: PT session with Ben on Fri 2/23 at 4:00pm. Wear shorts or loose pants. This is your last visit covered under the current referral — front desk can help you request more from your doctor. Call 555-0108 with questions."
+ },
+ {
+  "label": "legit",
+  "category": "order_receipt",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Thanks for your order! Order #KL-449201 from Brambleway Books is confirmed. 2 items — $37.84 charged to your Visa ending 4417. Estimated delivery Thu, Mar 14. You can track it anytime from the Orders tab in your account."
+ },
+ {
+  "label": "legit",
+  "category": "order_receipt",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Tinderbox Coffee Co. — receipt for in-store purchase. Large oat latte $5.40, cinnamon scone $3.25. Subtotal $8.65, tax $0.71, total $9.36. Paid with card ending 0982. You earned 9 bean points."
+ },
+ {
+  "label": "legit",
+  "category": "order_receipt",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Hi! This is Marla from Quillhaven Print Shop. Your 200 club flyers are printed and boxed. Total came to $46.00 like we quoted, already charged to the card on file from your deposit form. Pick up anytime before 6pm, just ask for the order under the film society name."
+ },
+ {
+  "label": "legit",
+  "category": "order_receipt",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Order confirmed: 1x refurbished laptop charger (65W, USB-C) — $28.99 + $4.99 shipping = $33.98. Ships from our Ohio warehouse within 2 business days. Reply HELP for support or visit voltcrate-parts.example-store.com/orders to view the receipt. — Voltcrate Parts"
+ },
+ {
+  "label": "legit",
+  "category": "order_receipt",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Your pickup order is ready!\n\nGreen Lantern Grocery — Store #12, Pine & 4th\nOrder GL-7731\n\n• Eggs, dozen — $4.19\n• Rice, 5lb — $8.49\n• Frozen dumplings x2 — $11.98\n• Bananas (1.4 lb) — $0.90\n\nTotal: $25.56 (EBT applied: $25.56, card charged $0.00)\n\nPark in spot 3-7 and call the number on the sign. We hold orders 24 hours."
+ },
+ {
+  "label": "legit",
+  "category": "order_receipt",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Receipt from Hollow Pine Outfitters. You returned 1 pair hiking socks (size M) and exchanged for size L. No balance due, no refund issued. Exchange reference EX-20418. Keep this message in case you need to show it at the counter."
+ },
+ {
+  "label": "legit",
+  "category": "order_receipt",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hey — order went through for the dorm shelf unit. Confirmation number is 88-30211. Total $112.47 split across two payments of $56.24 (the second one hits your card on the 15th, that's the payment plan you picked at checkout). Delivery window is next Tuesday 1–5pm, someone has to be there to sign. Reply to this thread if you need to reschedule, I'm the store's delivery coordinator."
+ },
+ {
+  "label": "legit",
+  "category": "order_receipt",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "MOSSBANK SUPPLY — ORDER CONFIRMATION\n\nOrder 5511-B placed today at 11:42am.\n\nItems:\n1x graphing calculator (used, grade B) $58.00\n1x battery pack $6.00\nStudent discount -$5.00\nTax $4.86\nTOTAL $63.86\n\nPayment method: card ending 7730. Your order will ship Monday. Nothing further is needed from you — we will never call or text asking you to confirm payment details."
+ },
+ {
+  "label": "legit",
+  "category": "order_receipt",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "thanks for shopping at Dented Can Market :) order #3391 — 4 items, $19.02. picked up in store. no delivery for this one. your receipt is attached in the app under Purchases. sorry the printer was out of paper again lol"
+ },
+ {
+  "label": "legit",
+  "category": "order_receipt",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Order #WR-60245 confirmed — Wrenfield Apparel\n\nHoodie, heather grey, size L — $42.00\nShipping (standard, 5-7 days) — $6.50\nTotal — $48.50\n\nWe charged the card ending 1156. If you used a promo code and don't see it applied, reply within 48 hours and we'll refund the difference to the original payment method. Returns are free for 30 days with the label inside the box."
+ },
+ {
+  "label": "legit",
+  "category": "subscription_genuine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Heads up: your LoopNote Student plan renews on March 12 for $4.99/month. No change to your price this year. You can manage or cancel anytime from Settings > Billing in the app."
+ },
+ {
+  "label": "legit",
+  "category": "subscription_genuine",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Hi there,\n\nWe're writing to let you know that starting with your next billing cycle on 1 May, the price of Pagebound Reading Club will increase from $8.00 to $9.50 per month. This is our first price change since 2021 and helps cover expanded library licensing.\n\nYou don't need to do anything to continue. If you'd rather not continue at the new price, you can cancel from your account page before 1 May and keep access until the end of your current term.\n\nWe've also added a verified student rate of $5.50/month — you can apply for it from the Billing tab if you have a .edu address.\n\nThanks for reading with us,\nThe Pagebound Team"
+ },
+ {
+  "label": "legit",
+  "category": "subscription_genuine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Your annual Kettleworks Fitness membership renews on 09/30 at the same rate, $180/year. Card ending 4412 will be charged. Manage renewal in the app under Account."
+ },
+ {
+  "label": "legit",
+  "category": "subscription_genuine",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Hello,\n\nThis is your 30-day advance notice: the Cloudmarrow storage plan on your account (200 GB) will renew on 14 June for $29.99/year.\n\nIf your storage needs have changed, you can downgrade to the free 15 GB tier or upgrade to 2 TB before the renewal date. All changes take effect at renewal, and downgrading will not delete files immediately — you'll get a 60-day grace window to reduce usage.\n\nInvoices are always available under Account > Payments when you sign in to your account directly.\n\n— Cloudmarrow Billing"
+ },
+ {
+  "label": "legit",
+  "category": "subscription_genuine",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "hey! just a note from the studio — the unlimited class pass is going from $65 to $72 starting next month. everyone currently on autopay keeps the old rate until september. if you want to pause or switch to the 8-class pack instead just reply here or tell me at the front desk :)"
+ },
+ {
+  "label": "legit",
+  "category": "subscription_genuine",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Ridgeline Transit monthly student pass: auto-renews Nov 1 for $32. Fare unchanged. Reply STOP to end auto-renew or visit a ticket office."
+ },
+ {
+  "label": "legit",
+  "category": "subscription_genuine",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Your Tinderbox Audio subscription — upcoming renewal\n\nHi,\n\nYour Tinderbox Audio Premium subscription will automatically renew on 22 February for $11.99/month, charged to the payment method on file (Visa ending 0917).\n\nNothing is required from you. If you'd like to switch plans, pause for up to three months, or cancel, sign in and go to Account Settings. We never ask for your password or card details by email or text.\n\nIf your card has expired, the charge may fail and your account will drop to the free tier after a 7-day grace period.\n\nTinderbox Audio Support"
+ },
+ {
+  "label": "legit",
+  "category": "subscription_genuine",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Notice of price change: beginning with your 1 August invoice, Halden Campus Wireless will increase your monthly plan from $25 to $27 to reflect network upgrades. Existing 12-month contracts are locked at the current rate until they end. Full details and plan options are in your online account under Billing. No response needed."
+ },
+ {
+  "label": "legit",
+  "category": "subscription_genuine",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Reminder from the co-op: your Sunday produce box subscription renews for the spring season on Feb 28. The share price stays $22/week for students. If you're going home for the summer, let me know by the 25th and I'll pause it for you — no fee."
+ },
+ {
+  "label": "legit",
+  "category": "subscription_genuine",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Hi,\n\nYour free 6-month trial of Quillmark Writing Suite (provided through your university) ends on 30 April. After that date your account will convert to the standard plan at $6.25/month unless you cancel.\n\nTo avoid a charge, open the Quillmark app, go to Subscription, and choose \"Do not renew.\" Documents you've created stay yours either way and can be exported at any time.\n\nIf you're not sure whether your school extended the license, ask your campus IT help desk before the trial ends.\n\nQuillmark Accounts Team"
+ },
+ {
+  "label": "legit",
+  "category": "employer_schedule",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Hey, it's Dana from the campus bookstore. Marcus called out sick tomorrow — any chance you can take the 11-3 shift? No pressure if you have class, I'm asking a few people."
+ },
+ {
+  "label": "legit",
+  "category": "employer_schedule",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Reminder for everyone: timesheets need to be submitted in the scheduling portal by Sunday 11:59pm or your hours roll to the next pay period. Payday is still the 15th. If you already submitted, ignore this. - Priya"
+ },
+ {
+  "label": "legit",
+  "category": "employer_schedule",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Onboarding paperwork — bring these on your first day\n\nHi Tomas,\n\nWelcome to the Ridgeway Café team! Your first shift is Monday 9/9 at 7:30am. For payroll we need to complete your I-9 in person, so please bring physical ID documents (either a passport, or a driver's license plus Social Security card). Do not email or text photos of these to me — we handle them in the office only.\n\nEverything else (direct deposit form, handbook acknowledgment) you'll fill out on the tablet in the back office during your first shift, which is paid.\n\nIf you can't find your documents by Monday, just tell me and we'll figure out timing. It's not a big deal.\n\nBest,\nAngela Brennan\nStore Manager"
+ },
+ {
+  "label": "legit",
+  "category": "employer_schedule",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "swapped you off friday closing since you said you had the bio exam. youre now on saturday 12-6. schedule is posted in the break room too"
+ },
+ {
+  "label": "legit",
+  "category": "employer_schedule",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Heads up — payroll is switching from biweekly Fridays to the 1st and 15th starting next month. Means one paycheck will feel a little late in October. HR is doing a 15-min info session Thursday at 4 in Room 212, or you can just ask me."
+ },
+ {
+  "label": "legit",
+  "category": "employer_schedule",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Hi! This is Kevin, shift lead. Can you come in 30 min early tomorrow? We're doing inventory before open. You'll be paid for the extra time obviously."
+ },
+ {
+  "label": "legit",
+  "category": "employer_schedule",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Direct deposit not set up yet\n\nHi Renee,\n\nPayroll flagged that your direct deposit info hasn't been entered. You'll get a paper check this period, which you can pick up at the front desk Friday after 2pm with your student ID.\n\nIf you want direct deposit going forward, log in to the employee portal yourself (the same site you used for onboarding — bookmark it from the HR page, I'm not going to send a link over email) and enter it under Pay Settings. Please don't send me your account numbers.\n\nThanks,\nDaniel Okoro\nHR Coordinator"
+ },
+ {
+  "label": "legit",
+  "category": "employer_schedule",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "team: holiday schedule requests are open until the 20th. put your blackout dates in the shared sheet. after the 20th i'm just assigning shifts and you'll have to trade with each other"
+ },
+ {
+  "label": "legit",
+  "category": "employer_schedule",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "You left your name badge on the counter again lol. It's in the drawer by the register. Also your break is 12:15 tomorrow not 12:45, I moved it."
+ },
+ {
+  "label": "legit",
+  "category": "employer_schedule",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Training modules due before your first solo shift\n\nHey all,\n\nQuick note for the new hires: you have three online training modules (food safety, register basics, harassment prevention) to finish before you can work a shift alone. They take about 90 minutes total and yes, that time is paid — log it on your timesheet under \"Training.\"\n\nAccess them through the learning portal using the login you created in the office. If your login isn't working, come see me in person during the week, don't try to reset it through some random email.\n\nDeadline is the 28th. After that I'll start scheduling you independently.\n\nThanks,\nSam"
+ },
+ {
+  "label": "legit",
+  "category": "family_check_in",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Hi honey, just sent $80 to your account for groceries. Dad says don't spend it all on energy drinks. Call us Sunday if you get a chance, love you."
+ },
+ {
+  "label": "legit",
+  "category": "family_check_in",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "hey kiddo, your mother is making me ask — did you get the winter coat out of the box we mailed? she's convinced the post office lost it"
+ },
+ {
+  "label": "legit",
+  "category": "family_check_in",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Checking in\n\nSweetheart,\n\nWe haven't heard from you since the exam week started so I'm assuming you're buried in books. Grandma asked about you at dinner and I told her you were fine, which I hope is true.\n\nI transferred $150 into the checking account you set up with the credit union. That's for groceries and the dentist copay, not for concert tickets. Please actually buy vegetables.\n\nNo need to write back a novel. A sentence will do.\n\nLove,\nMom"
+ },
+ {
+  "label": "legit",
+  "category": "family_check_in",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Aunt Rosa here (new phone, old one went swimming in the sink). Saving your number again. How's the semester going? Come by for dinner when you're home for break, I'll make the pork."
+ },
+ {
+  "label": "legit",
+  "category": "family_check_in",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "did u eat today. be honest"
+ },
+ {
+  "label": "legit",
+  "category": "family_check_in",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hi! It's Mom. I tried to Venmo you the $60 for the groceries but it said the username wasn't found — is it still the one ending in 21? Don't send me anything, I'll just try again when you tell me. Or I can mail a check, whatever's easier."
+ },
+ {
+  "label": "legit",
+  "category": "family_check_in",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Your brother got his braces off today and he looks like a completely different kid. Sending a photo. He said not to send it to you so obviously I'm sending it to you."
+ },
+ {
+  "label": "legit",
+  "category": "family_check_in",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Thanksgiving travel\n\nHey,\n\nDad and I looked at the bus schedule. The Wednesday 4:10 gets in too late for us to pick you up before your cousin's thing, so we're thinking the 11:30 instead. Let us know by Friday and I'll book it on our card — you don't need to pay us back, just show up.\n\nAlso, do you still want the old crockpot? It's taking up space in the garage.\n\nLove you,\nDad (typed by Mom because he refuses)"
+ },
+ {
+  "label": "legit",
+  "category": "family_check_in",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "hey it's Uncle Dave. your dad said you're studying that computer stuff. my laptop is doing the thing again where it gets loud. no rush, just when you're home. anyway hope school's good"
+ },
+ {
+  "label": "legit",
+  "category": "family_check_in",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Grandpa's surgery went fine, he's already complaining about the hospital coffee so that's a good sign. Don't worry about driving down, everyone's okay. Put $40 in your account for gas anyway in case you want to come next weekend. Love you honey."
+ },
+ {
+  "label": "legit",
+  "category": "utility_bill_ready",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Your NorthBay Power eBill is ready. Amount due: $54.18. Due date: March 14. View your statement anytime by signing in to your account at the address printed on your paper bill. Reply STOP to opt out of billing texts."
+ },
+ {
+  "label": "legit",
+  "category": "utility_bill_ready",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Your March statement is available\n\nHi Dana,\n\nYour Cedarline Internet statement for March is ready in your online account.\n\nPlan: Cedarline Fiber 300\nStatement period: Feb 1 - Feb 28\nAmount due: $49.99\nDue date: March 10\nAutoPay: ON (card ending 4412)\n\nSince AutoPay is enabled, no action is needed. We'll charge your card on the due date and email you a receipt.\n\nQuestions about a charge? Call the number on the back of your bill or use the message center after signing in.\n\n- Cedarline Communications Billing"
+ },
+ {
+  "label": "legit",
+  "category": "utility_bill_ready",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Metro Valley Water: eBill ready. $31.22 due 04/02. Log in to your account to view usage details. Msg&data rates may apply."
+ },
+ {
+  "label": "legit",
+  "category": "utility_bill_ready",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Halcyon Mobile - bill ready (account ending 7781)\n\nYour bill for the cycle ending February 26 is now available.\n\nTotal: $38.40\nDue: March 18\n\nThis cycle includes a $5.00 one-time charge for the international day pass used on Feb 9. If you did not travel or believe this is an error, you can dispute the charge from the Billing section of your account.\n\nWe never ask for your PIN or a verification code over email or phone. To review your bill, open the Halcyon Mobile app or type our web address manually into your browser.\n\nThanks,\nHalcyon Mobile"
+ },
+ {
+  "label": "legit",
+  "category": "utility_bill_ready",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hey! This is Priya from the Maple Court leasing office. Just a heads up that the February utility allocation for unit 3B posted to your resident portal — $27.65 for water/sewer/trash, due with rent on the 1st. No rush, just wanted you to see it before the statement email lands. Let me know if the number looks off and I'll pull the breakdown."
+ },
+ {
+  "label": "legit",
+  "category": "utility_bill_ready",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Your Ridgeton Gas & Electric bill is ready\n\nAccount: ****3092\nService address: 214 Wexler St, Apt 5\n\nAmount due: $88.71\nDue date: March 21\nPrevious balance: $0.00 (thank you for your payment)\n\nYour usage was higher this month than last, mostly due to colder weather during the week of Feb 4. You can see a day-by-day breakdown in the Usage tab of your account.\n\nNeed more time? Payment arrangements are available before the due date. Sign in or call the customer service number listed on your printed statement.\n\nRidgeton Gas & Electric"
+ },
+ {
+  "label": "legit",
+  "category": "utility_bill_ready",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Ottercreek Broadband: Your paperless bill for account ending 5520 is ready. $64.00 due Mar 28. AutoPay is off, so please pay by the due date to avoid a late fee. Sign in through our app to view or pay."
+ },
+ {
+  "label": "legit",
+  "category": "utility_bill_ready",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Statement ready - Brightwick Student Housing Utilities\n\nHello,\n\nYour shared utility statement for Suite 412 is posted to the resident portal.\n\nElectric (split 4 ways): $19.03\nWater: $8.40\nInternet: $12.50\nYour total: $39.93\nDue: the 5th of next month with rent\n\nStatements are always posted in the portal first. We will never text you a payment link or ask for a gift card. If you get a message like that, forward it to the front desk.\n\nBrightwick Residence Services"
+ },
+ {
+  "label": "legit",
+  "category": "utility_bill_ready",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Reminder from Larkfield Mutual Telephone: your bill of $22.15 is ready and due 03/09. Paper copy mailed Feb 27. Pay in person, by mail, or online after signing in."
+ },
+ {
+  "label": "legit",
+  "category": "utility_bill_ready",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Subject: Bill ready + rate change notice (effective April 1)\n\nYour Copperline Energy statement is available. Amount due: $103.56, due March 25.\n\nPlease also note: as approved by the state utility commission in December, the residential supply rate changes from 9.8 to 10.4 cents per kWh beginning April 1. This does not affect the bill above.\n\nYou can compare supplier options through the commission's public shopping site — we do not endorse any particular supplier, and our representatives will never call you to demand an immediate payment to avoid shutoff. Disconnection notices are always mailed first.\n\nCopperline Energy, Customer Billing"
+ },
+ {
+  "label": "legit",
+  "category": "professor_email",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Hi all — quick note that the Problem Set 6 deadline is pushed from Thursday to Sunday 11:59pm since the lab servers were down Tuesday night. No penalty, no form to fill out, the Canvas due date is already updated. Office hours run as usual Wednesday 2-4 in Hoyt 318.\n\n— Prof. Aleman, STAT 214"
+ },
+ {
+  "label": "legit",
+  "category": "professor_email",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Hey everyone, TA here. I'm moving tomorrow's office hours from 10am to 1pm because of a department meeting. Same room (Kessler basement, the one with the broken clock). If 1pm doesn't work for you just reply here and I'll figure something out."
+ },
+ {
+  "label": "legit",
+  "category": "professor_email",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Midterm grades are posted in the gradebook. Class median was 74. If you think something was added up wrong, submit a regrade request through the course site within one week — please don't email me scans of your exam, I can't process those."
+ },
+ {
+  "label": "legit",
+  "category": "professor_email",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Reminder: no class Monday (holiday). Reading response still due Tuesday 9am."
+ },
+ {
+  "label": "legit",
+  "category": "professor_email",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Hi — I noticed you haven't submitted the draft for the final project yet and the deadline was Friday. I'd rather you turn it in late than not at all; the late penalty is 5% per day and caps at 20%. If something's going on, come by office hours Thursday 3-5 or just reply and we'll sort out a plan.\n\nBest,\nDr. Ferreira"
+ },
+ {
+  "label": "legit",
+  "category": "professor_email",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Quick heads up: I'll be about 10 min late to office hours today, parking situation. Start without me, the whiteboard is unlocked."
+ },
+ {
+  "label": "legit",
+  "category": "professor_email",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Good afternoon,\n\nA few of you asked about the lab fee refund for the cancelled field session. The bursar's office is processing $45 back to student accounts automatically — you do not need to send anyone any information, and nobody from the department will call you about it. If you have questions, walk over to the bursar window in Tallman Hall.\n\nAlso, Quiz 4 is still Wednesday, covering chapters 8 and 9 only.\n\n— Prof. Okonjo"
+ },
+ {
+  "label": "legit",
+  "category": "professor_email",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Hi all, I've enabled a one-time access code for the practice exam on the course platform: the code is HYDRA9 and it's printed on the syllabus too. It just unlocks the practice quiz, it isn't tied to your account. Good luck studying."
+ },
+ {
+  "label": "legit",
+  "category": "professor_email",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Your presentation slot is Thursday at 2:15. Bring your slides on a USB as backup, the room wifi is unreliable. — TA Marcus"
+ },
+ {
+  "label": "legit",
+  "category": "professor_email",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Hello,\n\nFollowing up on our conversation after lecture: yes, you can use the incomplete grade option, but you'll need to fill out the form with the registrar and have me sign it before the last day of classes. I've attached nothing here on purpose — the form lives on the registrar's page, log in through the normal university portal, not through any link in an email.\n\nCome by office hours if you want to talk through whether an incomplete is actually the right call for you. I have space Monday 11-12.\n\nRegards,\nDr. Lindqvist"
+ },
+ {
+  "label": "legit",
+  "category": "payment_received",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "PayNook: You sent $22.50 to Marisol R. New balance $118.03. Open the app to view details."
+ },
+ {
+  "label": "legit",
+  "category": "payment_received",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "You got $15 from Devon T. — \"pizza last night 🍕\". It's in your PayNook balance now."
+ },
+ {
+  "label": "legit",
+  "category": "payment_received",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Receipt for your CashLoop transfer\n\nHi Priya,\n\nYour transfer of $340.00 to Northside Student Housing LLC was completed on Oct 3 at 9:14 AM.\n\nTransaction ID: CL-7741-22890\nFunding source: Fairmont Credit Union ****8102\nFee: $0.00\n\nYou can view or download this receipt from Activity > Completed in the CashLoop app. If you don't recognize this transfer, report it from the receipt screen — we'll never ask for your PIN by phone or email.\n\n— CashLoop Support"
+ },
+ {
+  "label": "legit",
+  "category": "payment_received",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Zipline Pay: Request from Amara K for $37.25 (groceries split) is still pending. Approve or decline in the app by Friday."
+ },
+ {
+  "label": "legit",
+  "category": "payment_received",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "hey it's Josh from the lab — just sent you $60 on PayNook for the textbook, let me know when it lands"
+ },
+ {
+  "label": "legit",
+  "category": "payment_received",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "CashLoop: $200.00 from GRANT DISBURSEMENT - LAKEMONT COLLEGE deposited to your balance. Available now."
+ },
+ {
+  "label": "legit",
+  "category": "payment_received",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Your monthly PayNook activity summary\n\nSeptember at a glance:\nMoney in: $612.00 (7 transfers)\nMoney out: $588.41 (19 transfers)\nLargest payment: $310.00 to Willow Court Apartments\n\nNothing is required from you — this summary is informational. To change how often you get these, update Notifications in your app settings."
+ },
+ {
+  "label": "legit",
+  "category": "payment_received",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Zipline Pay: Your $45.00 payment to Coach Emilia Vance was declined because your linked card expired. Nothing was charged. Update your card in the app to retry."
+ },
+ {
+  "label": "legit",
+  "category": "payment_received",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "PayNook alert: transfer of $9.00 to @tuesdaytrivia completed. Reply STOP to turn off payment texts."
+ },
+ {
+  "label": "legit",
+  "category": "payment_received",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "heads up, the $128 refund for the concert tickets showed up in my CashLoop and i already sent your half — check your balance"
+ },
+ {
+  "label": "legit",
+  "category": "newsletter_promo",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "CAMPUS THREADS: Midterm survival sale starts now — 30% off all hoodies and crewnecks thru Sunday. Shop: campusthreads-shop.com/sale. Reply STOP to opt out."
+ },
+ {
+  "label": "legit",
+  "category": "newsletter_promo",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Hi! You're getting this because you signed up for Bean Lane Coffee rewards last semester.\n\nThis week only: buy any large cold brew, get a second one free. Just show the offer in the app at checkout — no code needed.\n\nOffer runs Monday through Friday at all three locations, including the one on Winslow St.\n\nSee the details: beanlane-coffee.com/offers\n\nYou can manage email preferences at the bottom of this message."
+ },
+ {
+  "label": "legit",
+  "category": "newsletter_promo",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "NoteNest Premium is 40% off for students until Nov 30. Annual plan drops to $23.99. Upgrade any time from Settings > Plan, or here: notenest.app/student-offer. No action needed if you're happy on the free tier."
+ },
+ {
+  "label": "legit",
+  "category": "newsletter_promo",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Pixel Pantry grocery delivery: $0 delivery fee on your next 3 orders this month. Tap to browse — pixelpantry-order.com/deals. Txt STOP to end."
+ },
+ {
+  "label": "legit",
+  "category": "newsletter_promo",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: Your semester textbook buyback window is open\n\nHey — the buyback window at Marlow Campus Books opens today and closes Dec 18.\n\nWe're also running 25% off used titles and 15% off stationery through the end of the month. You can check trade-in values by ISBN on our site before you come in: marlowcampusbooks.com/buyback\n\nNo appointment needed. Bring your student ID to the front counter.\n\n— Marlow Campus Books, 412 Ridgeway Ave"
+ },
+ {
+  "label": "legit",
+  "category": "newsletter_promo",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "flash sale on the app rn — 20% off all running shoes til midnight, code SPRINT20 at checkout. link: stridewaypa.com/flash"
+ },
+ {
+  "label": "legit",
+  "category": "newsletter_promo",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Orbit Cinemas: Student Tuesdays are back. $6 tickets all day with a valid .edu email. Reserve seats at orbitcinemas-tickets.com/student. Reply STOP to unsubscribe."
+ },
+ {
+  "label": "legit",
+  "category": "newsletter_promo",
+  "lang": "en",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Subject: 48 hours only — 35% off storage bins and dorm organizers\n\nMoving back in? Our dorm essentials event is live through Thursday night.\n\n35% off storage bins, under-bed drawers, and shower caddies. Free pickup at the Grant Street store, usually ready in about two hours.\n\nBrowse the event: hollowayhomegoods.com/dorm\n\nPrices shown online already include the discount — nothing to enter at checkout. Sale excludes furniture and clearance items.\n\nHolloway Home Goods"
+ },
+ {
+  "label": "legit",
+  "category": "newsletter_promo",
+  "lang": "en",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "Hey! Quick heads up from the Fernwood Gym team: we're waiving the sign-up fee for students through the end of the month, and the 6-month plan is $22/mo instead of $29. If you want it, you can start the membership online at fernwoodgym-fit.com/join or just come by the desk and we'll set it up. No rush, the offer runs til the 31st."
+ },
+ {
+  "label": "legit",
+  "category": "newsletter_promo",
+  "lang": "en",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Lumen Audio: your free trial ends Dec 4. If you'd like to keep going, students get 3 months for $2.99 — details at lumenaudio.com/students. Otherwise you'll be moved to the free plan automatically, no charge."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "es",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Hola, soy mamá. Ya hablé con tu tía y dice que sí te puede prestar la maleta grande para el viaje. Pásate por su casa el sábado antes de las 6. Avísame cuando la recojas 😊"
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "es",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "BancoNorte: Compra aprobada de 34,90 EUR en CAFETERÍA EL ROBLE el 12/03 a las 09:14 con tu tarjeta terminada en 4471. Saldo disponible: 512,08 EUR. Si no reconoces la operación, bloquéala desde la app en Tarjetas > Bloquear."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "es",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Estimado estudiante:\n\nLe recordamos que la tutoría de Estadística II con el profesor Ramírez está programada para el jueves 14 de marzo a las 11:30 en el aula B-204 del edificio de Ciencias.\n\nSi no puede asistir, responda a este correo antes del miércoles para reasignar su turno a otro compañero de la lista de espera.\n\nUn saludo,\nSecretaría Académica\nFacultad de Ciencias Económicas"
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "es",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Tu pedido #7741-QB sale hoy para entrega. El repartidor llegará entre las 16:00 y las 18:00. Si no hay nadie en casa lo dejamos en el punto de recogida de la calle Olivos 23."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "es",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "oye, al final la cita del dentista me la cambiaron para el martes a las 5. ¿me puedes acompañar? te invito a un helado después jajaja"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "es",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "UNIVERSIDAD DEL VALLE NORTE - Aviso de Matrícula\n\nEstimado alumno:\n\nDetectamos un saldo pendiente de $2.340 en su cuenta de matrícula. Si no realiza el pago en las próximas 24 horas, su inscripción del semestre será ANULADA y perderá sus materias.\n\nPara evitarlo, ingrese aquí y complete el pago con tarjeta:\nhttps://pagos-matricula-valle.top/urgente\n\nRecuerde tener a mano: número de tarjeta, fecha de vencimiento, código de seguridad y su clave de banca en línea para validar la operación.\n\nDepartamento de Tesorería\nNo responda a este correo."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "es",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Hola!! soy tu prima Male, se me rompió el celu y estoy escribiendo de otro numero. Estoy en un problema, me quedé sin plata y necesito que me hagas una transferencia de $4.500 hoy mismo, mañana te devuelvo. No le digas nada a mi mamá porfa se preocupa. Te paso el alias: MALE.PAGO.RAPIDO — avisame cuando lo mandes 🙏"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "es",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "BANCO HORIZONTE SUR - Departamento de Seguridad. Detectamos un intento de compra por $18.900 en su cuenta de estudiante. Si NO reconoce esta operación llame de inmediato al 555-0143 y tenga lista su tarjeta y su clave de 4 digitos para bloquearla. No comparta este mensaje."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "es",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "¡¡FELICIDADES!! 🎉 Tu correo institucional fue seleccionado en el sorteo anual \"Beca Futuro 2024\" de la Fundación EduPlus. Ganaste una beca en efectivo de $50.000 y una laptop nueva. Para liberar tu premio solo debés abonar el arancel de gestión y envío de $890 por transferencia antes del viernes. Escribinos por WhatsApp al 555-0178 y te pasamos los datos. Los premios no reclamados se sortean de nuevo, no pierdas esta oportunidad!! bendiciones"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "es",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Buenas tardes, le escribo de la Oficina de Becas y Ayudas Estudiantiles.\n\nSu solicitud de reintegro fue aprobada por un monto de $1.120, pero el sistema rechazó la acreditación porque sus datos bancarios están desactualizados.\n\nPor favor confirme en el siguiente formulario antes del 30/05 para no perder el beneficio: https://reintegro-becas-estudiantil.com/form\n\nNecesitamos: nombre completo, DNI, número de cuenta, CBU, usuario y contraseña de su homebanking para verificar la titularidad. Es un procedimiento estándar y totalmente seguro.\n\nSaludos cordiales,\nLic. R. Medina — Coordinación de Becas"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "fr",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "URGENT : Votre dossier de bourse CROUS 2024 est INCOMPLET. Un solde de 89,50€ reste à régler avant le 12/03 sinon votre versement mensuel sera suspendu. Régularisez ici : crous-regularisation-dossier.top/paiement"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "fr",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Bonjour, ici le service anti-fraude de la Banque Aurelis. Nous avons détecté une tentative de virement de 1 240€ depuis votre compte étudiant vers un compte situé en Lituanie. Si vous n'êtes pas à l'origine de cette opération, il est impératif d'annuler immédiatement. Un conseiller va vous rappeler du 01 55 55 01 42. Merci de lui communiquer le code à 6 chiffres que vous recevrez par SMS afin de bloquer le virement. Sans confirmation de votre part sous 30 minutes, le débit sera définitif."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "fr",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Salut maman c'est moi, j'ai cassé mon tel je t'écris depuis le numéro d'un pote. Je peux plus accéder à mon appli bancaire et je dois payer la caution du logement aujourd'hui sinon je perds la chambre. Tu peux m'envoyer 420€ sur ce RIB ? Je te rembourse dès que ma carte est refaite. Réponds vite stp, l'agence ferme à 17h."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "fr",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "FÉLICITATIONS !!! Votre adresse étudiante a été tirée au sort parmi 12 000 inscrits par CampusPrimes. Vous remportez un MacBook + 500€ de bon d'achat. Pour recevoir votre lot, il suffit de régler les frais de livraison de 2,99€ sur campusprimes-cadeau.win avant ce soir minuit. Ne ratez pas cette chance, le lot sera réattribué !"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "fr",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Bonjour, je suis Mme Lefranc du secrétariat pédagogique. Suite à une erreur de facturation, il manque 147€ sur vos frais d'inscription du second semestre. Sans régularisation avant vendredi, votre inscription sera annulée et vous ne pourrez pas passer les partiels. Le paiement se fait uniquement via ce lien sécurisé : scolarite-paiement-etudiant.com/inscr Merci de ne pas passer par la scolarité physique, le service est saturé en ce moment."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "fr",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Salut ma puce, j'ai mis un colis à la poste ce matin avec ton écharpe et les gâteaux de mamie. Normalement tu reçois ça jeudi. Appelle-moi quand tu as deux minutes, on ne t'a pas entendu depuis dimanche. Bisous, Maman"
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "fr",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Rappel : votre rendez-vous chez le Dr Lemoine (cabinet dentaire des Tilleuls) est prévu mardi 14 à 9h15. Merci d'arriver 5 minutes en avance avec votre carte Vitale. Pour annuler, appelez le 01 55 55 0134."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "fr",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Objet : Résultats de l'examen de Statistiques L2 — session de janvier\n\nBonjour à toutes et à tous,\n\nLes notes de l'examen de Statistiques descriptives ont été déposées sur l'espace pédagogique de l'université. Vous pouvez les consulter en vous connectant comme d'habitude à votre ENT avec vos identifiants habituels (je ne vous enverrai jamais de lien par mail pour cela).\n\nLa séance de consultation des copies aura lieu le jeudi 6 février, de 14h à 16h, en salle B212. Si vous ne pouvez pas être présent, écrivez-moi depuis votre adresse universitaire et nous trouverons un autre créneau.\n\nBon courage pour la suite du semestre,\nP. Vasseur\nMaître de conférences, département MIASHS"
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "fr",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Alerte Banque Rivéole : débit de 42,90 EUR chez SUPER FRAIS CENTRE le 03/02 à 18h47. Solde disponible : 311,25 EUR. Vous reconnaissez cette opération ? Aucune action nécessaire. Sinon, contactez votre conseiller depuis l'application."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "fr",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "coucou c'est Théo, je passe récupérer mon chargeur vers 19h si t'es là. sinon laisse le chez la voisine comme l'autre fois 😅 j'ramène des pâtes et on regarde le match"
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "pt",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Oi filha, teu pai passou no mercado e comprou aquele iogurte que tu gosta. Se tu vier no fim de semana, tem lasanha. Beijo da mãe."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "pt",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Banco Serrano: compra aprovada de R$ 47,90 no cartão final 4417 em PADARIA DOIS IRMAOS hoje às 08:12. Não reconhece? Bloqueie o cartão pelo app, na aba Cartões > Bloquear."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "pt",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Sua encomenda do pedido #88213 saiu para entrega e chega hoje entre 14h e 18h. Não é preciso estar em casa: se não houver ninguém, deixamos na portaria do bloco B."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "pt",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Bom dia! Aqui é da Clínica Odonto Vila Nova. Lembrando da sua consulta de limpeza na quinta, dia 14, às 09h30. Chegue 10 minutos antes e traga a carteirinha do convênio. Se precisar remarcar, responda esta mensagem que a gente ajusta na agenda."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "pt",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Prezados alunos,\n\nAs notas da segunda avaliação de Cálculo II já estão lançadas no portal acadêmico. A revisão de prova será na sexta-feira, das 10h às 12h, na sala 304 do bloco C — quem não puder comparecer pode me procurar no horário de atendimento (terças, 16h).\n\nLembro também que a entrega da lista 5 foi adiada para o dia 22.\n\nAbraço,\nProf. Ricardo Menezes"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "pt",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "BANCO NOVA PRAIA - ALERTA DE SEGURANCA\n\nDetectamos uma compra de R$ 2.847,90 no seu cartao final 4471 realizada hoje as 03h12 em loja de eletronicos.\n\nSe NAO reconhece, cancele imediatamente pelo link abaixo em ate 30 minutos, caso contrario o debito sera confirmado na sua fatura:\n\nhttps://novapraia-cancelamento.top/seguranca\n\nEquipe Antifraude 24h"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "pt",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Oi filho, tudo bem? Esse aqui é meu número novo, perdi o celular na rua e tive que comprar um chip. Salva aí e apaga o antigo.\n\nAproveitando, você consegue me fazer um favor? Preciso pagar um boleto hoje senão vai pro cartório, mas meu banco só libera amanhã porque o aplicativo tá sendo reconfigurado no aparelho novo. São R$ 890,00. Te devolvo amanhã sem falta.\n\nA chave pix é o CPF 555.010.221-04, em nome de Wellington R. Alves, é o contador que resolve isso pra mim. Manda o comprovante aqui depois. Não liga no número antigo que não vai atender."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "pt",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Prezado(a) estudante,\n\nA Secretaria Acadêmica informa que sua matrícula referente ao semestre 2025.1 encontra-se PENDENTE devido a uma taxa administrativa de revalidação no valor de R$ 187,50 que não foi identificada no sistema.\n\nA regularização deve ser feita até às 23h59 de hoje. Após esse prazo o sistema efetuará o cancelamento automático das disciplinas e a vaga será redistribuída na lista de espera.\n\nEmita a guia de pagamento (Pix ou boleto) em:\nportal-matricula-regularize.com/taxa\n\nAtenciosamente,\nCentro de Registros Acadêmicos\nFaculdade Monte Aurora"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "pt",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "PARABENS!!! 🎉🎉 Voce foi o aluno SORTEADO na promocao UNIVERSITARIO PREMIADO 2025 e ganhou um notebook UltraBook Pro 16GB + R$ 3.000,00 em dinheiro!!!\n\nPara receber, basta confirmar seus dados e pagar a taxa unica de liberacao/frete no valor de R$ 74,90.\n\nCadastre-se: premio-universitario-liberar.top\n\nATENCAO: o premio expira em 24 horas e passa para o proximo sorteado. NAO PERCA!"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "pt",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "boa tarde, aqui é o Rodrigo do setor de prevenção a fraudes do Banco Cedro Azul\n\nidentificamos uma tentativa de cadastro de dispositivo na sua conta agora a pouco, vinda de outro estado. voce reconhece?\n\npra bloquear o acesso eu preciso confirmar sua identidade. vou enviar um código de 6 dígitos por SMS, me repete ele aqui no chat por favor. nao passe esse codigo pra mais ninguem alem de mim\n\ndepois disso vou te passar uma conta cofre segura do proprio banco pra voce transferir o saldo enquanto a conta antiga fica em analise. é procedimento padrao, o valor volta em ate 2 horas"
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "yo",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Ẹ kú alẹ́ o. Màmá ní kí n sọ fún ẹ pé àwọn ti fi owó náà ránṣẹ́ sí àkántì rẹ lónìí. Bí ó bá dé, jọ̀wọ́ pè wá kí inú wa balẹ̀. Má gbàgbé láti jẹun o."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "yo",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Ìkìlọ̀ àkántì: A ti yọ ₦12,500 kúrò nínú àkántì rẹ tí ó parí pẹ̀lú 4471 ní ọjọ́ 12/03 ní 14:22 fún rírà nǹkan. Ìyókù owó: ₦48,300. Tí ìwọ kọ́ ni ó ṣe é, pè nọ́mbà tí ó wà lẹ́yìn káàdì rẹ."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "yo",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Ẹ ǹ lẹ́ o. Àkójọ nǹkan tí ẹ ra yóò dé ilé yín lọ́la láàárín aago mẹ́sàn-án àárọ̀ sí aago kan ọ̀sán. Awakọ̀ yóò pè yín kí ó tó dé. Bí ẹ kò bá sí nílé, a ó fi sílẹ̀ ní ilé ìkówèésí àdúgbò."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "yo",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Ẹ jọ̀wọ́ rántí pé àdéhùn yín pẹ̀lú dókítà eyín wà ní ọjọ́bọ̀ tó ń bọ̀, aago mẹ́wàá àárọ̀. Ẹ wá ní ìṣẹ́jú mẹ́ẹ̀ẹ́dógún ṣáájú. Bí ẹ kò bá lè wá, ẹ pè wá ní 555-0142 kí a lè yí ọjọ́ padà."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "yo",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Ẹ kú iṣẹ́ ọ̀gá. Èmi ni akẹ́kọ̀ọ́ nínú kíláàsì Ìtàn Áfíríkà ti ọjọ́ Aje. Mo fẹ́ bèèrè bóyá mo lè fi iṣẹ́ àkànṣe mi ránṣẹ́ ní ọjọ́ Ẹtì dípò ọjọ́ Ọjọ́rú, nítorí pé àrùn ibà mú mi ní ọ̀sẹ̀ tó kọjá. Mo ní ìwé ilé ìwòsàn tí mo lè fi hàn yín. Mo dúpẹ́."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "ha",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Sannu, ni ne Mama. Na tura maka N15,000 a asusunka na banki yau da safe don kudin littattafai. Ka duba ka gaya mini idan ya shigo. Kar ka manta ka kira kakarka ranar Lahadi."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "ha",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Gargadi daga Banki: An janye N4,500 daga asusunka mai lamba ***2187 a POS ranar 12/03 karfe 4:22 na yamma. Sauran kudi: N23,110. Idan ba kai ka yi ba, je reshen bankin da ke kusa da kai ko ka yi amfani da lambar da ke bayan katinka."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "ha",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Assalamu alaikum. Direban kaya ne. Na iso kofar gidan hostel din ku da kunshin ku, amma gadin bai bar ni in shiga ba. Ina jira a kofar shiga ta biyu kimanin minti goma. Ka fito ka karba."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "ha",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Tunatarwa daga Asibitin Daliban Jami'a: Kana da alkawarin ganin likitan hakori ranar Talata 18 ga wata, karfe 10:30 na safe, Ofis na 3. Ka zo da katin dalibi. Idan ba za ka iya zuwa ba, ka amsa da SOKE."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "ha",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Sannu ku daliban shekara ta biyu. Malam Bello ya sauya lokacin karatun ECO 204 daga Laraba karfe 8 zuwa Alhamis karfe 10 a Babban Zauren Lecture B. Wanda bai gama biyan kudin takardun karatu ba, ya kawo su ofishin sashe kafin Juma'a. Na gode."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "yo",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "IKILO: Akaunti re ni Banki Ajumose Oluyole ti wa ni titipa nitori ise ifura kan ni ago 2:14 alaale. Te ibi yii lati mu pada: https://oluyole-secure-verify.top/unlock . Ti o ba je pe o ko se laarin wakati mefa, gbogbo owo inu akaunti re ni yoo di dandan gbe lo si ile-ifowopamo aringbungbun. Pe 555-0178 fun iranlowo."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "yo",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "E ku ojumo o. Emi ni Ojogbon Adeyanju lati Eka Isuna Ile-eko Giga Iwoyi. A ri i pe owo ileiwe yin ko ti wonu eto wa fun sáà yii. Ti e ba fe ki oruko yin ma parẹ ninu iforukọsilẹ, e fi naira ẹgbẹrún mẹrinlelogun (24,000) ranṣẹ si nomba akaunti ti a fi sinu ọna asopọ yii loni: https://iwoyi-feeportal-pay.top . Ẹ ma dahun sí imeeli yii, ẹ pe mi ni 555-0132 nikan. Mo ni ipade titi di aago mẹrin."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "yo",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "KU ORIRE!!! Nomba foonu re la yan ninu idije KAADI IWE-EKO 2024. O ti jawe olubori NAIRA MILIONU MEJI ati ero-iforukọsilẹ tuntun. Lati gba ebun re, fi oruko, nomba akaunti ati eda kaadi omo ile-eko ranse si WhatsApp 555-0149. Owo idasile faili jẹ N7,500 nikan. Ma sọ fun ẹnikẹni titi ti a fi gbe ẹbun naa fun ọ."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "yo",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Mummy, foonu mi ti bajẹ, nomba ọrẹ mi ni mo fi n kọ ọ. Mo wa ni ile-iwosan nitori ijamba kekere kan, wọn ni ki n san N85,000 ki wọn to tọju mi. Jọwọ fi owo naa ranṣẹ si akaunti yii: 0223887761 Sunday Okeke. Má pe mi o, foonu naa ko lè gba ipe. Fi ranṣẹ báyìí jọwọ, ó ń dun mi gan."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "yo",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Pele sir/ma. Emi ni Blessing lati Ile-ise Aabo Kaadi ti Banki Iwoyi. A ri idanwo lati fa N120,000 jade ninu kaadi yin ni Portharcourt. Ti kii ba se eyin ni, e da mi lohun ni kiakia. A ti fi koodu OTP ranse si foonu yin nisinsinyi — e ka koodu naa fun mi ki n le da idunadura yii duro. E ma pin koodu naa fun elomiran bikose emi. Ti e ba paare, kaadi yin yoo di didi patapata loni."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "ha",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Sanarwa daga Bankin Arewacin Zamani: An gano wani shigar da ba a sani ba a asusunka mai lamba ***4417. Don kare kuɗinka, danna wannan adireshin nan da minti 30: arewa-tsaro-asusu.top/tabbatarwa . Idan ba ka yi ba, za a rufe asusun gaba ɗaya. Kada ka bayar da PIN ga kowa sai a shafin."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "ha",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Barka dai, ni ne Malam Sanusi daga Sashen Kuɗi na Jami'a. An gano cewa ba a kammala biyan kuɗin jarrabawa naka ba na wannan zangon. Adadin da ya rage shi ne N18,500. Don gudun a cire sunanka daga jerin masu rubuta jarrabawa gobe, ka tura kuɗin zuwa asusun da ke ƙasa a yau kafin karfe 4: Sunan asusu: FEES CLEARANCE UNIT, Lamba: 0091223344, Banki: Zamfara Trust. Ka tura hoton rasit ta WhatsApp zuwa 555-0142. Kada ka je ofishin bursar, tsarin su ya lalace yanzu."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "ha",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "TAYA MURNA!!! Lambarka ta ci gasar cakuda ta MTN-DATA NAIJA MEGA PROMO 2024. Ka lashe N500,000 da wayar salula. Don karbar kyautarka, tura sunanka, jihar da kake, da lambar asusu zuwa wannan chat, sannan ka biya kudin rajista N7,500 kadai. KADA KA GAYA WA KOWA har sai an saka maka kudin, domin gudun karya doka. Danna nan: naija-mega-promo-claim.top"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "ha",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Mama, wayata ta bace, wannan lambar abokina ce nake amfani da ita yanzu. Ina asibiti a Kano, an yi min karamin hadari amma ba komai. Likita ya ce sai an biya N45,000 kafin a yi min gwaji. Ina rokonki ki tura ta wannan asusun: 2277884411, Sunan mai asusu: Ibrahim Yakubu (shi ne nas din da ke taimaka min). Don Allah kada ki kira ni, wayar nan ba ta da credit, ki tura kawai yanzu yanzu."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "ha",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "Assalamu alaikum. Wannan sako ne daga Hukumar Tallafin Dalibai ta Kasa (NSSF). An zabi sunanka a cikin masu cancantar tallafin karatu na N250,000 ga daliban jami'o'i. Don kammala tsari, ka shiga: nssf-tallafi-dalibai.com/form ka cika bayananka (lambar asusu, BVN, ranar haihuwa) sannan ka biya kudin tantancewa N3,200 ta hanyar katin da aka nuna. Wadanda ba su kammala ba cikin awa 24 za a ba wasu damar. Mun gode. -- Sakataren NSSF"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "hi",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "प्रिय छात्र, आपकी छात्रवृत्ति (₹48,000) स्वीकृत हो चुकी है। राशि आज ही खाते में भेजी जाएगी। कृपया प्रोसेसिंग शुल्क ₹850 नीचे दिए लिंक से जमा करें वरना आवेदन रद्द हो जाएगा। scholar-payout-verify.top/claim — शिक्षा सहायता प्रकोष्ठ"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "hi",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "नमस्ते बेटा, ये मामा बोल रहा हूँ। नया नंबर है, पुराना फोन खो गया। एक जरूरी काम था — अस्पताल में पेमेंट करनी है और मेरा UPI ब्लॉक हो गया है। 18,500 रुपये इस नंबर पर तुरंत भेज दे, कल सुबह वापस कर दूँगा। किसी को अभी मत बताना, तेरी मम्मी परेशान हो जाएगी।"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "hi",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "विषय: हॉस्टल फीस भुगतान विफल — 12 घंटे में सीट रद्द\n\nप्रिय विद्यार्थी,\n\nहमारे रिकॉर्ड के अनुसार आपकी इस सेमेस्टर की हॉस्टल फीस ₹21,400 का भुगतान तकनीकी कारण से विफल रहा है। नियमानुसार यदि 12 घंटे के भीतर पुनः भुगतान नहीं होता, तो आपकी हॉस्टल सीट किसी और छात्र को आवंटित कर दी जाएगी और सामान स्टोर रूम में भेज दिया जाएगा।\n\nभुगतान केवल इसी सुरक्षित लिंक से करें:\nhttps://hostel-fee-reactivate.top/pay?id=8842\n\nकृपया भुगतान के बाद स्क्रीनशॉट इसी मेल पर भेजें।\n\nभवदीय,\nलेखा विभाग\nनवजीवन प्रौद्योगिकी संस्थान"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "hi",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "सर, मैं भारतीय सुरक्षा बैंक के कार्ड विभाग से बोल रहा हूँ। आपके छात्र डेबिट कार्ड पर अभी दिल्ली से 34,990 रुपये का संदिग्ध लेनदेन हुआ है। अगर यह आपने नहीं किया तो इसे तुरंत रोकना होगा। सत्यापन के लिए आपके मोबाइल पर आए 6 अंकों का OTP मुझे बताइए, और कार्ड के पीछे के 3 अंक भी। जल्दी कीजिए, हमारे पास सिर्फ 2 मिनट हैं वरना पैसा कट जाएगा।"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "hi",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "बधाई हो!! आप कैम्पस फेस्ट लकी ड्रॉ के विजेता चुने गए हैं 🎉 इनाम: नया लैपटॉप + ₹25,000 कैश। इनाम पाने के लिए आधार और बैंक डिटेल भेजें तथा रजिस्ट्रेशन/GST शुल्क ₹1,999 जमा करें। दावा 24 घंटे में करें: campusfest-winner-claim.top"
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "hi",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "बेटा, तेरी बुआ कल दोपहर तक घर आ रही हैं। हॉस्टल से आ सको तो आ जाना, माँ ने तेरी पसंद की कढ़ी बनाने को कहा है। पापा स्टेशन लेने चले जाएंगे।"
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "hi",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "प्रिय विद्यार्थी, सूचित किया जाता है कि पाँचवें सेमेस्टर की आंतरिक परीक्षा का समय-सारिणी विभाग के नोटिस बोर्ड पर लगा दी गई है। कोई भी संशोधन 18 तारीख तक विभागाध्यक्ष कार्यालय में लिखित रूप में दें। - परीक्षा समिति, नंदनवन महाविद्यालय"
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "hi",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "आपके खाते XXXX4471 में 12/03 को रु. 8,500.00 जमा किए गए (NEFT/छात्रवृत्ति)। उपलब्ध शेष: रु. 9,212.40। यह लेनदेन आपने नहीं किया हो तो अपनी शाखा में जाएँ। - सुरधारा बैंक"
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "hi",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "आपका पार्सल आज शाम 6 से 8 बजे के बीच पहुँचेगा। डिलीवरी बॉय गेट पर फोन करेगा, कृपया हॉस्टल का ब्लॉक नंबर तैयार रखें। पार्सल पहले से भुगतान किया हुआ है, कुछ देना नहीं है। - झटपट कूरियर"
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "hi",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "नमस्ते! डॉ. मेहरा के साथ आपकी दाँतों की जाँच का अपॉइंटमेंट शनिवार सुबह 11:00 बजे तय है। समय बदलना हो तो क्लिनिक के काउंटर पर बता दें या 555-0182 पर कॉल करें। कृपया पिछली रिपोर्ट साथ लाएँ।"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "sw",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "HONGERA! Namba yako imeshinda Tsh 4,500,000 katika bahati nasibu ya MSIMU WA WANAFUNZI 2024. Ili kupokea zawadi yako, tuma ada ya usajili Tsh 25,000 kwa namba 0755-0142 (jina: AGENT JUMA) kisha piga simu kuthibitisha. Zawadi itafutwa baada ya saa 12!"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "sw",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "NDUGU MWANAFUNZI,\n\nTumebaini kuwa ada yako ya mtihani wa mwisho wa muhula haijakamilika. Kiasi kinachodaiwa ni Tsh 87,000. Tafadhali lipa kupitia link ifuatayo ndani ya masaa 24 vinginevyo jina lako litaondolewa kwenye orodha ya watahiniwa.\n\nLipa hapa: http://malipo-ada-chuo.top/mwanafunzi\n\nUsijibu barua pepe hii. Ofisi ya Fedha, Chuo cha Mwangaza."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "sw",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Habari mwanangu, hii ni namba yangu mpya, ile ya zamani imepotea na simu. Nina shida kidogo hapa hospitali, sina hela ya kulipia dawa. Tafadhali nitumie Tsh 300,000 kwa hii namba 0712-0177 haraka, nitakurudishia kesho. Usimwambie baba bado."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "sw",
+  "kind": "chat",
+  "difficulty": "easy",
+  "text": "Habari, natoka Idara ya Usalama wa Benki ya Tumaini. Tumeona muamala wa Tsh 950,000 unajaribu kutoka kwenye akaunti yako sasa hivi. Kama sio wewe, nitumie namba ya siri (OTP) tuliyokutumia sasa hivi ili tuzuie muamala huo mara moja. Tunasubiri, muda ni mfupi sana."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "sw",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "TAARIFA MUHIMU: Mkopo wako wa Bodi ya Elimu ya Juu umesimamishwa kwa sababu taarifa zako hazijahakikiwa. Ingia hapa kuthibitisha: bodi-mikopo-verify.online/sajili . Ukichelewa zaidi ya leo, fedha za awamu hii zitarudishwa serikalini."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "sw",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Mwanangu, nimekutumia shilingi 20,000 kwa M-pesa kwa ajili ya chakula. Usisahau kula vizuri na unipigie simu jioni. Mama."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "sw",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Habari, hii ni kumbusho kutoka Kliniki ya Meno Mlimani: una miadi Jumatano tarehe 14 saa nne asubuhi. Tafadhali fika dakika kumi mapema na uje na kitambulisho chako cha mwanafunzi. Ukihitaji kubadilisha siku, piga ofisi yetu wakati wa saa za kazi."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "sw",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "Ndugu mwanafunzi,\n\nTunakujulisha kuwa matokeo ya mtihani wa muhula wa kwanza yatatolewa kwenye mfumo wa chuo siku ya Ijumaa. Ingia kwa kutumia namba yako ya usajili kama kawaida. Iwapo utaona hitilafu yoyote kwenye alama zako, fika ofisi ya Mkuu wa Idara ndani ya siku saba.\n\nAsante,\nOfisi ya Mitihani, Chuo Kikuu cha Bahari"
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "sw",
+  "kind": "sms",
+  "difficulty": "hard",
+  "text": "Benki ya Tumaini: Umetoa TZS 50,000 kwenye ATM ya Kariakoo leo saa 3:12 usiku. Salio lako ni TZS 132,400. Kama si wewe, tembelea tawi lolote."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "sw",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "Mzigo wako umefika kituo cha Mabibo. Njoo kuchukua kabla ya Jumamosi, useme namba ya oda 44812. Tuko wazi hadi saa 12 jioni."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "ar",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "عزيزي الطالب، تم رصد رسوم تسجيل غير مدفوعة بقيمة 450 ريال على ملفك الجامعي. يجب السداد خلال 24 ساعة وإلا سيتم إلغاء جدولك الدراسي للفصل الحالي. ادفع الآن عبر الرابط: uni-fees-portal.top/pay"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "ar",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "مبروووك!! 🎉 رقمك فاز في سحب \"منحة الطلاب الذهبية\" بمبلغ 20,000. كل اللي عليك ترسل اسمك الكامل ورقم الهوية ورقم الحساب البنكي على هذا الواتساب 555-0142 خلال ساعتين لاستلام الجائزة. لا تفوت الفرصه!"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "ar",
+  "kind": "email",
+  "difficulty": "hard",
+  "text": "إشعار أمني عاجل من بنك النخيل الوطني\n\nعميلنا العزيز،\nلاحظنا محاولة دخول غير معتادة على حسابك من جهاز جديد. تم تجميد البطاقة مؤقتاً.\nلإعادة تفعيل الحساب يرجى تأكيد بياناتك (رقم البطاقة، الرقم السري، ورمز التحقق المرسل إليك) عبر البوابة الآمنة:\nhttps://alnakheel-secure-verify.com/reactivate\n\nملاحظة: عدم التأكيد خلال 12 ساعة يؤدي إلى إغلاق الحساب نهائياً.\nإدارة الحماية - بنك النخيل"
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "ar",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "السلام عليكم، أنا خالك أبو سعد، غيرت رقمي وهذا الجديد. أنا حالياً برا المدينة وبطاقتي ما تشتغل هنا. ممكن تحول لي 900 على حساب صاحبي وأرجعها لك بكرة إن شاء الله؟ لا تخبر أحد عشان ما يقلقون. أرسل لك الآيبان الحين."
+ },
+ {
+  "label": "scam",
+  "category": "multilingual_scam",
+  "lang": "ar",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "عمادة شؤون الطلاب: تم اعتماد استرداد رسوم السكن لك بمبلغ 1,200. لاستلام المبلغ سجل بيانات بطاقتك خلال 6 ساعات من هنا: students-refund-center.top ⚠️ الطلبات المتأخرة تُلغى ولا يمكن تقديمها مرة أخرى."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "ar",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "تنبيه من مصرف النخيل: تمت عملية شراء بمبلغ 85.50 ريال من متجر الجامعة اليوم الساعة 2:14 م. الرصيد المتاح 1,240.30 ريال. إذا لم تقم بهذه العملية اتصل بنا من الرقم الموجود خلف بطاقتك."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "ar",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "حبيبي، أمك طبخت مقلوبة اليوم وخبيت لك صحن. متى راح ترجع من الجامعة؟ وإذا ممكن تمر على الصيدلية وتجيب دوا الضغط لأبوك. الله يوفقك."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "ar",
+  "kind": "sms",
+  "difficulty": "easy",
+  "text": "عيادة الأسنان - مركز الياسمين: نذكّرك بموعدك يوم الأربعاء الساعة 10:30 صباحًا مع د. سلمى. يرجى الحضور قبل ١٥ دقيقة. للإلغاء أو التأجيل اتصل على 555-0142."
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "ar",
+  "kind": "chat",
+  "difficulty": "hard",
+  "text": "مرحبًا، أنا مندوب التوصيل من شركة سُرعة. طردك وصل عند بوابة السكن الطلابي رقم 3 لكن الحارس قال لازم تستلمه بنفسك. أنا موجود لمدة عشر دقائق، تقدر تنزل؟"
+ },
+ {
+  "label": "legit",
+  "category": "multilingual_legit",
+  "lang": "ar",
+  "kind": "email",
+  "difficulty": "easy",
+  "text": "عزيزي الطالب،\n\nنفيدكم بأن نتائج اختبارات منتصف الفصل لمقرر \"مبادئ الإحصاء\" أصبحت متاحة على البوابة الأكاديمية. يمكنكم الاطلاع عليها بتسجيل الدخول إلى حسابكم المعتاد عبر موقع الجامعة الذي تستخدمونه دائمًا.\n\nفي حال وجود أي اعتراض على الدرجة، يُرجى مراجعة مكتبي خلال الساعات المكتبية يومي الأحد والثلاثاء من 11 صباحًا حتى 1 ظهرًا، خلال مدة أقصاها أسبوع من تاريخ هذا الإعلان.\n\nمع التحية،\nد. هيثم العنزي\nقسم العلوم الإدارية"
+ }
+]

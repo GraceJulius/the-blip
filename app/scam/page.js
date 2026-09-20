@@ -51,6 +51,7 @@ function MessageCheck() {
           {res.flags.length > 0 && <ul>{res.flags.map((f) => <li key={f.id}>{f.label}</li>)}</ul>}
           {res.model && res.model.explanation && <p>{res.model.explanation}</p>}
           {risky && <p className="note">{t('Do not tap the link. Open your bank app directly. You can forward scam texts to 7726.')}</p>}
+          {res.verified === false && <p className="note">{t('The AI double-check was not available, so this is a first-pass check only.')}</p>}
           {res.level === 'probably_fine' && <p className="note">{t('One thing looked odd, but the model reads it as a normal message. Still open links and accounts from the official app, not from the message.')}</p>}
           {risky && <button onClick={() => run(true)}>{t('Report this scam (+25 points)')}</button>}{' '}
           <ReadAloud text={TEXT[res.level] + '. ' + res.flags.map((f) => f.label).join('. ') + '. ' + (res.model && res.model.explanation ? res.model.explanation : '')} />

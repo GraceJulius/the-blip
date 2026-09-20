@@ -241,6 +241,7 @@
  "Text the code back": "コードを返信する",
  "That is under the 30% mark, which is good for your credit score.": "30%未満です。信用情報に良い状態です。",
  "That payment does not cover the monthly interest. Try a higher amount.": "その金額では毎月の利息に足りません。もっと多い金額を試してください。",
+ "The AI double-check was not available, so this is a first-pass check only.": "AIによる再確認ができませんでした。これは一次チェックのみの結果です。",
  "The model can take a few seconds when it is busy.": "混んでいるときは、数秒かかることがあります。",
  "The sender": "送り主",
  "The sender says they are your bank and asks you to share the code they just texted.": "送り主は銀行を名乗り、今送ったコードを教えてと言っています。",

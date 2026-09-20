@@ -241,6 +241,7 @@
  "Text the code back": "Balas kodenya lewat SMS",
  "That is under the 30% mark, which is good for your credit score.": "Itu di bawah angka 30%, dan itu bagus untuk skor kredit Anda.",
  "That payment does not cover the monthly interest. Try a higher amount.": "Pembayaran itu tidak menutup bunga bulanan. Coba jumlah yang lebih besar.",
+ "The AI double-check was not available, so this is a first-pass check only.": "Pemeriksaan ulang AI tidak tersedia, jadi ini hanya pemeriksaan tahap pertama.",
  "The model can take a few seconds when it is busy.": "Model bisa butuh beberapa detik saat sedang sibuk.",
  "The sender": "Pengirim",
  "The sender says they are your bank and asks you to share the code they just texted.": "Pengirim mengaku dari bank Anda dan meminta Anda memberikan kode yang baru dikirim lewat SMS.",
