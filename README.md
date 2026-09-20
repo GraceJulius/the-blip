@@ -23,10 +23,10 @@ Built for the **PNC Compound** track (best financial hack), and it also uses NVI
 ## Tools and AI we used (disclosure)
 
 - **AI in the product:**
-  - **Anthropic Claude** reads card statements and receipts, turns a plain request into a grocery list, and writes short summaries. Claude never does the math: prices, totals and interest are computed by our code.
+  - **Anthropic Claude** reads card statements and receipts, turns a plain request into a grocery list, writes short summaries, and translates warnings into other languages. Claude never does the math: prices, totals and interest are computed by our code.
   - **NVIDIA Nemotron** helps classify borderline scam messages. Simple rules run first, and the app still works with rules only if the model is slow or off.
 - **AI used to build it:** we used **Claude Code (Anthropic)** as a coding assistant for much of the code, tests and documentation. Team members reviewed, ran and directed the work.
-- **Voice:** **ElevenLabs** text to speech reads warnings aloud (optional). Without a key the browser's built-in voice is used.
+- **Voice:** **ElevenLabs** text to speech reads warnings aloud, in several languages (optional). Without a key the browser's built-in voice is used.
 - **Services:** Tiger Cloud (Tiger Data) Postgres for saved state, DigitalOcean App Platform for hosting, a `.tech` domain from MLH.
 - **Open source:** Next.js and React, Leaflet with OpenStreetMap map tiles, `pg`, `zod`, `@anthropic-ai/sdk`.
 - The project was started after the hackathon opened (first commit Sept 19, 2026, 11:34 AM EDT).
@@ -49,6 +49,15 @@ The reaction is rule-based and shows on the student's **Home** screen (open the 
 ## Read aloud
 
 Warnings have a **Read aloud** button, for accessibility and for people who scan rather than read. With `ELEVENLABS_API_KEY` set, the server calls ElevenLabs (`/api/tts`, rate limited, at most 700 characters, cached). Without a key, or if the service is down, the button uses the browser's built-in voice, so it always works. Nothing spoken is stored.
+
+## Warnings in your language
+
+Warnings and alerts (scam check, "before you send money", bank alerts) can be shown in another language, in large type, and read aloud. Pick a language above a result. It is remembered in that browser only.
+
+- **Languages:** English, Yorùbá, Hausa, Igbo, Kiswahili, Español, Français, Português, हिन्दी and العربية.
+- **How:** Claude translates our warning into simple, everyday words for an older reader, keeping numbers and names exactly as written. The translation is only used if it lines up with the original item for item.
+- **Voice:** ElevenLabs reads it aloud. Spanish, French, Portuguese, Hindi and Arabic use Multilingual v2. Hausa and Swahili use Eleven v3. **Yorùbá is not on ElevenLabs' published language lists**, so its voice is marked experimental (turn it off with `ELEVENLABS_VOICE_OFF_LANGS=yo`). Igbo has text only.
+- **Honest limits:** translations are made by AI and are labeled that way, and a native speaker should check them. Menus and buttons are still in English. The scam rules read English, so a message pasted in another language relies on the model.
 
 ## Data: synthetic only
 
@@ -94,6 +103,7 @@ the-blip/
 │   ├── docs/                     Public API documentation page
 │   ├── embed/                    Embeddable widget page for partner sites
 │   ├── Shell.js, Onboarding.js   App frame, navigation, first-visit tips
+│   ├── Translated.js, lang.js    Language picker and translated warnings
 │   ├── ReadAloud.js              "Read aloud" button (ElevenLabs voice, browser voice as backup)
 │   ├── globals.css               Design tokens and styling
 │   └── api/                      Server routes
@@ -101,6 +111,7 @@ the-blip/
 │       ├── payment-check/        Rule-based check of a payment request
 │       ├── sandbox-bank/         Synthetic bank feed: transaction in, student alert out
 │       ├── tts/                  Text to speech for the read-aloud button
+│       ├── translate/            Translates our warnings (Claude)
 │       ├── statement/, groceries/  Claude reads statements and receipts, plans lists
 │       ├── events/, state/, quests/, redeem/, recovery/   Points engine endpoints
 │       ├── v1/                   Public partner API (API keys, rate limited)
@@ -112,6 +123,7 @@ the-blip/
 │   ├── scamRules.mjs, paymentRules.mjs   Plain-language scam rules
 │   ├── sandboxBank.mjs           Sandbox bank scenarios and how TheBlip reacts to each
 │   ├── tts.mjs                   Read-aloud text cleanup and the ElevenLabs call
+│   ├── languages.mjs, translate.js   Language list, voice choice, translation of warnings
 │   ├── nemotron.mjs              NVIDIA Nemotron scam classifier
 │   ├── claude.js, vision.js, statement.mjs, receipt.mjs   Claude features (Claude never does the math)
 │   ├── grocery.mjs               Store prices, health ratings and comparisons
@@ -224,10 +236,11 @@ We tried to think about how this could hurt someone, be abused, or confuse peopl
 | **Bad or outdated local info** | Pantry hours are marked "not confirmed" when we have not verified them, with the check date, and only confirmed places show open or closed. Grocery prices are labeled as samples. |
 | **Confusing or inaccessible screens** | A first-visit welcome and per-page tips, plain language, keyboard and screen-reader support in dialogs, and a high-contrast light map. |
 | **Someone treats it as financial advice** | Educational only. No card recommendations and no promised score changes. Not affiliated with any bank. |
+| **A translation is wrong or too literal** | Translations are labeled as AI-made, keep numbers and names unchanged, are rejected if they do not match the original item for item, and the English warning always stays on screen. A native speaker should review them. |
 | **The voice service is down or the key runs out** | Read aloud falls back to the browser's voice, is rate limited, has a per-10-minute call budget, and caches repeats. |
 | **Someone sends money to a scammer** | "Before you send money" checks a payment request for common scam patterns (gift cards, crypto, "send it back", secrecy, fake bank calls) and says what to do next, including calling the bank and reporting to the FTC. |
 
-Known limits: the payment and scam checks catch common patterns, not every scam. We have not tested with a real bank's data, and the bank events in the demo are simulated.
+Known limits: the payment and scam checks catch common patterns, not every scam, and the scam rules read English only. We have not tested with a real bank's data, and the bank events in the demo are simulated.
 
 ## Guardrails
 

@@ -1,8 +1,9 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import { langById } from '@/lib/languages.mjs';
 
 // "Read aloud" button. Tries the ElevenLabs voice through /api/tts, and falls back to the browser's voice.
-export default function ReadAloud({ text, label = 'Read aloud' }) {
+export default function ReadAloud({ text, lang = 'en', label = 'Read aloud' }) {
   const [state, setState] = useState('idle');
   const audio = useRef(null);
   const url = useRef('');
@@ -19,7 +20,7 @@ export default function ReadAloud({ text, label = 'Read aloud' }) {
     if (state !== 'idle') { stop(); return; }
     setState('loading');
     try {
-      const res = await fetch('/api/tts', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text }) });
+      const res = await fetch('/api/tts', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text, lang }) });
       if (res.ok && (res.headers.get('content-type') || '').includes('audio')) {
         url.current = URL.createObjectURL(await res.blob());
         const a = new Audio(url.current);
@@ -33,6 +34,7 @@ export default function ReadAloud({ text, label = 'Read aloud' }) {
     } catch {}
     try {
       const u = new SpeechSynthesisUtterance(String(text).slice(0, 700));
+      u.lang = langById(lang).bcp;
       u.onend = () => setState('idle');
       u.onerror = () => setState('idle');
       window.speechSynthesis.speak(u);

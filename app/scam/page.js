@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react';
 import { post } from '../useBlip';
 import ReadAloud from '../ReadAloud';
+import Translated from '../Translated';
+import { LangSelect } from '../lang';
 import { METHODS, WHO, SITUATIONS, LEVEL_LABEL } from '@/lib/paymentRules.mjs';
 
 const SAMPLES = [
@@ -38,6 +40,7 @@ function MessageCheck() {
         <p><button disabled={busy} onClick={() => run(false)}>{busy ? 'Checking…' : 'Check message'}</button> <span className="err">{err}</span>{busy && <span className="note"> The model can take a few seconds when it is busy.</span>}</p>
       </div>
       {res && (
+        <>
         <div className={'card ' + cls}>
           <h2>{TEXT[res.level]}</h2>
           {res.flags.length > 0 && <ul>{res.flags.map((f) => <li key={f.id}>{f.label}</li>)}</ul>}
@@ -48,6 +51,8 @@ function MessageCheck() {
           <ReadAloud text={TEXT[res.level] + '. ' + res.flags.map((f) => f.label).join('. ') + '. ' + (res.model && res.model.explanation ? res.model.explanation : '')} />
           {info && <p>{info}</p>}
         </div>
+        <Translated parts={[TEXT[res.level], ...res.flags.map((f) => f.label), ...(res.model && res.model.explanation ? [res.model.explanation] : []), ...(risky ? ['Do not tap the link. Open your bank app directly. You can forward scam texts to 7726.'] : [])]} />
+        </>
       )}
     </>
   );
@@ -108,6 +113,7 @@ function PaymentCheck({ init = {} }) {
         </p>
       </div>
       {res && (
+        <>
         <div className={'card ' + cls} aria-live="polite">
           <h2>{LEVEL_LABEL[res.level]}</h2>
           {res.flags.length > 0 && <ul>{res.flags.map((f) => <li key={f.id}><b>{f.label}.</b> {f.advice}</li>)}</ul>}
@@ -116,6 +122,8 @@ function PaymentCheck({ init = {} }) {
           <ReadAloud text={LEVEL_LABEL[res.level] + ' ' + res.flags.map((f) => f.label).join('. ') + '. ' + res.next.join(' ')} />
           <p className="note" style={{ marginTop: 12 }}>This is general guidance from common scam patterns. It cannot prove a request is safe or unsafe. Nothing you entered is stored.</p>
         </div>
+        <Translated parts={[LEVEL_LABEL[res.level], ...res.flags.map((f) => f.label + '. ' + f.advice), ...res.next]} />
+        </>
       )}
     </>
   );
@@ -141,6 +149,7 @@ export default function Scam() {
         <button role="tab" aria-selected={mode === 'message'} className={mode === 'message' ? 'on' : ''} onClick={() => setMode('message')}>A message</button>
         <button role="tab" aria-selected={mode === 'payment'} className={mode === 'payment' ? 'on' : ''} onClick={() => setMode('payment')}>Before you send money</button>
       </div>
+      <p style={{ margin: '0 0 14px' }}><LangSelect /></p>
       {mode === 'message' ? <MessageCheck /> : <PaymentCheck key={JSON.stringify(init)} init={init} />}
     </>
   );
