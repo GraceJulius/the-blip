@@ -1,0 +1,23 @@
+import { pickTip, introFor, readStore, INTROS, WELCOME } from '../lib/onboarding.mjs';
+let pass = 0, fail = 0;
+const ok = (n, c, x = '') => { console.log((c ? '  PASS ' : '  FAIL ') + n + (c ? '' : ' ' + x)); c ? pass++ : fail++; };
+
+ok('a brand-new visitor on the home page gets the welcome', pickTip('/', {}, false) === 'welcome');
+ok('the welcome is not shown again once seen', pickTip('/', { welcome: true }, false) === null);
+ok('the welcome is only for the home page', pickTip('/check', {}, false) === 'check');
+ok('the first visit to a feature shows its intro', pickTip('/scam', { welcome: true }, false) === 'scam');
+ok('a feature intro is not shown twice', pickTip('/scam', { scam: true }, false) === null);
+ok('seeing one intro does not hide the others', pickTip('/quests', { scam: true, check: true }, false) === 'quests');
+ok('turning tips off silences everything', pickTip('/', {}, true) === null && pickTip('/check', {}, true) === null);
+ok('pages without an intro show nothing', pickTip('/some-other-page', {}, false) === null && pickTip('/embed', {}, false) === null);
+ok('sub-paths use their feature intro', introFor('/console/anything')?.id === 'console' && introFor('/food/x')?.id === 'food');
+ok('a path that only starts with the same letters does not match', introFor('/checkout') === null && introFor('/scammers') === null);
+ok('the home page has no feature intro, only the welcome', introFor('/') === null);
+ok('every intro has a title, a lead, an icon and 3 points', Object.values(INTROS).every((i) => i.title && i.lead && i.icon && i.list.length === 3));
+ok('every intro path is unique', new Set(Object.values(INTROS).map((i) => i.path)).size === Object.keys(INTROS).length);
+ok('the welcome has 3 steps', WELCOME.length === 3 && WELCOME.every((w) => w.title && (w.body || w.list)));
+ok('stored data is read safely', readStore('{"seen":{"a":true},"tipsOff":true}').tipsOff === true && readStore('{"seen":{"a":true}}').seen.a === true);
+ok('corrupt or missing storage falls back to a fresh start', readStore(null).tipsOff === false && readStore('not json').seen.a === undefined && readStore('[]').tipsOff === false && readStore('{"seen":5}').seen && typeof readStore('{"seen":5}').seen === 'object');
+const cleanCopy = Object.values(INTROS).map((i) => i.title + i.lead + i.list.join('')).join('') + WELCOME.map((w) => (w.title || '') + (w.body || '') + (w.list || []).join('')).join('');
+ok('the copy has no em dashes or exclamation marks', !cleanCopy.includes(String.fromCharCode(0x2014)) && !cleanCopy.includes('!'));
+console.log(fail ? `\n${fail} FAILED, ${pass} passed` : `\nall ${pass} checks passed`); process.exit(fail ? 1 : 0);
