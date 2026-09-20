@@ -12,6 +12,7 @@ const PATHS = {
   check: <path d="m5 12 5 5 9-10" />,
   lock: <><rect x="5.5" y="11" width="13" height="9" rx="2" /><path d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3" /></>,
   chevron: <path d="m9 6 6 6-6 6" />,
+  globe: <><circle cx="12" cy="12" r="9" /><path d="M3 12h18" /><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" /></>,
   help: <><circle cx="12" cy="12" r="9" /><path d="M9.6 9.4a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1.1.8-1.1 1.6" /><path d="M12 17h.01" /></>,
   book: <><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2z" /><path d="M9 8h5M9 12h5" /></>,
   basket: <><path d="M4 9h16l-1.5 9a2 2 0 0 1-2 1.7h-9A2 2 0 0 1 5.5 18z" /><path d="m9 9 3-5 3 5M9.5 13v3M14.5 13v3" /></>,

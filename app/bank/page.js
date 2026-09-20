@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { post, studentId } from '../useBlip';
 import { SCENARIOS, START } from '@/lib/sandboxBank.mjs';
 import ReadAloud from '../ReadAloud';
+import Translated from '../Translated';
+import { LangSelect } from '../lang';
 
 const EVENTS = [
   ['autopay_enabled', 'Student enabled autopay'],
@@ -82,6 +84,7 @@ export default function Bank() {
       <div className="card">
         <h2>Sandbox bank feed</h2>
         <p className="note" style={{ marginBottom: 10 }}>A made-up student account with made-up money. Each button is something a real bank would send. TheBlip reads it and warns the student, and the warning shows on their Home screen. No real accounts or data.</p>
+        <p style={{ margin: '0 0 8px' }}><LangSelect label="Language for alerts" /></p>
         <p style={{ margin: '0 0 12px' }}><b>Checking {money(acct.checking)}</b> &nbsp;·&nbsp; <b>Savings {money(acct.savings)}</b> &nbsp; <button className="ghost small" onClick={() => { setAcct(START); setFeed([]); }}>Reset sandbox</button></p>
         <div className="chips" style={{ marginBottom: 14 }}>
           {SCENARIOS.map((sc) => <button key={sc.id} className="ghost" disabled={busy} onClick={() => play(sc.id)}>{sc.label}</button>)}
@@ -99,6 +102,7 @@ export default function Bank() {
               {f.alert.actions.map((a) => <button key={a.kind} onClick={() => act(a)}>{a.label}</button>)}
               <ReadAloud text={f.alert.title + '. ' + f.alert.message} />
             </div>
+            <Translated parts={[f.alert.title, f.alert.message]} />
           </div>
         ))}
       </div>

@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Icon from './Icons';
+import { useT } from './i18n';
 import { STORAGE_KEY, WELCOME, INTROS, pickTip, introFor, readStore } from '@/lib/onboarding.mjs';
 
 function load() {
@@ -12,6 +13,7 @@ function save(v) {
 }
 
 export default function Onboarding() {
+  const t = useT();
   const path = usePathname() || '/';
   const [tip, setTip] = useState(null);
   const [step, setStep] = useState(0);
@@ -21,12 +23,12 @@ export default function Onboarding() {
   const show = useCallback((id, from) => { opener.current = from || document.activeElement; setStep(0); setTip(id); }, []);
 
   useEffect(() => {
-    const t = setTimeout(() => {
+    const timer = setTimeout(() => {
       const { seen, tipsOff } = load();
       const next = pickTip(path, seen, tipsOff);
       if (next) show(next);
     }, 600);
-    return () => clearTimeout(t);
+    return () => clearTimeout(timer);
   }, [path, show]);
 
   useEffect(() => {
@@ -73,19 +75,19 @@ export default function Onboarding() {
     <div className="ob-back">
       <div className="ob" role="dialog" aria-modal="true" aria-labelledby="ob-title" ref={box}>
         <div className="ob-ico"><Icon name={data.icon} size={26} /></div>
-        <h2 id="ob-title">{data.title}</h2>
-        {data.lead && <p className="ob-lead">{data.lead}</p>}
-        {data.body && <p className="ob-lead">{data.body}</p>}
-        {data.list && <ul className="ob-list">{data.list.map((x) => <li key={x}><Icon name="check" size={16} /><span>{x}</span></li>)}</ul>}
-        {data.note && <p className="note" style={{ margin: '10px 0 0' }}>{data.note}</p>}
+        <h2 id="ob-title">{t(data.title)}</h2>
+        {data.lead && <p className="ob-lead">{t(data.lead)}</p>}
+        {data.body && <p className="ob-lead">{t(data.body)}</p>}
+        {data.list && <ul className="ob-list">{data.list.map((x) => <li key={x}><Icon name="check" size={16} /><span>{t(x)}</span></li>)}</ul>}
+        {data.note && <p className="note" style={{ margin: '10px 0 0' }}>{t(data.note)}</p>}
         {welcome && <div className="ob-dots" aria-hidden="true">{WELCOME.map((_, i) => <span key={i} className={i === step ? 'on' : ''} />)}</div>}
         <div className="ob-actions">
-          {welcome && step > 0 && <button className="ghost" onClick={() => setStep(step - 1)}>Back</button>}
-          <button data-primary onClick={() => (last ? close(false) : setStep(step + 1))}>{last ? (welcome ? 'Get started' : 'Got it') : 'Next'}</button>
+          {welcome && step > 0 && <button className="ghost" onClick={() => setStep(step - 1)}>{t('Back')}</button>}
+          <button data-primary onClick={() => (last ? close(false) : setStep(step + 1))}>{last ? (welcome ? t('Get started') : t('Got it')) : t('Next')}</button>
         </div>
         <div className="ob-foot">
-          {welcome && !last && <button className="linkish" onClick={() => close(false)}>Skip</button>}
-          <button className="linkish" onClick={() => close(true)}>Do not show tips again</button>
+          {welcome && !last && <button className="linkish" onClick={() => close(false)}>{t('Skip')}</button>}
+          <button className="linkish" onClick={() => close(true)}>{t('Do not show tips again')}</button>
         </div>
       </div>
     </div>

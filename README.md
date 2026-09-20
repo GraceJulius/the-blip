@@ -23,10 +23,10 @@ Built for the **PNC Compound** track (best financial hack), and it also uses NVI
 ## Tools and AI we used (disclosure)
 
 - **AI in the product:**
-  - **Anthropic Claude** reads card statements and receipts, turns a plain request into a grocery list, and writes short summaries. Claude never does the math: prices, totals and interest are computed by our code.
+  - **Anthropic Claude** reads card statements and receipts, turns a plain request into a grocery list, writes short summaries, and translates warnings into other languages. Claude never does the math: prices, totals and interest are computed by our code.
   - **NVIDIA Nemotron** helps classify borderline scam messages. Simple rules run first, and the app still works with rules only if the model is slow or off.
 - **AI used to build it:** we used **Claude Code (Anthropic)** as a coding assistant for much of the code, tests and documentation. Team members reviewed, ran and directed the work.
-- **Voice:** **ElevenLabs** text to speech reads warnings aloud (optional). Without a key the browser's built-in voice is used.
+- **Voice:** **ElevenLabs** text to speech reads warnings aloud, in several languages (optional). Without a key the browser's built-in voice is used.
 - **Services:** Tiger Cloud (Tiger Data) Postgres for saved state, DigitalOcean App Platform for hosting, a `.tech` domain from MLH.
 - **Open source:** Next.js and React, Leaflet with OpenStreetMap map tiles, `pg`, `zod`, `@anthropic-ai/sdk`.
 - The project was started after the hackathon opened (first commit Sept 19, 2026, 11:34 AM EDT).
@@ -49,6 +49,25 @@ The reaction is rule-based and shows on the student's **Home** screen (open the 
 ## Read aloud
 
 Warnings have a **Read aloud** button, for accessibility and for people who scan rather than read. With `ELEVENLABS_API_KEY` set, the server calls ElevenLabs (`/api/tts`, rate limited, at most 700 characters, cached). Without a key, or if the service is down, the button uses the browser's built-in voice, so it always works. Nothing spoken is stored.
+
+## Languages and accessibility
+
+**Pick a language** with the globe menu (top right, or in the sidebar). It is remembered in that browser only.
+
+- **The app in your language:** the menus, buttons, tips and the safety screens (Home, Scam check, "Before you send money", Recovery) switch language. The text comes from pre-built dictionaries in `public/i18n/<language>.json`, so it loads instantly, works offline and can be reviewed by a native speaker. Regenerate or extend them with `node scripts/build-i18n.mjs` (it only translates new strings). Arabic and Urdu switch the page to right-to-left.
+- **Warnings and alerts:** results are also translated live by Claude into simple words for an older reader, shown in large type, and can be read aloud. The original English stays on screen.
+- **Voice (ElevenLabs):** Multilingual v2 covers Spanish, French, Portuguese, Arabic, Hindi, Tamil, Chinese, Japanese, Korean, Filipino, Indonesian, Russian, Ukrainian, Polish, German, Italian, Dutch, Turkish and English. Eleven v3 covers Hausa, Swahili, Somali, Bengali, Urdu and Vietnamese. **Yorùbá, Igbo, Amharic and Haitian Creole are not on ElevenLabs' language lists**, so they are text only. We tried a Yorùbá voice and its intonation was wrong, so it stays off. To experiment, set `ELEVENLABS_VOICE_ON_LANGS=yo`.
+- **Honest limits:** all translations are AI-made and labeled that way, and a native speaker should review them. Quests, Reality check and Groceries screens, quest titles and level names are still English. The scam rules read English, so a message pasted in another language relies on the model.
+
+**Accessibility (screen readers and keyboards)**
+
+- A "Skip to main content" link, labeled landmarks (sidebar, menu, main), and `aria-current` on the page you are on.
+- Every input on the safety screens has a real label. Sliders announce their values. Results are announced as they appear.
+- File upload buttons can be reached and used from the keyboard.
+- Dialogs trap focus, close with Escape, and return focus. Motion respects "reduce motion".
+- Color contrast passes WCAG AA (small gray labels were raised from 3.98:1 to 5.85:1).
+- The page language and direction update when you change language.
+- We ran the axe-core accessibility checker on the server-rendered pages and fixed what it found. We have not done a full test with VoiceOver, TalkBack or NVDA, and would like to.
 
 ## Data: synthetic only
 
@@ -94,6 +113,8 @@ the-blip/
 │   ├── docs/                     Public API documentation page
 │   ├── embed/                    Embeddable widget page for partner sites
 │   ├── Shell.js, Onboarding.js   App frame, navigation, first-visit tips
+│   ├── i18n.js, lang.js, useLang.js   Language picker and the t() function for the interface
+│   ├── Translated.js             Live translated warnings
 │   ├── ReadAloud.js              "Read aloud" button (ElevenLabs voice, browser voice as backup)
 │   ├── globals.css               Design tokens and styling
 │   └── api/                      Server routes
@@ -101,6 +122,7 @@ the-blip/
 │       ├── payment-check/        Rule-based check of a payment request
 │       ├── sandbox-bank/         Synthetic bank feed: transaction in, student alert out
 │       ├── tts/                  Text to speech for the read-aloud button
+│       ├── translate/            Translates our warnings (Claude)
 │       ├── statement/, groceries/  Claude reads statements and receipts, plans lists
 │       ├── events/, state/, quests/, redeem/, recovery/   Points engine endpoints
 │       ├── v1/                   Public partner API (API keys, rate limited)
@@ -112,6 +134,8 @@ the-blip/
 │   ├── scamRules.mjs, paymentRules.mjs   Plain-language scam rules
 │   ├── sandboxBank.mjs           Sandbox bank scenarios and how TheBlip reacts to each
 │   ├── tts.mjs                   Read-aloud text cleanup and the ElevenLabs call
+│   ├── languages.mjs, translate.js   Language list, voice choice, translation of warnings
+│   ├── i18n.mjs                  Interface translation helpers
 │   ├── nemotron.mjs              NVIDIA Nemotron scam classifier
 │   ├── claude.js, vision.js, statement.mjs, receipt.mjs   Claude features (Claude never does the math)
 │   ├── grocery.mjs               Store prices, health ratings and comparisons
@@ -119,10 +143,10 @@ the-blip/
 │   ├── orgs.js, platform.mjs, partnerApi.js, webhooks.js, analytics.mjs   Partner platform
 │   ├── guard.js                  Rate limits, admin lockout, budgets
 │   └── ids.js, api.js, onboarding.mjs   Student ids, request helpers, tip content
-├── data/                         Scam test messages and the last evaluation results
+├── data/                         Scam test messages, evaluation results, translatable strings
 ├── scripts/                      Test suites, scam evaluation, partner demo scripts
 ├── docs/API.md                   Partner API reference
-├── public/                       Logo and the embeddable widget script (embed.js)
+├── public/                       Logo, the embeddable widget script, and i18n/ (one dictionary per language)
 ├── .env.example                  Every setting the app reads (copy to .env.local)
 └── package.json                  Scripts: dev, build, start, test, eval
 ```
@@ -224,10 +248,12 @@ We tried to think about how this could hurt someone, be abused, or confuse peopl
 | **Bad or outdated local info** | Pantry hours are marked "not confirmed" when we have not verified them, with the check date, and only confirmed places show open or closed. Grocery prices are labeled as samples. |
 | **Confusing or inaccessible screens** | A first-visit welcome and per-page tips, plain language, keyboard and screen-reader support in dialogs, and a high-contrast light map. |
 | **Someone treats it as financial advice** | Educational only. No card recommendations and no promised score changes. Not affiliated with any bank. |
+| **Someone cannot read English, or uses a screen reader** | The interface and safety screens switch language, results can be read aloud, and the safety screens follow screen-reader basics (labels, landmarks, announcements). Not everything is translated yet, and we have not tested with a real screen reader. |
+| **A translation is wrong or too literal** | Translations are labeled as AI-made, keep numbers and names unchanged, are rejected if they do not match the original item for item, and the English warning always stays on screen. A native speaker should review them. |
 | **The voice service is down or the key runs out** | Read aloud falls back to the browser's voice, is rate limited, has a per-10-minute call budget, and caches repeats. |
 | **Someone sends money to a scammer** | "Before you send money" checks a payment request for common scam patterns (gift cards, crypto, "send it back", secrecy, fake bank calls) and says what to do next, including calling the bank and reporting to the FTC. |
 
-Known limits: the payment and scam checks catch common patterns, not every scam. We have not tested with a real bank's data, and the bank events in the demo are simulated.
+Known limits: the payment and scam checks catch common patterns, not every scam, and the scam rules read English only. We have not tested with a real bank's data, and the bank events in the demo are simulated.
 
 ## Guardrails
 
