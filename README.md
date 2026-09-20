@@ -15,7 +15,7 @@ Built for SteelHacks XIII.
 | Name | Email |
 | --- | --- |
 | Grace Julius | juliusgrace65@gmail.com |
-| Aryannah Martin | (add email) |
+| Aryannah Martin | aryannah.nicole12@gmail.com |
 | Jaemere Gamble | jaemere.gamble@gmail.com |
 
 Built for the **PNC Compound** track (best financial hack), and it also uses NVIDIA Nemotron, Tiger Cloud (Tiger Data), DigitalOcean and a `.tech` domain.
