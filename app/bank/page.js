@@ -16,7 +16,7 @@ const EVENTS = [
   ['card_frozen', 'Card frozen (recovery step)'],
 ];
 
-const money = (n) => '$' + (Math.round(n * 100) / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const money = (n) => (n < 0 ? '-' : '') + '$' + (Math.abs(Math.round(n * 100) / 100)).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 const SEV = { alert: 'bad', warn: 'warn', good: 'good', info: '' };
 
 export default function Bank() {
