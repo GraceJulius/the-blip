@@ -20,7 +20,7 @@ function sliderStyle(value, min, max) {
 }
 
 // Made-up statement for demos and judging. Nothing here is a real account.
-const SAMPLE = { apr: 24.99, balance: 1200, creditLimit: 2000, minimumPayment: 35, dueDate: 'sample data', cashBackPercent: 1.5, annualFee: 0, notes: ['This is a made-up sample statement. It is not a real account.'] };
+const SAMPLE = { apr: 24.99, balance: 1200, creditLimit: 2000, minimumPayment: 35, dueDate: 'sample data', cashBackPercent: 1.5, annualFee: 0, notes: [] };
 
 export default function Check() {
   const t = useT();
